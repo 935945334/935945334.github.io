@@ -35,12 +35,20 @@ html, body {
       flex-direction:column;
 
     }
-    #index{
+    .index-1-1{
       height: 100%;
-      background:url(../../imges/bj.png) no-repeat bottom; 
-      background-size:100%;
-      
-      
+      background:url(../../imges/zhuti-1/bj.png) no-repeat bottom; 
+      background-size:100%; 
+    }
+    .index-1-2{
+      height: 100%;
+      background:url(../../imges/zhuti-2/bj.png) no-repeat bottom; 
+      background-size:100%;  
+    }
+    .index-1-3{
+      height: 100%;
+      background:url(../../imges/zhuti-3/bj.png) no-repeat bottom; 
+      background-size:100%;  
     }
     .icon{
       width: 100%;
@@ -66,7 +74,6 @@ html, body {
         margin: 0.8em;
         float: left;
     }
-
     #mydiv{
       margin-top: 420px;
 
@@ -80,7 +87,7 @@ html, body {
     .div2{
       height: 1500px;
     }
-    #th{
+    #thpc{
       z-index:2;
       margin-top: 80%;
       position:absolute;
@@ -88,13 +95,41 @@ html, body {
       height: 30%;
       display: none;
     }
-    .th-dh-1{
-      background:url(../../imges/dh-bj-1.png);
+    #thpe{
+      z-index:2;
+      margin-top: 80%;
+      position:absolute;
+      width: 80%;
+      height: 30%;
+      display: none;
+    }
+    .th-dh-1-pc{
+      background:url(../../imges/zhuti-1/dh-bj-pc.png);
       background-repeat: no-repeat;
       background-size:100%;
     }
-    .th-dh-2{
-      background:url(../../imges/dh-bj-2.png);
+    .th-dh-1-pe{
+      background:url(../../imges/zhuti-1/dh-bj-pe.png);
+      background-repeat: no-repeat;
+      background-size:100%;
+    }
+    .th-dh-2-pc{
+      background:url(../../imges/zhuti-2/dh-bj-pc.png);
+      background-repeat: no-repeat;
+      background-size:100%;
+    }
+    .th-dh-2-pe{
+      background:url(../../imges/zhuti-2/dh-bj-pe.png);
+      background-repeat: no-repeat;
+      background-size:100%;
+    }
+    .th-dh-3-pc{
+      background:url(../../imges/zhuti-3/dh-bj-pc.png);
+      background-repeat: no-repeat;
+      background-size:100%;
+    }
+    .th-dh-3-pe{
+      background:url(../../imges/zhuti-3/dh-bj-pe.png);
       background-repeat: no-repeat;
       background-size:100%;
     }
@@ -152,7 +187,18 @@ html, body {
       width: 80%;
       height: 30%;
       display: none;
-      background:url(../../imges/youxiang-tc.png);
+    }
+    .youxiang-1{
+      background:url(../../imges/zhuti-1/youxiang-tc.png);
+      background-repeat: no-repeat;
+      background-size:100%;
+    }
+    .youxiang-2{
+      background:url(../../imges/zhuti-2/youxiang-tc.png);
+      background-repeat: no-repeat;
+      background-size:100%;
+    }.youxiang-3{
+      background:url(../../imges/zhuti-3/youxiang-tc.png);
       background-repeat: no-repeat;
       background-size:100%;
     }
@@ -245,5 +291,84 @@ html, body {
   -webkit-flex-direction: column;
   flex-direction: column;
   justify-content: space-around;
-  background:url(../../imges/icon/bj.png);
+  background:url(../../imges/chahua/chahua-2-bj.png);
+}
+.APP-1{
+  background: url(../../imges/APP/1-bj.png);
+}
+.APP-7{
+  background: url(../../imges/APP/7-bj.png);
+}
+.APP-8{
+  background: url(../../imges/APP/8-bj.png);
+}
+#chahua-1{
+  background: url(../../imges/chahua/chahua-1-bj.png);
+}
+#chahua-2{
+  background: url(../../imges/chahua/chahua-2-bj.png);
+}
+#chahua-3{
+  background: url(../../imges/chahua/chahua-3-bj.png);
+}
+#chahua-5{
+  background: url(../../imges/chahua/chahua-5-bj.png);
+}
+#zhuti{
+  z-index:12;
+  margin-top: 40%;
+  position:absolute;
+  width: 80%;
+  height: 80%;
+  display: none;
+}
+#zhuti-1{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  /*-webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;*/
+  width: 300px;
+  height: 300px;
+  padding-top: 10px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+      flex-direction:column;
+}
+.zhuti-bj-1{
+  background:url(../../imges/zhuti-1/zhuti-bj.png);
+  background-repeat: no-repeat;
+  background-size:100%;
+}
+.zhuti-bj-2{
+  background:url(../../imges/zhuti-2/zhuti-bj.png);
+  background-repeat: no-repeat;
+  background-size:100%;
+}
+.zhuti-bj-3{
+  background:url(../../imges/zhuti-3/zhuti-bj.png);
+  background-repeat: no-repeat;
+  background-size:100%;
+}
+#zhuti-2{
+  width: 60px;
+  height: 60px;
+  margin: 0 auto;
+
+}
+#zhuti-x{
+  width: 60px;
+  height: 60px;
+  /*margin-top: 40%;*/
 }
