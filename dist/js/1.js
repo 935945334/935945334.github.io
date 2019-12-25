@@ -7,18 +7,27 @@
 
             setTimeout(function(){  document.querySelector("#jz").style.display ='none'; }, 1000);
             setTimeout(function(){  document.body.style.backgroundColor ='#eee'; }, 1000);
+            setTimeout(function(){document.getElementById("tishi").className = "tishi1"; }, 1000);
+    		setTimeout(function(){document.getElementById("tishi").className = "tishi2"; }, 3000);
+    		setTimeout(function(){document.getElementById("tishi").className = "tishi3"; }, 5000);
+    		setTimeout(function(){document.getElementById("tishi").id = 'tishi1'; }, 5000);
+
       }
     }
     //加载动画
     if(screen.width > 1365){
             window.onload = function () {
-  
-
             setTimeout(function(){  document.querySelector("#jz").style.display ='none'; }, 1000);
             setTimeout(function(){  document.body.style.backgroundColor ='#eee'; }, 1000);
+            setTimeout(function(){document.getElementById("tishi").className = "tishi1"; }, 1000);
+    		setTimeout(function(){document.getElementById("tishi").className = "tishi2"; }, 3000);
+    		setTimeout(function(){document.getElementById("tishi").className = "tishi3"; }, 5000);
+    		setTimeout(function(){document.getElementById("tishi").id = 'tishi-1'; }, 5000);
       }
     }
-
+    function myTishi(){
+    	document.querySelector("#tishi-1").style.display='none';
+    }
     //点击电话icon弹出号码弹窗
     function myFunction() {
             if (screen.width > 1366) {
@@ -340,3 +349,4 @@
 
  
 	}
+

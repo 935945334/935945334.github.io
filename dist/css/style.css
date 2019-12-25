@@ -286,7 +286,7 @@ html, body {
       background-size:100%;
 }
 .swiper-slide-icon{
-    display: -webkit-flex;
+  display: -webkit-flex;
   display: flex;
   -webkit-flex-direction: column;
   flex-direction: column;
@@ -371,4 +371,50 @@ html, body {
   width: 60px;
   height: 60px;
   /*margin-top: 40%;*/
+}
+#huancun{
+      position:absolute;
+      z-index: -20;
+      display: none;
+}
+.huancun1{
+  width: 1px;
+  height: 1px;
+}
+#tishi{
+  position:absolute;
+  z-index: 10;
+  width:100%;
+  height: 100%;
+}
+#tishi-1{
+  position:absolute;
+  z-index: 10;
+  width:100%;
+  height: 100%;
+}
+.tishi0{
+  background:url(../../imges/0.png) no-repeat bottom; 
+  background-size:100%; 
+  background-color:transparent;
+}
+
+.tishi1{
+  background:url(../../imges/1.gif) no-repeat bottom; 
+  background-size:100%; 
+  background-color:transparent;
+}
+.tishi2{
+  background:url(../../imges/2.gif) no-repeat bottom; 
+  background-size:100%; 
+  background-color:transparent;
+}
+.tishi3{
+  background:url(../../imges/3.gif) no-repeat bottom; 
+  background-size:100%; 
+  background-color:transparent;
+}
+.daodi{
+  background:url(../../imges/daodi.png) no-repeat bottom; 
+  background-size:100%; 
 }
