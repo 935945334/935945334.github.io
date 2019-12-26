@@ -375,7 +375,7 @@ html, body {
 #huancun{
       position:absolute;
       z-index: -20;
-      display: none;
+      display: block;
 }
 .huancun1{
   width: 1px;
@@ -396,7 +396,6 @@ html, body {
 .tishi0{
   background:url(../../imges/0.png) no-repeat bottom; 
   background-size:100%; 
-  background-color:transparent;
 }
 
 .tishi1{
@@ -417,4 +416,12 @@ html, body {
 .daodi{
   background:url(../../imges/daodi.png) no-repeat bottom; 
   background-size:100%; 
+}
+#jiantou{
+  background:url(../../imges/jiantou.gif) no-repeat bottom; 
+  background-size:100%; 
+  position:absolute;
+  z-index: 22;
+  width: 100%;
+  height: 100%;
 }

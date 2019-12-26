@@ -1,24 +1,24 @@
     //手机模式下保证底部icon位置在底部
     if(screen.width < 1365){
             window.onload = function () {
-            var div = document.getElementById("mydiv");
             document.getElementById("mydiv").style.marginTop= document.documentElement.clientHeight - 390 + "px";  //将mydiv改变为网页可见区域高度减390
             //将mydiv改变为网页可见区域高度减390
-
-            setTimeout(function(){  document.querySelector("#jz").style.display ='none'; }, 1000);
-            setTimeout(function(){  document.body.style.backgroundColor ='#eee'; }, 1000);
+            setTimeout(function(){document.querySelector("#huancun").style.display ='none'; }, 500);
+            setTimeout(function(){document.querySelector("#jz").style.display ='none'; }, 1000);
+            setTimeout(function(){document.body.style.backgroundColor ='#eee'; }, 1000);
             setTimeout(function(){document.getElementById("tishi").className = "tishi1"; }, 1000);
     		setTimeout(function(){document.getElementById("tishi").className = "tishi2"; }, 3000);
     		setTimeout(function(){document.getElementById("tishi").className = "tishi3"; }, 5000);
-    		setTimeout(function(){document.getElementById("tishi").id = 'tishi1'; }, 5000);
+    		setTimeout(function(){document.getElementById("tishi").id = 'tishi-1'; }, 5000);
 
       }
     }
     //加载动画
     if(screen.width > 1365){
             window.onload = function () {
-            setTimeout(function(){  document.querySelector("#jz").style.display ='none'; }, 1000);
-            setTimeout(function(){  document.body.style.backgroundColor ='#eee'; }, 1000);
+            setTimeout(function(){document.querySelector("#huancun").style.display ='none'; }, 500);
+            setTimeout(function(){document.querySelector("#jz").style.display ='none'; }, 1000);
+            setTimeout(function(){document.body.style.backgroundColor ='#eee'; }, 1000);
             setTimeout(function(){document.getElementById("tishi").className = "tishi1"; }, 1000);
     		setTimeout(function(){document.getElementById("tishi").className = "tishi2"; }, 3000);
     		setTimeout(function(){document.getElementById("tishi").className = "tishi3"; }, 5000);
@@ -207,7 +207,7 @@
 				setTimeout(function(){  document.body.style.backgroundColor ='#eee'; }, 1000);
 				document.getElementById("jz-1").src="imges/zhuti-1/jz.gif";
 				document.querySelector("#jz").style.display ='block';
-				setTimeout(function(){  document.querySelector("#jz").style.display ='none'; }, 1000);
+				// setTimeout(function(){  document.querySelector("#jz").style.display ='none'; }, 1000);
 				
 				document.getElementById("icon-jianli").src="imges/zhuti-1/jianli.png"; 
 				document.getElementById("icon-xtx").src="imges/zhuti-1/xtx.png"; 
@@ -248,6 +248,9 @@
 				document.querySelector("#zhuti").style.display ='none';
 
 				document.getElementById("index").className = "swiper-slide index-1-1";
+				window.onload = function () {
+            		setTimeout(function(){document.querySelector("#jz").style.display ='none'; }, 1000);
+     		 	}
 	}
 	function myZhuti2() {
 				document.getElementById("jz").style.backgroundColor ='#ffd789';
@@ -255,7 +258,7 @@
 				setTimeout(function(){  document.body.style.backgroundColor ='#eee'; }, 1000);
 				document.getElementById("jz-1").src="imges/zhuti-2/jz.gif";
 				document.querySelector("#jz").style.display ='block';
-				setTimeout(function(){  document.querySelector("#jz").style.display ='none'; }, 1000);
+				// setTimeout(function(){  document.querySelector("#jz").style.display ='none'; }, 1000);
 				
 				document.getElementById("icon-jianli").src="imges/zhuti-2/jianli.png"; 
 				document.getElementById("icon-xtx").src="imges/zhuti-2/xtx.png"; 
@@ -296,6 +299,9 @@
 				document.querySelector("#zhuti").style.display ='none';
 
 				document.getElementById("index").className = "swiper-slide index-1-2";
+				window.onload = function () {
+            		setTimeout(function(){document.querySelector("#jz").style.display ='none'; }, 1000);
+     		 	}
 
  
 	}
@@ -305,7 +311,7 @@
 				setTimeout(function(){  document.body.style.backgroundColor ='#eee'; }, 1000);
 				document.getElementById("jz-1").src="imges/zhuti-3/jz.gif";
 				document.querySelector("#jz").style.display ='block';
-				setTimeout(function(){  document.querySelector("#jz").style.display ='none'; }, 1000);
+				
 				
 				document.getElementById("icon-jianli").src="imges/zhuti-3/jianli.png"; 
 				document.getElementById("icon-xtx").src="imges/zhuti-3/xtx.png"; 
@@ -346,6 +352,9 @@
 				document.querySelector("#zhuti").style.display ='none';
 
 				document.getElementById("index").className = "swiper-slide index-1-3";
+				window.onload = function () {
+            		setTimeout(function(){document.querySelector("#jz").style.display ='none'; }, 1000);
+     		 	}
 
  
 	}
