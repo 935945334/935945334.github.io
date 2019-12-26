@@ -1,6 +1,7 @@
     //手机模式下保证底部icon位置在底部
     if(screen.width < 1365){
             window.onload = function () {
+            	document.getElementById("jiantou").style.marginTop= document.documentElement.clientHeight - 20 + "px"; 
             document.getElementById("mydiv").style.marginTop= document.documentElement.clientHeight - 390 + "px";  //将mydiv改变为网页可见区域高度减390
             //将mydiv改变为网页可见区域高度减390
             setTimeout(function(){document.querySelector("#huancun").style.display ='none'; }, 500);
