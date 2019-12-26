@@ -202,12 +202,13 @@
     	document.querySelector("#zhuti").style.display ='none';
     }
 	function myZhuti1() {
+				mySwiper1.slideTo(0, 500, false);
 				document.getElementById("jz").style.backgroundColor ='#2b6584';
 				document.body.style.backgroundColor ='#2b6584';
 				setTimeout(function(){  document.body.style.backgroundColor ='#eee'; }, 1000);
 				document.getElementById("jz-1").src="imges/zhuti-1/jz.gif";
 				document.querySelector("#jz").style.display ='block';
-				// setTimeout(function(){  document.querySelector("#jz").style.display ='none'; }, 1000);
+				setTimeout(function(){  document.querySelector("#jz").style.display ='none'; }, 1000);
 				
 				document.getElementById("icon-jianli").src="imges/zhuti-1/jianli.png"; 
 				document.getElementById("icon-xtx").src="imges/zhuti-1/xtx.png"; 
@@ -248,17 +249,15 @@
 				document.querySelector("#zhuti").style.display ='none';
 
 				document.getElementById("index").className = "swiper-slide index-1-1";
-				window.onload = function () {
-            		setTimeout(function(){document.querySelector("#jz").style.display ='none'; }, 1000);
-     		 	}
 	}
 	function myZhuti2() {
+				mySwiper1.slideTo(0, 500, false);
 				document.getElementById("jz").style.backgroundColor ='#ffd789';
 				document.body.style.backgroundColor ='#ffd789';
 				setTimeout(function(){  document.body.style.backgroundColor ='#eee'; }, 1000);
 				document.getElementById("jz-1").src="imges/zhuti-2/jz.gif";
 				document.querySelector("#jz").style.display ='block';
-				// setTimeout(function(){  document.querySelector("#jz").style.display ='none'; }, 1000);
+				setTimeout(function(){  document.querySelector("#jz").style.display ='none'; }, 1000);
 				
 				document.getElementById("icon-jianli").src="imges/zhuti-2/jianli.png"; 
 				document.getElementById("icon-xtx").src="imges/zhuti-2/xtx.png"; 
@@ -299,19 +298,17 @@
 				document.querySelector("#zhuti").style.display ='none';
 
 				document.getElementById("index").className = "swiper-slide index-1-2";
-				window.onload = function () {
-            		setTimeout(function(){document.querySelector("#jz").style.display ='none'; }, 1000);
-     		 	}
 
  
 	}
 	function myZhuti3() {
+				mySwiper1.slideTo(0, 500, false);
 				document.getElementById("jz").style.backgroundColor ='#daf2d2';
 				document.body.style.backgroundColor ='#daf2d2';
 				setTimeout(function(){  document.body.style.backgroundColor ='#eee'; }, 1000);
 				document.getElementById("jz-1").src="imges/zhuti-3/jz.gif";
 				document.querySelector("#jz").style.display ='block';
-				
+				setTimeout(function(){  document.querySelector("#jz").style.display ='none'; }, 1000);
 				
 				document.getElementById("icon-jianli").src="imges/zhuti-3/jianli.png"; 
 				document.getElementById("icon-xtx").src="imges/zhuti-3/xtx.png"; 
@@ -352,9 +349,6 @@
 				document.querySelector("#zhuti").style.display ='none';
 
 				document.getElementById("index").className = "swiper-slide index-1-3";
-				window.onload = function () {
-            		setTimeout(function(){document.querySelector("#jz").style.display ='none'; }, 1000);
-     		 	}
 
  
 	}
