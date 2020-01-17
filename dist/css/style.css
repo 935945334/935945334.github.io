@@ -262,6 +262,9 @@ html, body {
 .xiangsu-bj-1{
   background:url(../../imges/xiangsu/xiangsu-bj-1.png); 
 }
+.xiangsu-bj-2{
+  background:url(../../imges/xiangsu/xiangsu-bj-2.png); 
+}
 .swiper-slide-banner{
   display: -webkit-flex;
   display: flex;
@@ -303,6 +306,9 @@ html, body {
   background: url(../../imges/APP/8-bj.png);
 }
 #chahua-1{
+  background: url(../../imges/chahua/chahua-1-bj.png);
+}
+#chahua-6{
   background: url(../../imges/chahua/chahua-1-bj.png);
 }
 #chahua-2{
@@ -401,19 +407,8 @@ html, body {
   background:url(../../imges/0.png) no-repeat bottom; 
   background-size:100%; 
 }
-
 .tishi1{
-  background:url(../../imges/1.gif) no-repeat bottom; 
-  background-size:100%; 
-  background-color:transparent;
-}
-.tishi2{
-  background:url(../../imges/2.gif) no-repeat bottom; 
-  background-size:100%; 
-  background-color:transparent;
-}
-.tishi3{
-  background:url(../../imges/3.gif) no-repeat bottom; 
+  background:url(../../imges/0.gif) no-repeat bottom; 
   background-size:100%; 
   background-color:transparent;
 }
@@ -421,7 +416,7 @@ html, body {
   background:url(../../imges/daodi.png) no-repeat bottom; 
   background-size:100%; 
 }
-#jiantou{
+.jiantou{
   background:url(../../imges/jiantou.gif) no-repeat bottom; 
   background-size:100%; 
   position:absolute;
@@ -441,4 +436,19 @@ html, body {
 .icon-zhuti-3{
   background:url(../../imges/zhuti-3/bj.png) no-repeat bottom; 
   background-size:100%; 
+}
+
+
+
+#play{
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+#play-1{
+  width: 812px;
+  height: 375px;
+  background: #000;
+  margin: 0 auto;
+  margin-top: 10%;
 }

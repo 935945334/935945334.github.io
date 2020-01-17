@@ -1,16 +1,14 @@
     //手机模式下保证底部icon位置在底部
     if(screen.width < 1365){
             window.onload = function () {
-            	document.getElementById("jiantou").style.marginTop= document.documentElement.clientHeight - 20 + "px"; 
+            // document.getElementsByClassName("jiantou").style.marginTop= document.documentElement.clientHeight - 20 + "px"; 
             document.getElementById("mydiv").style.marginTop= document.documentElement.clientHeight - 390 + "px";  //将mydiv改变为网页可见区域高度减390
             //将mydiv改变为网页可见区域高度减390
             setTimeout(function(){document.querySelector("#huancun").style.display ='none'; }, 500);
             setTimeout(function(){document.querySelector("#jz").style.display ='none'; }, 1000);
             setTimeout(function(){document.body.style.backgroundColor ='#eee'; }, 1000);
             setTimeout(function(){document.getElementById("tishi").className = "tishi1"; }, 1000);
-    		setTimeout(function(){document.getElementById("tishi").className = "tishi2"; }, 3000);
-    		setTimeout(function(){document.getElementById("tishi").className = "tishi3"; }, 5000);
-    		setTimeout(function(){document.getElementById("tishi").id = 'tishi-1'; }, 5000);
+    		setTimeout(function(){document.getElementById("tishi").id = 'tishi-1'; }, 4500);
 
       }
     }
@@ -21,9 +19,7 @@
             setTimeout(function(){document.querySelector("#jz").style.display ='none'; }, 1000);
             setTimeout(function(){document.body.style.backgroundColor ='#eee'; }, 1000);
             setTimeout(function(){document.getElementById("tishi").className = "tishi1"; }, 1000);
-    		setTimeout(function(){document.getElementById("tishi").className = "tishi2"; }, 3000);
-    		setTimeout(function(){document.getElementById("tishi").className = "tishi3"; }, 5000);
-    		setTimeout(function(){document.getElementById("tishi").id = 'tishi-1'; }, 5000);
+    		setTimeout(function(){document.getElementById("tishi").id = 'tishi-1'; }, 4500);
       }
     }
     function myTishi(){
@@ -354,3 +350,8 @@
  
 	}
 
+function myXXX(){
+      document.querySelector("#play").style.display='block';
+      // document.getElementsByTagName("index").id = "index1";
+      
+    }
