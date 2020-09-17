@@ -393,11 +393,19 @@ body {
 }
 #mail-text{
 	position: absolute;
+	width: 10px;
+	height: 10px;
+	top: 50%;
+	left: 50%;
 	z-index: -10;
 	opacity: 0;
 }
 #tel-text{
 	position: absolute;
+	width: 10px;
+	height: 10px;
+	top: 50%;
+	left: 50%;
 	z-index: -10;
 	opacity: 0;
 }
