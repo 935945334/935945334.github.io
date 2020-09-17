@@ -259,17 +259,19 @@ function theme_fun(n) {
             status_bar.style.width = "86%";
             status_bar.style.marginTop = "24px";
             status_bar.style.marginLeft = "-4px";
-            for (var i = 0; i < 4; i++) {
+            for (var i = 0; i < 5; i++) {
                 icon_box[i].style.width = "78%";
             }
+            icon_box[4].style.top = "calc(100% - 130px)";
         }else{
             var status_bar = document.getElementById("status-bar");
             status_bar.style.width = "96%";
             status_bar.style.marginTop = "5px";
             status_bar.style.marginLeft = "0px";
-            for (var i = 0; i < 4; i++) {
+            for (var i = 0; i < 5; i++) {
                 icon_box[i].style.width = "88%";
             }
+            icon_box[4].style.top = "calc(100% - 120px)";
         }
         theme.style.display = "none";
         if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
