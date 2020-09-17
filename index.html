@@ -2,220 +2,260 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Swiper demo</title>
+    <title>简历</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-    <link rel="icon" href="imges/favicon-1.ico" type="image/x-icon" />
-    <link rel="shortcut icon" href="imges/favicon-1.ico" type="image/x-icon" />
-    <!-- Link Swiper's CSS -->
+    <link rel="icon" href="images/favicon-1.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="images/favicon-1.ico" type="image/x-icon" />
     <link rel="stylesheet" href="dist/css/swiper.min.css">
     <link rel="stylesheet" href="dist/css/style.css">
-
-    <!-- Demo styles -->
-    <style>
-    
-    </style>
+    <link rel="stylesheet" href="dist/css/resume.css">
+    <link rel="stylesheet" href="dist/css/animate.min.css">
 </head>
 <body>
-    <!-- Swiper -->
-    <div id="play">
-        <div id="play-1"></div>
+    <textarea id="mail-text">935945334@qq.com</textarea>
+    <textarea id="tel-text">17150024672</textarea>
+    <div id="jz" align="center">
+        <div id="jz-gif"></div>
+        <div id="jz-loading">
+            <div id="jz-loading-1"></div>
+            <div id="jz-loading-2"></div>
+            <div id="jz-loading-3"></div>
+        </div>
     </div>
-    <div id="jz" align="center"><img src="imges/zhuti-1/jz.gif" id="jz-1"></div>
-    <div id="huancun">
-        <div class="huancun1"><img src="imges/zhuti-2/jz.gif"></div>
-        <div class="huancun1"><img src="imges/zhuti-3/jz.gif"></div>
-        <div class="huancun1"><img src="imges/zhuti-2/zhuti-bj.png"></div>
-        <div class="huancun1"><img src="imges/zhuti-3/zhuti-bj.png"></div>
-        <div class="huancun1"><img src="imges/zhuti-2/banner.png"></div>
-        <div class="huancun1"><img src="imges/zhuti-3/banner.png"></div>
-        <div class="huancun1"><img src="imges/zhuti-2/chahua.png"></div>
-        <div class="huancun1"><img src="imges/zhuti-3/chahua.png"></div>
-        <div class="huancun1"><img src="imges/zhuti-2/dianhua.png"></div>
-        <div class="huancun1"><img src="imges/zhuti-3/dianhua.png"></div>
-        <div class="huancun1"><img src="imges/zhuti-2/erweima.png"></div>
-        <div class="huancun1"><img src="imges/zhuti-3/erweima.png"></div>
-        <div class="huancun1"><img src="imges/zhuti-2/haibao.png"></div>
-        <div class="huancun1"><img src="imges/zhuti-3/haibao.png"></div>
-        <div class="huancun1"><img src="imges/zhuti-2/icon.png"></div>
-        <div class="huancun1"><img src="imges/zhuti-3/icon.png"></div>
-        <div class="huancun1"><img src="imges/zhuti-2/jianli.png"></div>
-        <div class="huancun1"><img src="imges/zhuti-3/jianli.png"></div>
-        <div class="huancun1"><img src="imges/zhuti-2/quanbu.png"></div>
-        <div class="huancun1"><img src="imges/zhuti-3/quanbu.png"></div>
-        <div class="huancun1"><img src="imges/zhuti-2/shigong.png"></div>
-        <div class="huancun1"><img src="imges/zhuti-3/shigong.png"></div>
-        <div class="huancun1"><img src="imges/zhuti-2/Stardew Valley.png"></div>
-        <div class="huancun1"><img src="imges/zhuti-3/Stardew Valley.png"></div>
-        <div class="huancun1"><img src="imges/zhuti-2/Stonehearth.png"></div>
-        <div class="huancun1"><img src="imges/zhuti-3/Stonehearth.png"></div>
-        <div class="huancun1"><img src="imges/zhuti-2/tuya.png"></div>
-        <div class="huancun1"><img src="imges/zhuti-3/tuya.png"></div>
-        <div class="huancun1"><img src="imges/zhuti-2/weixin.png"></div>
-        <div class="huancun1"><img src="imges/zhuti-3/weixin.png"></div>
-        <div class="huancun1"><img src="imges/zhuti-2/xiangsu.png"></div>
-        <div class="huancun1"><img src="imges/zhuti-3/xiangsu.png"></div>
-        <div class="huancun1"><img src="imges/zhuti-2/xiazai.png"></div>
-        <div class="huancun1"><img src="imges/zhuti-3/xiazai.png"></div>
-        <div class="huancun1"><img src="imges/zhuti-2/xtx.png"></div>
-        <div class="huancun1"><img src="imges/zhuti-3/xtx.png"></div>
-        <div class="huancun1"><img src="imges/zhuti-2/youxiang.png"></div>
-        <div class="huancun1"><img src="imges/zhuti-3/youxiang.png"></div>
-        <div class="huancun1"><img src="imges/zhuti-2/zhuti.png"></div>
-        <div class="huancun1"><img src="imges/zhuti-3/zhuti.png"></div>
-        <div class="huancun1"><img src="imges/zhuti-2/copy-1.png"></div>
-        <div class="huancun1"><img src="imges/zhuti-3/copy-1.png"></div>
-        <div class="huancun1"><img src="imges/zhuti-2/copy-2.png"></div>
-        <div class="huancun1"><img src="imges/zhuti-3/copy-2.png"></div>
-        <div class="huancun1"><img src="imges/zhuti-2/dh-bj-pc.png"></div>
-        <div class="huancun1"><img src="imges/zhuti-3/dh-bj-pc.png"></div>
-        <div class="huancun1"><img src="imges/zhuti-2/dh-bj-pe.png"></div>
-        <div class="huancun1"><img src="imges/zhuti-3/dh-bj-pe.png"></div>
-        <div class="huancun1"><img src="imges/zhuti-2/dh-bj-pe.png"></div>
-        <div class="huancun1"><img src="imges/zhuti-3/dh-bj-pe.png"></div>
-    </div>
-    <div class="swiper-container swiper-container-h gallery-top">
-        <div id="caidan" style="display: none;">
-                <div>
-                    <img src="imges/zhuti-1/shouye-c.png" class="shouye" id="c-shouye" onclick="myShouye()">
-                </div>
-                <div>
-                    <img src="imges/zhuti-1/jianli-c.png" class="shouye" id="c-jianli" onclick="myJianli()">
-                </div>
-                <div>
-                    <img src="imges/zhuti-1/xtx-c.png" class="shouye" id="c-xtx" onclick="myXtx()">
-                </div>
-                <div>
-                    <img src="imges/zhuti-1/icon-c.png" class="shouye" id="c-icon" onclick="myIconi()">
-                </div>
-                <div>
-                    <img src="imges/zhuti-1/banner-c.png" class="shouye" id="c-banner" onclick="myBanner()">
-                </div>
-                <div>
-                    <img src="imges/zhuti-1/haibao-c.png" class="shouye" id="c-haibao" onclick="myHaibao()">
-                </div>
-                <div>
-                    <img src="imges/zhuti-1/chahua-c.png" class="shouye" id="c-chahua" onclick="myChahua()">
-                </div>               
-                <div>
-                    <img src="imges/zhuti-1/xiangsu-c.png" class="shouye" id="c-xiangsu" onclick="myXiangsu()">
-                </div>
-                <div>
-                    <img src="imges/zhuti-1/quanbu-c.png" class="shouye" id="c-quanbu" onclick="myQaunbu()">
-                </div>
-                <div>
-                    <img src="imges/zhuti-1/X.png" class="caidan-1" id="c-caidan" onclick="myCaidan1()">
+    <div class="swiper-container swiper-container-pc" id="PC-body">
+        <div id="PC-body-contact">
+            <!-- <div id="PC-body-contact-0">Resume&Portfolio</div> -->
+        </div>
+        <div id="PC-body-Nva">
+            <div id="PC-body-Nva-1" class="PC-body-Nva" onclick="PC_Nva(0);">HOME</div>
+            <div id="PC-body-Nva-2" class="PC-body-Nva" onclick="PC_Nva(2);">RESUME</div>
+            <div id="PC-body-Nva-3" class="PC-body-Nva" onclick="PC_Nva(3);">APP</div>
+            <div id="PC-body-Nva-3" class="PC-body-Nva" onclick="PC_Nva(7);">ICON</div>
+            <div id="PC-body-Nva-4" class="PC-body-Nva">POSTER</div>
+            <div id="PC-body-Nva-5" class="PC-body-Nva">OTHER</div>
+        </div>
+        <div class="swiper-wrapper">
+            <div class="swiper-slide blue-slide">
+                <div id="PC-body-1-1">
+                    <img src="images/PC/UI.png" alt="" class="ani" swiper-animate-effect="bounceInLeft" swiper-animate-duration="0.3s" swiper-animate-delay="0.1s">
+                    <img src="images/PC/collection.png" alt="" class="ani" swiper-animate-effect="bounceInRight" swiper-animate-duration="0.3s" swiper-animate-delay="0.1s">
                 </div>
             </div>
-        <div class="swiper-wrapper">       
+            <div class="swiper-slide red-slide">
+                <div id="PC-body-2-1">
+                    <img src="images/PC/CATALOG.png" alt="">
+                </div>
+                <div id="PC-body-2-2">
+                    <img src="images/PC/item-0.png" alt="" class="item ani" swiper-animate-effect="bounceInUp" swiper-animate-duration="0.3s" swiper-animate-delay="0.1s">
+                    <img src="images/PC/item-1.png" alt="" class="item ani" swiper-animate-effect="bounceInUp" swiper-animate-duration="0.3s" swiper-animate-delay="0.2s">
+                    <img src="images/PC/item-2.png" alt="" class="item ani" swiper-animate-effect="bounceInUp" swiper-animate-duration="0.3s" swiper-animate-delay="0.3s">
+                    <img src="images/PC/item-3.png" alt="" class="item ani" swiper-animate-effect="bounceInUp" swiper-animate-duration="0.3s" swiper-animate-delay="0.4s">
+                    <img src="images/PC/item-4.png" alt="" class="item ani" swiper-animate-effect="bounceInUp" swiper-animate-duration="0.3s" swiper-animate-delay="0.5s">
+                </div>
+            </div>
+            <div class="swiper-slide orange-slide">
+                
+            </div>
+            <div class="swiper-slide orange-slide">
+                <img src="images/PC/xtx-1.png" alt="" id="xtx-1" class="ani" swiper-animate-effect="fadeIn" swiper-animate-duration="0.3s" swiper-animate-delay="0.1s">
+                <img src="images/PC/xtx-2.png" alt="" id="xtx-2" class="ani" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="1s">
+            </div>
+            <div class="swiper-slide orange-slide">
+                <img src="images/PC/xtx-3.png" alt="" id="xtx-3" class="ani" swiper-animate-effect="zoomIn" swiper-animate-duration="0.3s" swiper-animate-delay="0.1s">
+            </div>
+            <div class="swiper-slide orange-slide">
+                <img src="images/PC/xtx-4.gif" alt="" id="xtx-4" class="ani" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s">
+            </div>
+            <div class="swiper-slide orange-slide">
+                <img src="images/PC/xtx-5.png" alt="" id="xtx-5" class="ani" swiper-animate-effect="fadeIn" swiper-animate-duration="0.3s" swiper-animate-delay="0.3s">
+            </div>
+            <div class="swiper-slide orange-slide">
+                <div id="PC-icon-1">
+                    <img src="images/PC/icon-1.png" alt="" class="ani" swiper-animate-effect="fadeIn" swiper-animate-duration="0.3s" swiper-animate-delay="0.3s">
+                    <img src="images/PC/icon-2.png" alt="" class="ani" swiper-animate-effect="fadeIn" swiper-animate-duration="0.3s" swiper-animate-delay="0.3s">
+                    <img src="images/PC/icon-3.png" alt="" class="ani" swiper-animate-effect="fadeIn" swiper-animate-duration="0.3s" swiper-animate-delay="0.3s">
+                    <img src="images/PC/icon-4.png" alt="" class="ani" swiper-animate-effect="fadeIn" swiper-animate-duration="0.3s" swiper-animate-delay="0.3s"> 
+                </div>
+            </div>
+            <div class="swiper-slide blue-slide">
+                <div id="PC-theme-1">
+                    <img src="images/PC/theme-1-1.png" alt="" class="ani" swiper-animate-effect="bounceInLeft" swiper-animate-duration="0.3s" swiper-animate-delay="0.1s">
+                    <img src="images/PC/theme-1-2.png" alt="" class="ani" swiper-animate-effect="bounceInRight" swiper-animate-duration="0.3s" swiper-animate-delay="0.1s">
+                </div>
+            </div>
+            <div class="swiper-slide blue-slide">
+                <div id="PC-theme-1">
+                    <img src="images/PC/theme-2-1.png" alt="" class="ani" swiper-animate-effect="bounceInLeft" swiper-animate-duration="0.3s" swiper-animate-delay="0.1s">
+                    <img src="images/PC/theme-2-2.png" alt="" class="ani" swiper-animate-effect="bounceInRight" swiper-animate-duration="0.3s" swiper-animate-delay="0.1s">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="swiper-container swiper-container-h gallery-top" id="subject">
+        <div id="menu" style="display: none;">
+            <div class="menu-Btn"></div>
+            <div class="menu-Btn"></div>
+            <div class="menu-Btn"></div>
+            <div class="menu-Btn"></div>
+            <div class="menu-Btn"></div>
+            <div class="menu-Btn"></div>
+            <div class="menu-Btn"></div>
+            <div class="menu-Btn"></div>
+            <div class="menu-Btn"></div>
+            <div class="menu-Btn"></div>
+        </div>
+        <div id="course-X">
+            <img src="images/course/X.png" alt="">
+        </div>
+        <div id="course-2">
+            <img src="images/course/arrow.gif" alt="" id="arrow">
+            <img src="images/course/2-1.png" alt="" id="course-2-img">
+        </div>
+        <div id="course-3">
+            <img src="images/course/slide-1.gif" alt="" id="slide-1">
+        </div>
+        <div id="course-4">
+            <img src="images/course/slide-2.gif" alt="" id="slide-2">
+        </div>
+        <div id="course-5">
+            <img src="images/course/5.png" alt="" id="slide-2">
+        </div>
+        <div class="swiper-wrapper">
             <div class="swiper-slide index-1-1" id="index">
-                <div id="tishi" class="tishi0" onclick="myTishi();"></div>
-                <div id="zhuti">
-                    <div id="zhuti-1" class="zhuti-bj-1">
-                        <div class="icon">
-                        <div class="icon1">
-                            <img src="imges/zhuti-1/Stonehearth.png" width="100%" onclick="myZhuti1();" id="Stonehearth">
+                <div id="Mask"></div>
+                <div id="erweima">
+                    <div id="erweima-X"></div>
+                </div>
+                <div id="mail">
+                    <div></div>
+                    <div></div>
+                </div>
+                <div id="WEB-Popup">
+                    <div></div>
+                    <div></div>
+                </div>
+                <div id="mail-Popup"></div>
+                <div id="tel-Popup"></div>
+                <div id="dial">
+                    <div id="dial-body">
+                        <div id="dial-Num">
+                            <div id="dial-Num-box"></div>
+                            <img src="images/theme/dial-Num-0.png" alt="">
                         </div>
-                        <div class="icon1">
-                            <img src="imges/zhuti-1/Stardew Valley.png" width="100%" onclick="myZhuti2();" id="StardewValley">
-                        </div>
-                        <div class="icon1">
-                            <img src="imges/zhuti-1/tuya.png" width="100%" onclick="myZhuti3();" id="tuya">
-                        </div>
-                        </div>
-                        <div class="icon">
-                        <div class="icon1">
-                            <img src="imges/zhuti-1/shigong.png" width="100%" id="shigong">
-                        </div>
-                        <div class="icon1"></div>
-                        <div class="icon1"></div>
+                        <div id="dial-box">
+                            <div class="dial-Btn">
+                                <img src="images/theme/dial-Btn-0.png" alt="">
+                            </div>
+                            <div class="dial-Btn">
+                                <img src="images/theme/dial-Btn-0.png" alt="">
+                            </div>
+                            <div class="dial-Btn">
+                                <img src="images/theme/dial-Btn-0.png" alt="">
+                            </div>
+                            <div class="dial-Btn">
+                                <img src="images/theme/dial-Btn-0.png" alt="">
+                            </div>
+                            <div class="dial-Btn">
+                                <img src="images/theme/dial-Btn-0.png" alt="">
+                            </div>
+                            <div class="dial-Btn">
+                                <img src="images/theme/dial-Btn-0.png" alt="">
+                            </div>
+                            <div class="dial-Btn">
+                                <img src="images/theme/dial-Btn-0.png" alt="">
+                            </div>
+                            <div class="dial-Btn">
+                                <img src="images/theme/dial-Btn-0.png" alt="">
+                            </div>
+                            <div class="dial-Btn">
+                                <img src="images/theme/dial-Btn-0.png" alt="">
+                            </div>
+                            <div class="dial-Btn">
+                                <img src="images/theme/dial-Btn-0.png" alt="">
+                            </div>
+                            <div class="dial-Btn">
+                                <img src="images/theme/dial-Btn-0.png" alt="">
+                            </div>
+                            <div class="dial-Btn">
+                                <a href="tel:17150024672">
+                                    <img src="images/theme/dial-Btn-0.png" alt="" onclick="dial_Del();">
+                                </a>
+                            </div>
                         </div>
                     </div>
-                    <div id="zhuti-2">
-                        <img src="imges/zhuti-1/X.png" width="60px" onclick="xZhuti();"id="zhuti-x">
-                    </div>
+                    <img src="images/theme/dial-0.png" alt="" id="dial-bg">
                 </div>
-            <div id="thpc" class="th-dh-1-pc">
-                <div id="tel-1"></div>
-                <div id="tel-2">
-                    <a href="tel:17150024672">
-                        <div class="copy-tel" onclick="copyTel();" ></div>
-                    </a>
-                <div class="fanhui" onclick="myTel()"></div>
+                <div id="index-bg-0" class="index-bg">
+                    <div id="index-bg-0-1"></div>
+                    <div id="index-bg-0-2"></div>
+                    <div id="index-bg-0-3"></div>
+                </div>
+                <div id="index-bg-1" class="index-bg"></div>
+                <div id="index-bg-2" class="index-bg"></div>
+                <div id="index-bg-3" class="index-bg">
+                    <img src="images/theme/3-1.png" alt="" id="index-bg-3-1">
+                    <div id="index-bg-3-2"></div>
+                    <img src="images/theme/3-3.png" alt="" id="index-bg-3-3">
+                </div>
+                <div id="status-bar">
+                    <div id="time"></div>
+                    <img src="images/bar-0.png" alt="" id="bar">
+                </div>
+                <div id="theme" class="Popup">
+                    <div class="theme-icon Popup-icon" onclick="theme_fun(0);"></div>
+                    <div class="theme-icon Popup-icon" onclick="theme_fun(1);"></div>
+                    <div class="theme-icon Popup-icon" onclick="theme_fun(2);"></div>
+                    <div class="theme-icon Popup-icon" onclick="theme_fun(3);"></div>
+                    <div class="theme-icon Popup-icon"></div>
+                    <div id="theme-X" class="Popup-X"></div>
+                </div>
+                <div id="WEB" class="Popup">
+                    <div class="WEB-icon Popup-icon"></div>
+                    <div class="WEB-icon Popup-icon"></div>
+                    <div class="WEB-icon Popup-icon"></div>
+                    <div class="WEB-icon Popup-icon"></div>
+                    <div id="WEB-X" class="Popup-X"></div>
+                </div>
+                <div id="course-1">
+                    <img src="images/course/1.png" alt="" id="course-1-img">
+                </div>
+                <div class="icon-box">
+                    <div class="icon-div"></div>
+                    <div class="icon-div"></div>
+                    <div class="icon-div"></div>
+                    <div class="icon-div"></div>
+                </div>
+                <div class="icon-box">
+                    <div class="icon-div"></div>
+                    <div class="icon-div"></div>
+                    <div class="icon-div"></div>
+                    <div class="icon-div"></div>
+                </div>
+                <div class="icon-box">
+                    <div class="icon-div"></div>
+                    <div class="icon-div"></div>
+                    <div class="icon-div"></div>
+                    <div class="icon-div"></div>
+                </div>
+                <div class="icon-box">
+                    <div class="icon-div"></div>
+                    <div class="icon-div"></div>
+                    <div class="icon-div-n"></div>
+                    <div class="icon-div-n"></div>
+                </div>
+                <div class="icon-box" id="icon-box">
+                    <div class="icon-div"></div>
+                    <div class="icon-div"></div>
+                    <div class="icon-div"></div>
+                    <div class="icon-div"></div>
                 </div>
             </div>
-            <div id="thpe" class="th-dh-1-pe">
-                <div id="tel-1"></div>
-                <div id="tel-2">
-                    <a href="tel:17150024672">
-                        <div class="copy-tel" onclick="copyTel();" ></div>
-                    </a>
-                <div class="fanhui" onclick="myTel()"></div>
-                </div>
-            </div>
-            <div id="copy-1"><img src="imges/zhuti-1/copy-1.png" width="100%" id="copy-1-1"></div>
-            <div id="copy-2"><img src="imges/zhuti-1/copy-2.png" width="100%" id="copy-2-1"></div>
-            <div id="weixin">
-                <img src="imges/zhuti-1/erweima.png" width="100%" id="erweima">
-                <div>
-                <img src="imges/zhuti-1/X.png" width="60px" onclick="xWeoxin();"id="weixin-x">
-            </div>
-            </div>
-            <div id="youxiang" class="youxiang-1">
-                <div id="tel-1"></div>
-                <div id="tel-2">
-                    <div class="copy-tel" onclick="copyYouxiang();" ></div>
-                    <div class="fanhui" onclick="xYouxiang()"></div>
-                </div>
-            </div>
-                <div class="icon">
-                    <div class="icon1"><img src="imges/zhuti-1/jianli.png" width="100%" type="button" onclick="myJianli();" id="icon-jianli"></div>
-                    <div class="icon1"><img src="imges/zhuti-1/xtx.png" width="100%" type="button" onclick="myXtx();" id="icon-xtx"></div>
-                    <div class="icon1"><img src="imges/zhuti-1/icon.png" width="100%" type="button" onclick="myIconi();" id="icon-icon"></div>
-                    <div class="icon1"><img src="imges/zhuti-1/banner.png" width="100%" type="button" onclick="myBanner();" id="icon-banner"></div>      
-                </div>
-            <div class="icon"> 
-                <div class="icon1"><img src="imges/zhuti-1/haibao.png" width="100%" type="button" onclick="myHaibao();" id="icon-haibao"></div>
-                <div class="icon1"><img src="imges/zhuti-1/chahua.png" width="100%" type="button" onclick="myChahua();" id="icon-chahua"></div>
-                <div class="icon1"><img src="imges/zhuti-1/xiangsu.png" width="100%" type="button" onclick="myXiangsu();" id="icon-xiangsu"></div>
-                <div class="icon1"><img src="imges/zhuti-1/quanbu.png" width="100%" type="button" onclick="myQaunbu();" id="icon-quanbu"></div>
-            </div>
-            <div class="icon" id="myicon">
-                <div class="icon1"><img src="imges/zhuti-1/zhuti.png" width="100%" id="icon-zhuti" onclick="myZhuti();"></div>
-                <!-- <div class="icon1"><img src="imges/zhuti-1/zhuti.png" width="100%" id="icon-zhuti" onclick="myXXX();"></div> -->
-                <div class="icon1"></div>
-                <div class="icon1"></div>
-                <div class="icon1"></div>
-            </div>   
-            <div class="icon" id="mydiv">
-                <div class="icon1"><img src="imges/zhuti-1/dianhua.png" width="100%" type="button" onclick="myFunction()" id="icon-dianhua"></div>
-                <div class="icon1"><a href="#"><img src="imges/zhuti-1/weixin.png" width="100%" onclick="myWeoxin();" id="icon-weixin"></a></div>
-                <div class="icon1"><a href="#"><img src="imges/zhuti-1/youxiang.png" width="100%" onclick="myYouxiang();" id="icon-youxiang"></a></div>
-                <div class="icon1">
-                <img src="imges/zhuti-1/xiazai.png" width="100%" id="icon-xiazai"></div>
-            </div>
-            </div>
-                <div class="swiper-slide">
-                    
-                    <div class="swiper-container swiper-container-v daodi">
-                        <!-- <div class="jiantou"></div> -->
-                        <div class="swiper-wrapper">                        
-                            <div class="swiper-slide"><img src="imges/1.png" style="height: 100%; " alt=""></div>
-                            <div class="swiper-slide"><img src="imges/2.png" style="height: 100%; " alt=""></div>
-                        </div>
-                    </div>
-                </div>
             <div class="swiper-slide">
                 <div class="swiper-container swiper-container-v daodi">
                     <!-- <div class="jiantou"></div> -->
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide APP-1"><img src="imges/APP/1.png" style="height: 100%; " alt=""></div>
-                        <div class="swiper-slide APP-1"><img src="imges/APP/2.png" style="height: 100%;" alt=""></div>
-                        <div class="swiper-slide APP-1"><img src="imges/APP/3.png" style="height: 100%;" alt=""></div>
-                        <div class="swiper-slide APP-1"><img src="imges/APP/4.gif" style="height: 100%;" alt=""></div>
-                        <div class="swiper-slide APP-1"><img src="imges/APP/5.png" style="height: 100%;" alt=""></div>
-                        <div class="swiper-slide APP-1"><img src="imges/APP/6.gif" style="height: 100%;" alt=""></div>
-                        <div class="swiper-slide APP-7"><img src="imges/APP/7.gif" style="height: 100%;" alt=""></div>
-                        <div class="swiper-slide APP-8"><img src="imges/APP/8.gif" style="height: 100%;" alt=""></div>
+                        <div class="swiper-slide"><img src="images/1.png" style="height: 100%; " alt=""></div>
+                        <div class="swiper-slide"><img src="images/2.png" style="height: 100%; " alt=""></div>
                     </div>
                 </div>
             </div>
@@ -223,121 +263,159 @@
                 <div class="swiper-container swiper-container-v daodi">
                     <!-- <div class="jiantou"></div> -->
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide swiper-slide-icon">
-                            <img src="imges/icon/icon.gif">
+                        <div class="swiper-slide APP-1"><img src="images/APP/1.png" style="height: 100%; " alt=""></div>
+                        <div class="swiper-slide APP-1"><img src="images/APP/2.png" style="height: 100%;" alt=""></div>
+                        <div class="swiper-slide APP-1"><img src="images/APP/3.png" style="height: 100%;" alt=""></div>
+                        <div class="swiper-slide APP-1"><img src="images/APP/4.gif" style="height: 100%;" alt=""></div>
+                        <div class="swiper-slide APP-1"><img src="images/APP/5.png" style="height: 100%;" alt=""></div>
+                        <div class="swiper-slide APP-1"><img src="images/APP/6.gif" style="height: 100%;" alt=""></div>
+                        <div class="swiper-slide APP-7"><img src="images/APP/7.gif" style="height: 100%;" alt=""></div>
+                        <div class="swiper-slide APP-8"><img src="images/APP/8.gif" style="height: 100%;" alt=""></div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="swiper-container swiper-container-v daodi">
+                    <!-- <div class="jiantou"></div> -->
+                    <div class="swiper-wrapper">
+                        <!-- <div class="swiper-slide swiper-slide-icon">
+                            <img src="images/icon/icon.gif">
                         </div>
                         <div class="swiper-slide swiper-slide-icon">
-                            <img src="imges/icon/icon-1.png">
+                            <img src="images/icon/icon-1.png">
                         </div>
                         <div class="swiper-slide swiper-slide-icon">
-                            <img src="imges/icon/icon-2.png">
+                            <img src="images/icon/icon-2.png">
                         </div>
                         <div class="swiper-slide swiper-slide-icon">
-                            <img src="imges/icon/icon-3.png">
+                            <img src="images/icon/icon-3.png">
                         </div>
                         <div class="swiper-slide swiper-slide-icon">
-                            <img src="imges/icon/icon-4.png">
-                        </div>
-                        <div class="swiper-slide icon-zhuti-1">
-                            <div class="icon">
-                                <div class="icon1"><img src="imges/zhuti-1/jianli-c.png" width="100%"></div>
-                                <div class="icon1"><img src="imges/zhuti-1/xtx-c.png" width="100%"></div>
-                                <div class="icon1"><img src="imges/zhuti-1/icon-c.png" width="100%"></div>
-                                <div class="icon1"><img src="imges/zhuti-1/banner-c.png" width="100%"></div>
+                            <img src="images/icon/icon-4.png">
+                        </div> -->
+                        <div class="swiper-slide icon-theme-1">
+                            <div class="icon-box">
+                                <div class="icon"></div>
+                                <div class="icon"></div>
+                                <div class="icon"></div>
+                                <div class="icon"></div>
                             </div>
-                            <div class="icon">
-                                <div class="icon1"><img src="imges/zhuti-1/haibao-c.png" width="100%"></div>
-                                <div class="icon1"><img src="imges/zhuti-1/chahua-c.png" width="100%"></div>
-                                <div class="icon1"><img src="imges/zhuti-1/xiangsu-c.png" width="100%"></div>
-                                <div class="icon1"><img src="imges/zhuti-1/quanbu-c.png" width="100%"></div>
+                            <div class="icon-box">
+                                <div class="icon"></div>
+                                <div class="icon"></div>
+                                <div class="icon"></div>
+                                <div class="icon"></div>
                             </div>
-                            <div class="icon">
-                                <div class="icon1"><img src="imges/zhuti-1/dianhua-c.png" width="100%"></div>
-                                <div class="icon1"><img src="imges/zhuti-1/weixin-c.png" width="100%"></div>
-                                <div class="icon1"><img src="imges/zhuti-1/youxiang-c.png" width="100%"></div>
-                                <div class="icon1"><img src="imges/zhuti-1/xiazai-c.png" width="100%"></div>
-                                
+                            <div class="icon-box">
+                                <div class="icon"></div>
+                                <div class="icon"></div>
+                                <div class="icon"></div>
+                                <div class="icon"></div>
                             </div>
-                            <div class="icon">
-                                <div class="icon1"><img src="imges/zhuti-1/shouye-c.png" width="100%"></div>
-                                <div class="icon1"><img src="imges/zhuti-1/zhuti-c.png" width="100%"></div>
-                                <div class="icon1"><img src="imges/zhuti-1/X.png" width="100%"></div>
-                                <div class="icon1"></div>
+                            <div class="icon-box">
+                                <div class="icon"></div>
+                                <div class="icon"></div>
+                                <div class="icon"></div>
+                                <div class="icon"></div>
                             </div>
-                            <div class="icon"></div>
-                            <div class="icon"></div>
-                            <div class="icon"></div>
-                            <div class="icon"></div>
-                            <div class="icon">
-                                <div class="icon1" style="width:330px;"><img src="imges/zhuti-1/yinyong.png" width="100%" onclick="myZhuti1();"></div>
+                            <div class="icon-theme-Btn" onclick="theme_fun(0);">
+                                <img src="images/theme/icon-theme-1-Btn.png" alt="">
                             </div>
                         </div>
-                        <div class="swiper-slide icon-zhuti-2">
-                            <div class="icon">
-                                <div class="icon1"><img src="imges/zhuti-2/jianli-c.png" width="100%"></div>
-                                <div class="icon1"><img src="imges/zhuti-2/xtx-c.png" width="100%"></div>
-                                <div class="icon1"><img src="imges/zhuti-2/icon-c.png" width="100%"></div>
-                                <div class="icon1"><img src="imges/zhuti-2/banner-c.png" width="100%"></div>
+                        <div class="swiper-slide icon-theme-2">
+                            <div class="icon-box">
+                                <div class="icon"></div>
+                                <div class="icon"></div>
+                                <div class="icon"></div>
+                                <div class="icon"></div>
                             </div>
-                            <div class="icon">
-                                <div class="icon1"><img src="imges/zhuti-2/haibao-c.png" width="100%"></div>
-                                <div class="icon1"><img src="imges/zhuti-2/chahua-c.png" width="100%"></div>
-                                <div class="icon1"><img src="imges/zhuti-2/xiangsu-c.png" width="100%"></div>
-                                <div class="icon1"><img src="imges/zhuti-2/quanbu-c.png" width="100%"></div>
+                            <div class="icon-box">
+                                <div class="icon"></div>
+                                <div class="icon"></div>
+                                <div class="icon"></div>
+                                <div class="icon"></div>
                             </div>
-                            <div class="icon">
-                                <div class="icon1"><img src="imges/zhuti-2/dianhua-c.png" width="100%"></div>
-                                <div class="icon1"><img src="imges/zhuti-2/weixin-c.png" width="100%"></div>
-                                <div class="icon1"><img src="imges/zhuti-2/youxiang-c.png" width="100%"></div>
-                                <div class="icon1"><img src="imges/zhuti-2/xiazai-c.png" width="100%"></div>
-                                
+                            <div class="icon-box">
+                                <div class="icon"></div>
+                                <div class="icon"></div>
+                                <div class="icon"></div>
+                                <div class="icon"></div>
                             </div>
-                            <div class="icon">
-                                <div class="icon1"><img src="imges/zhuti-2/shouye-c.png" width="100%"></div>
-                                <div class="icon1"><img src="imges/zhuti-2/zhuti-c.png" width="100%"></div>
-                                <div class="icon1"><img src="imges/zhuti-2/X.png" width="100%"></div>
-                                <div class="icon1"></div>
+                            <div class="icon-box">
+                                <div class="icon"></div>
+                                <div class="icon"></div>
+                                <div class="icon"></div>
+                                <div class="icon"></div>
                             </div>
-                            <div class="icon"></div>
-                            <div class="icon"></div>
-                            <div class="icon"></div>
-                            <div class="icon"></div>
-                            <div class="icon">
-                                <div class="icon1" style="width:330px;"><img src="imges/zhuti-2/yinyong.png" width="100%" onclick="myZhuti2();"></div>
+                            <div class="icon-theme-Btn" onclick="theme_fun(1);">
+                                <img src="images/theme/icon-theme-2-Btn.png" alt="">
                             </div>
                         </div>
-                        <div class="swiper-slide icon-zhuti-3">
-                            <div class="icon">
-                                <div class="icon1"><img src="imges/zhuti-3/jianli-c.png" width="100%"></div>
-                                <div class="icon1"><img src="imges/zhuti-3/xtx-c.png" width="100%"></div>
-                                <div class="icon1"><img src="imges/zhuti-3/icon-c.png" width="100%"></div>
-                                <div class="icon1"><img src="imges/zhuti-3/banner-c.png" width="100%"></div>
+                        <div class="swiper-slide icon-theme-3">
+                           <div class="icon-box">
+                                <div class="icon"></div>
+                                <div class="icon"></div>
+                                <div class="icon"></div>
+                                <div class="icon"></div>
                             </div>
-                            <div class="icon">
-                                <div class="icon1"><img src="imges/zhuti-3/haibao-c.png" width="100%"></div>
-                                <div class="icon1"><img src="imges/zhuti-3/chahua-c.png" width="100%"></div>
-                                <div class="icon1"><img src="imges/zhuti-3/xiangsu-c.png" width="100%"></div>
-                                <div class="icon1"><img src="imges/zhuti-3/quanbu-c.png" width="100%"></div>
+                            <div class="icon-box">
+                                <div class="icon"></div>
+                                <div class="icon"></div>
+                                <div class="icon"></div>
+                                <div class="icon"></div>
                             </div>
-                            <div class="icon">
-                                <div class="icon1"><img src="imges/zhuti-3/dianhua-c.png" width="100%"></div>
-                                <div class="icon1"><img src="imges/zhuti-3/weixin-c.png" width="100%"></div>
-                                <div class="icon1"><img src="imges/zhuti-3/youxiang-c.png" width="100%"></div>
-                                <div class="icon1"><img src="imges/zhuti-3/xiazai-c.png" width="100%"></div>
-                                
+                            <div class="icon-box">
+                                <div class="icon"></div>
+                                <div class="icon"></div>
+                                <div class="icon"></div>
+                                <div class="icon"></div>
                             </div>
-                            <div class="icon">
-                                <div class="icon1"><img src="imges/zhuti-3/shouye-c.png" width="100%"></div>
-                                <div class="icon1"><img src="imges/zhuti-3/zhuti-c.png" width="100%"></div>
-                                <div class="icon1"><img src="imges/zhuti-3/X.png" width="100%"></div>
-                                <div class="icon1"></div>
+                            <div class="icon-box">
+                                <div class="icon"></div>
+                                <div class="icon"></div>
+                                <div class="icon"></div>
+                                <div class="icon"></div>
+                            </div> 
+                            <div class="icon-theme-Btn" onclick="theme_fun(2);">
+                                <img src="images/theme/icon-theme-3-Btn.png" alt="">
                             </div>
-                            <div class="icon"></div>
-                            <div class="icon"></div>
-                            <div class="icon"></div>
-                            <div class="icon"></div>
-                            <div class="icon">
-                                <div class="icon1" style="width:330px;"><img src="imges/zhuti-3/yinyong.png" width="100%" onclick="myZhuti3();"></div>
+                        </div>
+                        <div class="swiper-slide icon-theme-4">
+                            <div class="icon-box icon-theme-4-1">
+                                <div class="icon"></div>
+                                <div class="icon"></div>
+                                <div class="icon"></div>
+                                <div class="icon"></div>
+                            </div>
+                            <div class="icon-box">
+                                <div class="icon"></div>
+                                <div class="icon"></div>
+                                <div class="icon"></div>
+                                <div class="icon"></div>
+                            </div>
+                            <div class="icon-box">
+                                <div class="icon"></div>
+                                <div class="icon"></div>
+                                <div class="icon"></div>
+                                <div class="icon"></div>
+                            </div>
+                            <div class="icon-box">
+                                <div class="icon"></div>
+                                <div class="icon"></div>
+                                <div class="icon"></div>
+                                <div class="icon"></div>
+                            </div>
+                            <div class="icon-theme-Btn" onclick="theme_fun(3);" id="icon-theme-Btn-4">
+                                <img src="images/theme/icon-theme-4-Btn.png" alt="">
+                            </div>
+                            <div class="index-bg">
+                                <div id="theme-4_1">
+                                    <img src="images/theme/3-1.png" alt="">
+                                </div>
+                                <div id="theme-4_2"></div>
+                                <div id="theme-4_3">
+                                    <img src="images/theme/3-3.png" alt="">
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -348,16 +426,16 @@
                     <!-- <div class="jiantou"></div> -->
                     <div class="swiper-wrapper">
                         <div class="swiper-slide swiper-slide-banner">
-                            <img src="imges/banner/banner-1.png" class="banner-h">
-                            <img src="imges/banner/banner-2.png" class="banner-h">
-                            <img src="imges/banner/banner-3.png" class="banner-h">
-                            <img src="imges/banner/banner-4.png" class="banner-h">
+                            <img src="images/banner/banner-1.png" class="banner-h">
+                            <img src="images/banner/banner-2.png" class="banner-h">
+                            <img src="images/banner/banner-3.png" class="banner-h">
+                            <img src="images/banner/banner-4.png" class="banner-h">
                         </div>
                         <div class="swiper-slide swiper-slide-banner">
-                            <img src="imges/banner/banner-5.png" class="banner-h">
-                            <img src="imges/banner/banner-6.png" class="banner-h">
-                            <img src="imges/banner/banner-7.png" class="banner-h">
-                            <img src="imges/banner/banner-8.png" class="banner-h">
+                            <img src="images/banner/banner-5.png" class="banner-h">
+                            <img src="images/banner/banner-6.png" class="banner-h">
+                            <img src="images/banner/banner-7.png" class="banner-h">
+                            <img src="images/banner/banner-8.png" class="banner-h">
                         </div>
                     </div>
                 </div>
@@ -366,10 +444,10 @@
                 <div class="swiper-container swiper-container-v daodi">
                     <!-- <div class="jiantou"></div> -->
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide"><img src="imges/haibao/haibao-1.png" style="height: 100%;" alt=""></div>
-                        <div class="swiper-slide"><img src="imges/haibao/haibao-2.png" style="height: 100%;" alt=""></div>
-                        <div class="swiper-slide"><img src="imges/haibao/haibao-3.png" style="height: 100%;" alt=""></div>
-                        <div class="swiper-slide"><img src="imges/haibao/haibao-4.png" style="height: 100%;" alt=""></div>
+                        <div class="swiper-slide"><img src="images/haibao/haibao-1.png" style="height: 100%;" alt=""></div>
+                        <div class="swiper-slide"><img src="images/haibao/haibao-2.png" style="height: 100%;" alt=""></div>
+                        <div class="swiper-slide"><img src="images/haibao/haibao-3.png" style="height: 100%;" alt=""></div>
+                        <div class="swiper-slide"><img src="images/haibao/haibao-4.png" style="height: 100%;" alt=""></div>
                         
                     </div>
                 </div>
@@ -379,12 +457,12 @@
                     <!-- <div class="jiantou"></div> -->
                     <div class="swiper-wrapper">
                         
-                        <div class="swiper-slide" id="chahua-1"><img src="imges/chahua/chahua-1.png" style="height: 100%;" alt="" style="height: 100%;" alt=""></div>
-                        <div class="swiper-slide" id="chahua-6"><img src="imges/chahua/chahua-6.png" style="height: 100%;" alt="" style="height: 100%;" alt=""></div>
-                        <div class="swiper-slide" id="chahua-2"><img src="imges/chahua/chahua-2.png" style="height: 100%;" alt="" style="height: 100%;" alt=""></div>
-                        <div class="swiper-slide" id="chahua-3"><img src="imges/chahua/chahua-3.png" style="height: 100%;" alt="" style="height: 100%;" alt=""></div>
-                        <div class="swiper-slide" id="chahua-4"><img src="imges/chahua/chahua-4.png" style="height: 100%;" alt="" style="height: 100%;" alt=""></div>
-                        <div class="swiper-slide" id="chahua-5"><img src="imges/chahua/chahua-5.png" style="height: 100%;" alt="" style="height: 100%;" alt=""></div>
+                        <div class="swiper-slide" id="chahua-1"><img src="images/chahua/chahua-1.png" style="height: 100%;" alt="" style="height: 100%;" alt=""></div>
+                        <div class="swiper-slide" id="chahua-6"><img src="images/chahua/chahua-6.png" style="height: 100%;" alt="" style="height: 100%;" alt=""></div>
+                        <div class="swiper-slide" id="chahua-2"><img src="images/chahua/chahua-2.png" style="height: 100%;" alt="" style="height: 100%;" alt=""></div>
+                        <div class="swiper-slide" id="chahua-3"><img src="images/chahua/chahua-3.png" style="height: 100%;" alt="" style="height: 100%;" alt=""></div>
+                        <div class="swiper-slide" id="chahua-4"><img src="images/chahua/chahua-4.png" style="height: 100%;" alt="" style="height: 100%;" alt=""></div>
+                        <div class="swiper-slide" id="chahua-5"><img src="images/chahua/chahua-5.png" style="height: 100%;" alt="" style="height: 100%;" alt=""></div>
                     </div>
                 </div>
             </div>
@@ -395,19 +473,19 @@
                     <!-- <div class="jiantou"></div> -->
                     <div class="swiper-wrapper">
                         <div class="swiper-slide xiangsu-bj">
-                        <img src="imges/xiangsu/xiangsu.png" style="height: 100%;" alt="">
+                        <img src="images/xiangsu/xiangsu.png" style="height: 100%;" alt="">
                         </div>
                         <div class="swiper-slide xiangsu-bj">
-                            <img src="imges/xiangsu/xiangsu-1.png" style="height: 100%;" alt="" style="height: 100%;" alt="">
+                            <img src="images/xiangsu/xiangsu-1.png" style="height: 100%;" alt="" style="height: 100%;" alt="">
                         </div>
                         <div class="swiper-slide xiangsu-bj">
-                            <img src="imges/xiangsu/xiangsu-2.png" style="height: 100%;" alt="" style="height: 100%;" alt=""
+                            <img src="images/xiangsu/xiangsu-2.png" style="height: 100%;" alt="" style="height: 100%;" alt=""
                             ></div>
                         <div class="swiper-slide xiangsu-bj-1">
-                            <img src="imges/xiangsu/xiangsu-3.png" style="height: 100%;" alt="" style="height: 100%;" alt="">
+                            <img src="images/xiangsu/xiangsu-3.png" style="height: 100%;" alt="" style="height: 100%;" alt="">
                         </div>
                          <div class="swiper-slide xiangsu-bj-2">
-                            <img src="imges/xiangsu/xiangsu-4.png" style="height: 100%;" alt="" style="height: 100%;" alt="">
+                            <img src="images/xiangsu/xiangsu-4.png" style="height: 100%;" alt="" style="height: 100%;" alt="">
                         </div>
 
                     </div>
@@ -418,233 +496,198 @@
                 <div class="swiper-container swiper-container-v daodi">
                     <!-- <div class="jiantou"></div> -->
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide"><img src="imges/1.png" style="height: 100%; " alt=""></div>
-                        <div class="swiper-slide"><img src="imges/2.png" style="height: 100%; " alt=""></div>
-                        <div class="swiper-slide APP-1"><img src="imges/APP/1.png" style="height: 100%; " alt=""></div>
-                        <div class="swiper-slide APP-1"><img src="imges/APP/2.png" style="height: 100%;" alt=""></div>
-                        <div class="swiper-slide APP-1"><img src="imges/APP/3.png" style="height: 100%;" alt=""></div>
-                        <div class="swiper-slide APP-1"><img src="imges/APP/4.gif" style="height: 100%;" alt=""></div>
-                        <div class="swiper-slide APP-1"><img src="imges/APP/5.png" style="height: 100%;" alt=""></div>
-                        <div class="swiper-slide APP-1"><img src="imges/APP/6.gif" style="height: 100%;" alt=""></div>
-                        <div class="swiper-slide APP-7"><img src="imges/APP/7.gif" style="height: 100%;" alt=""></div>
-                        <div class="swiper-slide APP-8"><img src="imges/APP/8.gif" style="height: 100%;" alt=""></div>
-                       
-
+                        <div class="swiper-slide"><img src="images/1.png" style="height: 100%; " alt=""></div>
+                        <div class="swiper-slide"><img src="images/2.png" style="height: 100%; " alt=""></div>
+                        <div class="swiper-slide APP-1"><img src="images/APP/1.png" style="height: 100%; " alt=""></div>
+                        <div class="swiper-slide APP-1"><img src="images/APP/2.png" style="height: 100%;" alt=""></div>
+                        <div class="swiper-slide APP-1"><img src="images/APP/3.png" style="height: 100%;" alt=""></div>
+                        <div class="swiper-slide APP-1"><img src="images/APP/4.gif" style="height: 100%;" alt=""></div>
+                        <div class="swiper-slide APP-1"><img src="images/APP/5.png" style="height: 100%;" alt=""></div>
+                        <div class="swiper-slide APP-1"><img src="images/APP/6.gif" style="height: 100%;" alt=""></div>
+                        <div class="swiper-slide APP-7"><img src="images/APP/7.gif" style="height: 100%;" alt=""></div>
+                        <div class="swiper-slide APP-8"><img src="images/APP/8.gif" style="height: 100%;" alt=""></div>
                         <div class="swiper-slide swiper-slide-icon">
-                            <img src="imges/icon/icon.gif">
+                            <img src="images/icon/icon.gif">
                         </div>
                         <div class="swiper-slide swiper-slide-icon">
-                            <img src="imges/icon/icon-1.png">
+                            <img src="images/icon/icon-1.png">
                         </div>
                         <div class="swiper-slide swiper-slide-icon">
-                            <img src="imges/icon/icon-2.png">
+                            <img src="images/icon/icon-2.png">
                         </div>
                         <div class="swiper-slide swiper-slide-icon">
-                            <img src="imges/icon/icon-3.png">
+                            <img src="images/icon/icon-3.png">
                         </div>
                         <div class="swiper-slide swiper-slide-icon">
-                            <img src="imges/icon/icon-4.png">
+                            <img src="images/icon/icon-4.png">
                         </div>
 
-                        <div class="swiper-slide icon-zhuti-1">
-                            <div class="icon">
-                                <div class="icon1"><img src="imges/zhuti-1/jianli-c.png" width="100%"></div>
-                                <div class="icon1"><img src="imges/zhuti-1/xtx-c.png" width="100%"></div>
-                                <div class="icon1"><img src="imges/zhuti-1/icon-c.png" width="100%"></div>
-                                <div class="icon1"><img src="imges/zhuti-1/banner-c.png" width="100%"></div>
+                        <div class="swiper-slide icon-theme-1">
+                            <div class="icon-box">
+                                <div class="icon"></div>
+                                <div class="icon"></div>
+                                <div class="icon"></div>
+                                <div class="icon"></div>
                             </div>
-                            <div class="icon">
-                                <div class="icon1"><img src="imges/zhuti-1/haibao-c.png" width="100%"></div>
-                                <div class="icon1"><img src="imges/zhuti-1/chahua-c.png" width="100%"></div>
-                                <div class="icon1"><img src="imges/zhuti-1/xiangsu-c.png" width="100%"></div>
-                                <div class="icon1"><img src="imges/zhuti-1/quanbu-c.png" width="100%"></div>
+                            <div class="icon-box">
+                                <div class="icon"></div>
+                                <div class="icon"></div>
+                                <div class="icon"></div>
+                                <div class="icon"></div>
                             </div>
-                            <div class="icon">
-                                <div class="icon1"><img src="imges/zhuti-1/dianhua-c.png" width="100%"></div>
-                                <div class="icon1"><img src="imges/zhuti-1/weixin-c.png" width="100%"></div>
-                                <div class="icon1"><img src="imges/zhuti-1/youxiang-c.png" width="100%"></div>
-                                <div class="icon1"><img src="imges/zhuti-1/xiazai-c.png" width="100%"></div>
-                                
+                            <div class="icon-box">
+                                <div class="icon"></div>
+                                <div class="icon"></div>
+                                <div class="icon"></div>
+                                <div class="icon"></div>
                             </div>
-                            <div class="icon">
-                                <div class="icon1"><img src="imges/zhuti-1/shouye-c.png" width="100%"></div>
-                                <div class="icon1"><img src="imges/zhuti-1/zhuti-c.png" width="100%"></div>
-                                <div class="icon1"><img src="imges/zhuti-1/X.png" width="100%"></div>
-                                <div class="icon1"></div>
-                            </div>
-                            <div class="icon"></div>
-                            <div class="icon"></div>
-                            <div class="icon"></div>
-                            <div class="icon"></div>
-                            <div class="icon">
-                                <div class="icon1" style="width:330px;"><img src="imges/zhuti-1/yinyong.png" width="100%" onclick="myZhuti1();"></div>
+                            <div class="icon-box">
+                                <div class="icon"></div>
+                                <div class="icon"></div>
+                                <div class="icon"></div>
+                                <div class="icon"></div>
                             </div>
                         </div>
-                        <div class="swiper-slide icon-zhuti-2">
-                            <div class="icon">
-                                <div class="icon1"><img src="imges/zhuti-2/jianli-c.png" width="100%"></div>
-                                <div class="icon1"><img src="imges/zhuti-2/xtx-c.png" width="100%"></div>
-                                <div class="icon1"><img src="imges/zhuti-2/icon-c.png" width="100%"></div>
-                                <div class="icon1"><img src="imges/zhuti-2/banner-c.png" width="100%"></div>
+                        <div class="swiper-slide icon-theme-2">
+                            <div class="icon-box">
+                                <div class="icon"></div>
+                                <div class="icon"></div>
+                                <div class="icon"></div>
+                                <div class="icon"></div>
                             </div>
-                            <div class="icon">
-                                <div class="icon1"><img src="imges/zhuti-2/haibao-c.png" width="100%"></div>
-                                <div class="icon1"><img src="imges/zhuti-2/chahua-c.png" width="100%"></div>
-                                <div class="icon1"><img src="imges/zhuti-2/xiangsu-c.png" width="100%"></div>
-                                <div class="icon1"><img src="imges/zhuti-2/quanbu-c.png" width="100%"></div>
+                            <div class="icon-box">
+                                <div class="icon"></div>
+                                <div class="icon"></div>
+                                <div class="icon"></div>
+                                <div class="icon"></div>
                             </div>
-                            <div class="icon">
-                                <div class="icon1"><img src="imges/zhuti-2/dianhua-c.png" width="100%"></div>
-                                <div class="icon1"><img src="imges/zhuti-2/weixin-c.png" width="100%"></div>
-                                <div class="icon1"><img src="imges/zhuti-2/youxiang-c.png" width="100%"></div>
-                                <div class="icon1"><img src="imges/zhuti-2/xiazai-c.png" width="100%"></div>
-                                
+                            <div class="icon-box">
+                                <div class="icon"></div>
+                                <div class="icon"></div>
+                                <div class="icon"></div>
+                                <div class="icon"></div>
                             </div>
-                            <div class="icon">
-                                <div class="icon1"><img src="imges/zhuti-2/shouye-c.png" width="100%"></div>
-                                <div class="icon1"><img src="imges/zhuti-2/zhuti-c.png" width="100%"></div>
-                                <div class="icon1"><img src="imges/zhuti-2/X.png" width="100%"></div>
-                                <div class="icon1"></div>
-                            </div>
-                            <div class="icon"></div>
-                            <div class="icon"></div>
-                            <div class="icon"></div>
-                            <div class="icon"></div>
-                            <div class="icon">
-                                <div class="icon1" style="width:330px;"><img src="imges/zhuti-2/yinyong.png" width="100%" onclick="myZhuti2();"></div>
+                            <div class="icon-box">
+                                <div class="icon"></div>
+                                <div class="icon"></div>
+                                <div class="icon"></div>
+                                <div class="icon"></div>
                             </div>
                         </div>
-                        <div class="swiper-slide icon-zhuti-3">
-                            <div class="icon">
-                                <div class="icon1"><img src="imges/zhuti-3/jianli-c.png" width="100%"></div>
-                                <div class="icon1"><img src="imges/zhuti-3/xtx-c.png" width="100%"></div>
-                                <div class="icon1"><img src="imges/zhuti-3/icon-c.png" width="100%"></div>
-                                <div class="icon1"><img src="imges/zhuti-3/banner-c.png" width="100%"></div>
+                        <div class="swiper-slide icon-theme-3">
+                           <div class="icon-box">
+                                <div class="icon"></div>
+                                <div class="icon"></div>
+                                <div class="icon"></div>
+                                <div class="icon"></div>
                             </div>
-                            <div class="icon">
-                                <div class="icon1"><img src="imges/zhuti-3/haibao-c.png" width="100%"></div>
-                                <div class="icon1"><img src="imges/zhuti-3/chahua-c.png" width="100%"></div>
-                                <div class="icon1"><img src="imges/zhuti-3/xiangsu-c.png" width="100%"></div>
-                                <div class="icon1"><img src="imges/zhuti-3/quanbu-c.png" width="100%"></div>
+                            <div class="icon-box">
+                                <div class="icon"></div>
+                                <div class="icon"></div>
+                                <div class="icon"></div>
+                                <div class="icon"></div>
                             </div>
-                            <div class="icon">
-                                <div class="icon1"><img src="imges/zhuti-3/dianhua-c.png" width="100%"></div>
-                                <div class="icon1"><img src="imges/zhuti-3/weixin-c.png" width="100%"></div>
-                                <div class="icon1"><img src="imges/zhuti-3/youxiang-c.png" width="100%"></div>
-                                <div class="icon1"><img src="imges/zhuti-3/xiazai-c.png" width="100%"></div>
-                                
+                            <div class="icon-box">
+                                <div class="icon"></div>
+                                <div class="icon"></div>
+                                <div class="icon"></div>
+                                <div class="icon"></div>
                             </div>
-                            <div class="icon">
-                                <div class="icon1"><img src="imges/zhuti-3/shouye-c.png" width="100%"></div>
-                                <div class="icon1"><img src="imges/zhuti-3/zhuti-c.png" width="100%"></div>
-                                <div class="icon1"><img src="imges/zhuti-3/X.png" width="100%"></div>
-                                <div class="icon1"></div>
+                            <div class="icon-box">
+                                <div class="icon"></div>
+                                <div class="icon"></div>
+                                <div class="icon"></div>
+                                <div class="icon"></div>
+                            </div> 
+                        </div>
+                        <div class="swiper-slide icon-theme-4">
+                            <div class="icon-box icon-theme-4-1">
+                                <div class="icon"></div>
+                                <div class="icon"></div>
+                                <div class="icon"></div>
+                                <div class="icon"></div>
                             </div>
-                            <div class="icon"></div>
-                            <div class="icon"></div>
-                            <div class="icon"></div>
-                            <div class="icon"></div>
-                            <div class="icon">
-                                <div class="icon1" style="width:330px;"><img src="imges/zhuti-3/yinyong.png" width="100%" onclick="myZhuti3();"></div>
+                            <div class="icon-box">
+                                <div class="icon"></div>
+                                <div class="icon"></div>
+                                <div class="icon"></div>
+                                <div class="icon"></div>
+                            </div>
+                            <div class="icon-box">
+                                <div class="icon"></div>
+                                <div class="icon"></div>
+                                <div class="icon"></div>
+                                <div class="icon"></div>
+                            </div>
+                            <div class="icon-box">
+                                <div class="icon"></div>
+                                <div class="icon"></div>
+                                <div class="icon"></div>
+                                <div class="icon"></div>
+                            </div>
+                            <div class="index-bg">
+                                <div id="theme-4_1">
+                                    <img src="images/theme/3-1.png" alt="">
+                                </div>
+                                <div id="theme-4_2"></div>
+                                <div id="theme-4_3">
+                                    <img src="images/theme/3-3.png" alt="">
+                                </div>
                             </div>
                         </div>
                         
                         <div class="swiper-slide swiper-slide-banner">
-                            <img src="imges/banner/banner-1.png" class="banner-h">
-                            <img src="imges/banner/banner-2.png" class="banner-h">
-                            <img src="imges/banner/banner-3.png" class="banner-h">
-                            <img src="imges/banner/banner-4.png" class="banner-h">
+                            <img src="images/banner/banner-1.png" class="banner-h">
+                            <img src="images/banner/banner-2.png" class="banner-h">
+                            <img src="images/banner/banner-3.png" class="banner-h">
+                            <img src="images/banner/banner-4.png" class="banner-h">
                         </div>
                         <div class="swiper-slide swiper-slide-banner">
-                            <img src="imges/banner/banner-5.png" class="banner-h">
-                            <img src="imges/banner/banner-6.png" class="banner-h">
-                            <img src="imges/banner/banner-7.png" class="banner-h">
-                            <img src="imges/banner/banner-8.png" class="banner-h">
+                            <img src="images/banner/banner-5.png" class="banner-h">
+                            <img src="images/banner/banner-6.png" class="banner-h">
+                            <img src="images/banner/banner-7.png" class="banner-h">
+                            <img src="images/banner/banner-8.png" class="banner-h">
                         </div>
 
 
-                        <div class="swiper-slide"><img src="imges/haibao/haibao-1.png" style="height: 100%;" alt=""></div>
-                        <div class="swiper-slide"><img src="imges/haibao/haibao-2.png" style="height: 100%;" alt=""></div>
-                        <div class="swiper-slide"><img src="imges/haibao/haibao-3.png" style="height: 100%;" alt=""></div>
-                        <div class="swiper-slide"><img src="imges/haibao/haibao-4.png" style="height: 100%;" alt=""></div>
+                        <div class="swiper-slide"><img src="images/haibao/haibao-1.png" style="height: 100%;" alt=""></div>
+                        <div class="swiper-slide"><img src="images/haibao/haibao-2.png" style="height: 100%;" alt=""></div>
+                        <div class="swiper-slide"><img src="images/haibao/haibao-3.png" style="height: 100%;" alt=""></div>
+                        <div class="swiper-slide"><img src="images/haibao/haibao-4.png" style="height: 100%;" alt=""></div>
 
-                        <div class="swiper-slide" id="chahua-1"><img src="imges/chahua/chahua-1.png" style="height: 100%;" alt="" style="height: 100%;" alt=""></div>
-                        <div class="swiper-slide" id="chahua-2"><img src="imges/chahua/chahua-2.png" style="height: 100%;" alt="" style="height: 100%;" alt=""></div>
-                        <div class="swiper-slide" id="chahua-3"><img src="imges/chahua/chahua-3.png" style="height: 100%;" alt="" style="height: 100%;" alt=""></div>
-                        <div class="swiper-slide" id="chahua-4"><img src="imges/chahua/chahua-4.png" style="height: 100%;" alt="" style="height: 100%;" alt=""></div>
-                        <div class="swiper-slide" id="chahua-5"><img src="imges/chahua/chahua-5.png" style="height: 100%;" alt="" style="height: 100%;" alt=""></div>
+                        <div class="swiper-slide" id="chahua-1"><img src="images/chahua/chahua-1.png" style="height: 100%;" alt="" style="height: 100%;" alt=""></div>
+                        <div class="swiper-slide" id="chahua-2"><img src="images/chahua/chahua-2.png" style="height: 100%;" alt="" style="height: 100%;" alt=""></div>
+                        <div class="swiper-slide" id="chahua-3"><img src="images/chahua/chahua-3.png" style="height: 100%;" alt="" style="height: 100%;" alt=""></div>
+                        <div class="swiper-slide" id="chahua-4"><img src="images/chahua/chahua-4.png" style="height: 100%;" alt="" style="height: 100%;" alt=""></div>
+                        <div class="swiper-slide" id="chahua-5"><img src="images/chahua/chahua-5.png" style="height: 100%;" alt="" style="height: 100%;" alt=""></div>
 
 
                         <div class="swiper-slide xiangsu-bj">
-                        <img src="imges/xiangsu/xiangsu.png" style="height: 100%;" alt="">
+                        <img src="images/xiangsu/xiangsu.png" style="height: 100%;" alt="">
                         </div>
                         <div class="swiper-slide xiangsu-bj">
-                            <img src="imges/xiangsu/xiangsu-1.png" style="height: 100%;" alt="" style="height: 100%;" alt="">
+                            <img src="images/xiangsu/xiangsu-1.png" style="height: 100%;" alt="" style="height: 100%;" alt="">
                         </div>
                         <div class="swiper-slide xiangsu-bj">
-                            <img src="imges/xiangsu/xiangsu-2.png" style="height: 100%;" alt="" style="height: 100%;" alt=""
+                            <img src="images/xiangsu/xiangsu-2.png" style="height: 100%;" alt="" style="height: 100%;" alt=""
                             ></div>
                         <div class="swiper-slide xiangsu-bj-1">
-                            <img src="imges/xiangsu/xiangsu-3.png" style="height: 100%;" alt="" style="height: 100%;" alt="">
+                            <img src="images/xiangsu/xiangsu-3.png" style="height: 100%;" alt="" style="height: 100%;" alt="">
                         </div>
                          <div class="swiper-slide xiangsu-bj-2">
-                            <img src="imges/xiangsu/xiangsu-4.png" style="height: 100%;" alt="" style="height: 100%;" alt="">
+                            <img src="images/xiangsu/xiangsu-4.png" style="height: 100%;" alt="" style="height: 100%;" alt="">
                         </div>
 
                     </div>
                 </div>
             </div>
-
         </div>
         <textarea id="tel-copy">17150024672 </textarea>
         <textarea id="youxiang-copy">935945334@qq.com </textarea>
     </div>
-
-    <!-- Swiper JS -->
+    <script src="dist/js/swiper.animate.min.js"></script>
     <script src="dist/js/swiper.min.js"></script>
-    <script src="dist/js/1.js"></script>
-
-    <!-- Initialize Swiper -->
-    <script>
-    var swiperH = new Swiper('.swiper-container-h', {
-        pagination: '.swiper-pagination-h',
-        paginationClickable: true,
-        // spaceBetween: 50,
-        direction: 'horizontal',
-    });
-    var swiperV = new Swiper('.swiper-container-v', {
-        pagination: '.swiper-pagination-v',
-        paginationClickable: true,
-        direction: 'vertical',
-        // spaceBetween: 50,
-        mousewheel: true,
-
-    });
-    var mySwiper2 = new Swiper('.gallery-top',{
-            on:{
-                doubleTap: function(event){
-                    if(document.getElementById("caidan").style.display=="none")
-                    {
-                    document.getElementById("caidan").style.display = "block";
-                    var x = document.getElementById("caidan");
-                    setTimeout(function(){ x.style.opacity='0.2'; }, 50);
-                    setTimeout(function(){ x.style.opacity='0.4'; }, 100);
-                    setTimeout(function(){ x.style.opacity='0.6'; }, 150);
-                    setTimeout(function(){ x.style.opacity='0.8'; }, 200);
-                    setTimeout(function(){ x.style.opacity='1'; }, 250);
-                    }
-                }
-            }
-    })
-    function myCaidan1(){
-        var x = document.getElementById("caidan");
-                    setTimeout(function(){ x.style.opacity='1'; }, 50);
-                    setTimeout(function(){ x.style.opacity='0.8'; }, 100);
-                    setTimeout(function(){ x.style.opacity='0.6'; }, 150);
-                    setTimeout(function(){ x.style.opacity='0.4'; }, 200);
-                    setTimeout(function(){ x.style.opacity='0.2'; }, 250);
-                    setTimeout(function(){ x.style.display = "none" }, 300);
-    }
-    </script>
+    <script src="dist/js/resume.js"></script>
+    
 </body>
 </html>
