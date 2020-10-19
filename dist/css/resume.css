@@ -603,7 +603,7 @@ body {
 	-ms-transform:rotate(-90deg); /* IE 9 */
 	-webkit-transform:rotate(-90deg); /* Safari and Chrome */
 	transform-origin: 0 0;
-	top: 100vh;
+	/*top: 100vh;*/
 	width: 100vh;
 	height: 100vw;
 }
