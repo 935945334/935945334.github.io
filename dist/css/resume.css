@@ -598,7 +598,7 @@ body {
 	left: calc(50% - 650px);
 	top:  calc(50% - 400px);
 }
-.PC-body-iphone{
+.PC-body-iphone img{
 	ransform:rotate(-90deg);
 	-ms-transform:rotate(-90deg); /* IE 9 */
 	-webkit-transform:rotate(-90deg); /* Safari and Chrome */
