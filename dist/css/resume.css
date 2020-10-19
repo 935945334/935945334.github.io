@@ -574,107 +574,174 @@ body {
 	width: 78%;
 }
 #PC-body{
+	position: absolute;
+	z-index: -100;
+	opacity: 0;
+}
+.PC-body{
+	min-width: 1300px;
+	max-height: 800px;
+	border: 4px solid #fcfefd;
+	border-radius: 10px;
+	box-shadow: 10px 10px 50px #141623;
+	left: calc(50% - 650px);
+	top:  calc(50% - 400px);
+}
+.iphone-body{
+	
+}
+.PC-body-PC{
 	width: 1300px;
 	height: 800px;
 	min-width: 1300px;
 	max-height: 800px;
-	/*display: none;*/
-	position: absolute;
-	z-index: -100;
-	background: red;
-	opacity: 0;
 	left: calc(50% - 650px);
 	top:  calc(50% - 400px);
-	border: 4px solid #fcfefd;
-	border-radius: 10px;
-	box-shadow: 10px 10px 50px #141623;
-	/*background: #141623;*/
+}
+.PC-body-iphone{
+	ransform:rotate(-90deg);
+	-ms-transform:rotate(-90deg); /* IE 9 */
+	-webkit-transform:rotate(-90deg); /* Safari and Chrome */
+	transform-origin: 0 0;
+	top: 100vh;
+	width: 100vh;
+	height: 100vw;
 }
 #PC-body .swiper-slide{
 	background: #161a26;
 }
-#PC-body-contact{
+#PC-page{
+	color: #fff;
+	/*opacity: 0.5;*/
+	mix-blend-mode: overlay;
+	font-size: 36px;
 	position: absolute;
 	z-index: 200;
-	width: 1300px;
-	height: 40px;
-	/*background: #fff;*/
-	color: #c5e5da;
-	font-size: 16px;
-	display: -webkit-flex;
-    display: flex;
-	-webkit-justify-content: center;
-    justify-content: center;
+	font-weight: bold;
 }
-
+.PC-page{
+	top: 10px;
+	left: 20px;
+}
+.iphone-page{
+	transform:rotate(-90deg);
+	-ms-transform:rotate(-90deg); /* IE 9 */
+	-webkit-transform:rotate(-90deg); /* Safari and Chrome */
+	transform-origin: 0 0;
+	left: 14px;
+	top: calc(100% - 14px);
+}
 #PC-body-Nva{
 	display: -webkit-flex;
     display: flex;
-	width: 800px;
+    -webkit-justify-content: flex-end;
+    justify-content: flex-end;
 	height: 30px;
 	position: absolute;
 	z-index: 200;
-	transform:rotate(90deg);
-	-ms-transform:rotate(90deg); /* IE 9 */
-	-webkit-transform:rotate(90deg); /* Safari and Chrome */
-	transform-origin: 0 0;
-	left: 40px;
-	color: #6e8080;
+	color: #c5e5da;
 	font-size: 16px;
-	-webkit-justify-content: center;
-    justify-content: center;
+}
+.PC-Nva{
+	right: 0;
+	margin-top: 26px;
+	margin-right: 10px;
+}
+.iphone-Nva{
+	width: 100vh;
+	transform:rotate(-90deg);
+	-ms-transform:rotate(-90deg); /* IE 9 */
+	-webkit-transform:rotate(-90deg); /* Safari and Chrome */
+	transform-origin: 0 0;
+	left: 14px;
+	top: 100%;
+	/*left: calc(100% - 14px);*/
 }
 #PC-body-Nva div{
-	margin-left: 10px;
-	margin-right: 10px;
+	margin-right: 20px;
 	/*border-bottom: 2px solid #fcfefd;*/
 }
-#PC-body-contact div{
-	margin-left: 10px;
+#PC-contact{
+	position: absolute;
+	z-index: 200;
+	bottom: 20px;
+	display: -webkit-flex;
+    display: flex;
+    /*opacity: 0.5;*/
+	mix-blend-mode: normal;
+}
+.PC-contact{
+	width: 100%;
+}
+.PC-contact-icon{
+	width: 35px;
+	height: 35px;
 	margin-right: 10px;
-	/*border-bottom: 2px solid #fcfefd;*/
 }
-#PC-body-contact-0{
-	margin-right: auto;
-	color: #fff;
-	font-size: 24px;
+.PC-contact-icon:first-child {
+    margin-left: 20px;
 }
-#PC-body-1-1{
-	margin-top: 200px;
+.PC-contact-icon:last-child {
+    margin-left: auto;
+    margin-right: 20px;
 }
-#PC-body-2-1{
-	margin-top: 120px;
+.iphone-contact{
+	width: 100vh;
+	transform:rotate(-90deg);
+	-ms-transform:rotate(-90deg); /* IE 9 */
+	-webkit-transform:rotate(-90deg); /* Safari and Chrome */
+	transform-origin: 0 0;
+	left: calc(100% - 55px);
+	top: 100%;
 }
-#PC-body-2-2{
-	margin-top: 100px;
+#PC-body-0-1{
+	display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
 }
 #xtx-1{
 	position: absolute;
-	z-index: 1;
-	margin-top: 75px;
+	z-index: 200;
 }
 #xtx-2{
 	position: absolute;
-	z-index: 2;
-	margin-top: 75px;
+	z-index: 201;
 }
-#xtx-3{
-	margin: auto;
+#PC-theme-1 img{
+	height: 800px;
 }
-#xtx-5{
-	margin: auto;
+.PC-icon{
+	position: absolute;
 }
-#PC-icon-1{
-	width: 1150px;
-	height: 600px;
-	display: -webkit-flex;
-    display: flex;
-    -webkit-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -webkit-justify-content: center;
-    justify-content: center;
-    margin: auto;
+.ani{
+	z-index: 222;
 }
-#PC-theme-1{
-	/*margin-top: 200px;*/
+#PC-bg-anim{
+	width: 0;
+	height: 100%;
+	background: #141623;
+	position: absolute;
+	/*opacity: 0;*/
 }
+.PC-contact-img{
+	position: absolute;
+	z-index: 200;
+	display: none;
+}
+.iphone-contact-img{
+	position: absolute;
+	z-index: 200;
+	ransform:rotate(-90deg);
+	-ms-transform:rotate(-90deg); /* IE 9 */
+	-webkit-transform:rotate(-90deg); /* Safari and Chrome */
+	transform-origin: 0 0;
+	top: 100vh;
+	left: -10px;
+	height: 100vw;
+}
+
+
+
+
+
