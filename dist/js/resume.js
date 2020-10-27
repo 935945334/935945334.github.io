@@ -830,6 +830,9 @@ course_X.addEventListener("click",function(e){
     icon_box[1].style.zIndex = 1;
 })
 function PC_Nva(n) {
+    mySwiper_PC.slideTo(n, 100, true);
+}
+function iphone_Nva(n) {
     mySwiper_iphone.slideTo(n, 100, true);
 }
 PC_contact.onmouseover = function(e) {
