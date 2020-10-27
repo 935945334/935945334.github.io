@@ -39,7 +39,11 @@ if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
 
     document.querySelector("#status-bar").style.display = "none";
     index_bg_0_2.style.height = window.screen.width + "px";
-
+    if (window.screen.height < 700) {
+        var meun_width = 48;
+    }else{
+        var meun_width = 60;
+    }
     for (var i = 0; i < iphone_contact_arr.length; i++) {
         iphone_contact_arr[i].index = i;
         iphone_contact_arr[i].style.background = "url(images/PC/contact.png)";
@@ -830,10 +834,10 @@ course_X.addEventListener("click",function(e){
     icon_box[1].style.zIndex = 1;
 })
 function PC_Nva(n) {
-    mySwiper_PC.slideTo(n, 100, true);
+    mySwiper_PC.slideTo(n, 100*n, true);
 }
 function iphone_Nva(n) {
-    mySwiper_iphone.slideTo(n, 100, true);
+    mySwiper_iphone.slideTo(n, 100*n, true);
 }
 PC_contact.onmouseover = function(e) {
     PC_contact.style.mixBlendMode = "normal";
