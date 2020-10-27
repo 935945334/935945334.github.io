@@ -1,5 +1,4 @@
 var icon_div = document.getElementsByClassName("icon-div");
-var PC_contact_arr = document.getElementsByClassName("PC-contact-icon");
 var theme_icon = document.getElementsByClassName("theme-icon");
 var WEB_icon = document.getElementsByClassName("WEB-icon");
 var menu_Btn = document.getElementsByClassName("menu-Btn");
@@ -8,6 +7,7 @@ var icon = document.getElementsByClassName("icon");
 var dial_Btn_Num = document.getElementsByClassName("dial-Btn-Num");
 var PC_body_Nva_Arr = document.getElementsByClassName("PC-body-Nva");
 var dial = document.getElementById("dial");
+var index = document.getElementById("index");
 var theme_Num = 0;
 var index_bg = [document.getElementById("index-bg-0"),document.getElementById("index-bg-1"),document.getElementById("index-bg-2"),document.getElementById("index-bg-3")];
 var index_bg_0_2 = document.getElementById("index-bg-0-2");
@@ -19,56 +19,36 @@ var WEB = document.getElementById("WEB");
 var PC_body_Nva = document.getElementById("PC-body-Nva");
 var PC_contact = document.getElementById("PC-contact");
 var PC_page = document.getElementById("PC-page");
+var iphone_page = document.getElementById("iphone-page");
+var iphone_contact = document.getElementById("iphone-contact");
+var iphone_body_Nva = document.getElementById("iphone-body-Nva");
 var PC_img = document.getElementsByClassName("PC-img");
 var PC_contact_img = document.getElementsByClassName("PC-contact-img");
+var iphone_contact_img = document.getElementsByClassName("iphone-contact-img");
 var PC_contact_arr = PC_contact.getElementsByClassName("PC-contact-icon");
+var iphone_contact_arr = document.getElementsByClassName("iphone-contact-icon");
+var iphone_body = document.getElementById("iphone-body");
 var Popup_state = false;
 var Page = 0;
 var equipment;
 var PC_Nva_Num;
+var iphone;
 if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
     console.log("手机");
     equipment = "pc";
-    PC_body.classList.add("iphone-body");
-    PC_body_Nva.classList.add("iphone-Nva");
-    PC_contact.classList.add("iphone-contact");
-    PC_page.classList.add("iphone-page");
-    var PC_body_iphone = PC_body.getElementsByClassName("swiper-slide");
-    document.getElementById("PC-1-1").style.height = "50vw";
-    document.getElementById("PC-1-1").src = "images/PC/1-3.png";
-    var item = document.getElementsByClassName("item");
-    console.log(item);
-    for (var i = 0; i < PC_contact_arr.length; i++) {
-        PC_contact_arr[i].index = i;
-        PC_contact_arr[i].style.width = "25px";
-        PC_contact_arr[i].style.height = "25px";
-        PC_contact_arr[i].style.background = "url(images/PC/contact.png)";
-        PC_contact_arr[i].style.backgroundSize = "100px";
-        PC_contact_arr[i].style.backgroundPosition = -i*25 + "px" + " " + "0";
-    }
-    PC_contact.style.left = "calc(100% - 40px)";
-    for (var i = 0; i < item.length; i++) {
-        item[i].index = i;
-        item[i].style.height = "30vw";
-    }
-    for (var i = 0; i < PC_body_iphone.length; i++) {
-        PC_body_iphone[i].index = i;
-        PC_body_iphone[i].classList.add("PC-body-iphone");
-    }
-    for (var i = 0; i < PC_img.length; i++) {
-        PC_img[i].index = i;
-        PC_img[i].style.height = "100vw";
-    }
+
     document.querySelector("#status-bar").style.display = "none";
     index_bg_0_2.style.height = window.screen.width + "px";
-    PC_body.style.width = "100vw";
-    PC_body.style.height = "100vh";
-    for (var i = 0; i < PC_contact_img.length; i++) {
-        PC_contact_img[i].classList.add("iphone-contact-img");
+
+    for (var i = 0; i < iphone_contact_arr.length; i++) {
+        iphone_contact_arr[i].index = i;
+        iphone_contact_arr[i].style.background = "url(images/PC/contact.png)";
+        iphone_contact_arr[i].style.backgroundSize = "140px";
+        iphone_contact_arr[i].style.backgroundPosition = -i*35 + "px" + " " + "0";
     }
-    var mySwiper_PC = new Swiper('.swiper-container-pc',{
+    var mySwiper_iphone = new Swiper('.swiper-container-iphone',{
+        // direction: 'vertical',
         mousewheel: true,
-        width: window.screen.height, 
         on:{
             init: function(){
                 swiperAnimateCache(this); //隐藏动画元素 
@@ -77,40 +57,41 @@ if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
             slideChangeTransitionStart: function(){
                 swiperAnimate(this);
                 console.log(this.activeIndex);
+                console.log(iphone_page);
                 if (this.activeIndex < 10) {
-                    PC_page.innerHTML = "0" + this.activeIndex;
-                    console.log("<");
+                    iphone_page.innerHTML = "0" + this.activeIndex;
                 }else{
-                    PC_page.innerHTML = this.activeIndex;
-                    console.log(">");
+                    iphone_page.innerHTML = this.activeIndex;
                 }
-                var PC_Page = this.activeIndex;
+                // var iphone_Num = this.activeIndex;
+                var iphone_Nva_Color_Arr = ["#d02a2e","#08f70c","#13b5b1","#ea68a2","#6f84f1","#fff100"];
+                var iphone_body_Nva_Arr = document.getElementsByClassName("iphone-body-Nva");
                 if (this.activeIndex == 0) {
-                    PC_page.style.opacity = 1;
-                    PC_contact.style.opacity = 1;
-                    PC_body_Nva.style.opacity = 1;
-                    PC_contact.style.mixBlendMode = "normal";
+                    iphone_page.style.opacity = 1;
+                    iphone_contact.style.opacity = 1;
+                    iphone_body_Nva.style.opacity = 1;
+                    iphone_contact.style.mixBlendMode = "normal";
                 }else{
-                    PC_page.style.opacity = 0.5; 
-                    PC_contact.style.opacity = 0.5;
-                    PC_body_Nva.style.opacity = 0.5;
-                    PC_contact.style.mixBlendMode = "overlay";
+                    iphone_page.style.opacity = 0.5; 
+                    iphone_contact.style.opacity = 0.5;
+                    iphone_body_Nva.style.opacity = 0.5;
+                    iphone_contact.style.mixBlendMode = "overlay";
                 }
-                var PC_Nva_Color_Arr = ["#d02a2e","#08f70c","#13b5b1","#ea68a2","#6f84f1","#fff100"];
-                if (PC_Page == 0) {
-                    var PC_Nva_Num = 0;
-                }else if (PC_Page == 2) {
-                    var PC_Nva_Num = 1;
-                }else if (PC_Page > 2 && PC_Page < 7) {
-                    var PC_Nva_Num = 2;
-                }else if (PC_Page > 6 && PC_Page < 10) {
-                    var PC_Nva_Num = 3;
+                if (this.activeIndex < 2) {
+                    iphone_Nva_Num = 0;
+                }else if (this.activeIndex == 2) {
+                    iphone_Nva_Num = 1;
+                }else if (this.activeIndex > 2 && this.activeIndex < 7) {
+                    iphone_Nva_Num = 2;
+                }else if (this.activeIndex > 6 && this.activeIndex < 10) {
+                    iphone_Nva_Num = 3;
                 }
-                for (var i = 0; i < PC_body_Nva_Arr.length; i++) {
-                    if (i == PC_Nva_Num) {
-                        PC_body_Nva_Arr[i].style.color = PC_Nva_Color_Arr[PC_Nva_Num];
+                for (var i = 0; i < iphone_body_Nva_Arr.length; i++) {
+                    iphone_body_Nva_Arr[i].index = i;
+                    if (i == iphone_Nva_Num) {
+                        iphone_body_Nva_Arr[i].style.color = iphone_Nva_Color_Arr[iphone_Nva_Num];
                     }else {
-                        PC_body_Nva_Arr[i].style.color = "#c5e5da";
+                        iphone_body_Nva_Arr[i].style.color = "#c5e5da";
                     }
                 }
             },
@@ -120,38 +101,29 @@ if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
                 } 
         }
     });
-    // var swiper_PC = PC_body.getElementsByClassName("swiper-slide");
-    // for (var i = 0; i < swiper_PC.length; i++) {
-    //     swiper_PC[i].style.width = "100vh";
-    //     swiper_PC[i].style.height = "100vw";
-    // }
 }else{
     console.log("电脑"); 
     equipment = "pc";
+    if (window.screen.height < 800) {
+        var meun_width = 48;
+        subject.style.width = "375px";
+        subject.style.height = "600px";
+    }else{
+        var meun_width = 60;
+        subject.style.width = "375px";
+        subject.style.height = "812px";
+    }
     index_bg_0_2.style.height = "375px";
     subject.style.top = "20px";
     subject.style.border = "4px solid #fcfefd";
     subject.style.borderRadius = "10px";
     subject.style.boxShadow = "10px 10px 50px #999999";
-    PC_body.classList.add("PC-body");
-    PC_body_Nva.classList.add("PC-Nva");
-    PC_contact.classList.add("PC-contact");
-    PC_page.classList.add("PC-page");
-    var PC_body_iphone = PC_body.getElementsByClassName("swiper-slide");
-    console.log(PC_body_iphone);
+    document.getElementsByClassName("swiper-container");
     for (var i = 0; i < PC_contact_arr.length; i++) {
         PC_contact_arr[i].index = i;
         PC_contact_arr[i].style.background = "url(images/PC/contact.png)";
         PC_contact_arr[i].style.backgroundSize = "140px";
         PC_contact_arr[i].style.backgroundPosition = -i*35 + "px" + " " + "0";
-    }
-    for (var i = 0; i < PC_body_iphone.length; i++) {
-        PC_body_iphone[i].index = i;
-        PC_body_iphone[i].classList.add("PC-body-PC");
-    }
-    for (var i = 0; i < PC_img.length; i++) {
-        PC_img[i].index = i;
-        PC_img[i].style.height = "800px";
     }
     var mySwiper_PC = new Swiper('.swiper-container-pc',{
         direction: 'vertical',
@@ -169,7 +141,6 @@ if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
                 }else{
                     PC_page.innerHTML = this.activeIndex;
                 }
-                var PC_Page = this.activeIndex;
                 var PC_Nva_Color_Arr = ["#d02a2e","#08f70c","#13b5b1","#ea68a2","#6f84f1","#fff100"];
                 var PC_body_Nva_Arr = document.getElementsByClassName("PC-body-Nva");
                 if (this.activeIndex == 0) {
@@ -183,13 +154,13 @@ if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
                     PC_body_Nva.style.opacity = 0.5;
                     PC_contact.style.mixBlendMode = "overlay";
                 }
-                if (PC_Page == 0) {
+                if (this.activeIndex == 0) {
                     PC_Nva_Num = 0;
-                }else if (PC_Page == 2) {
+                }else if (this.activeIndex == 2) {
                     PC_Nva_Num = 1;
-                }else if (PC_Page > 2 && PC_Page < 7) {
+                }else if (this.activeIndex > 2 && this.activeIndex < 7) {
                     PC_Nva_Num = 2;
-                }else if (PC_Page > 6 && PC_Page < 10) {
+                }else if (this.activeIndex > 6 && this.activeIndex < 10) {
                     PC_Nva_Num = 3;
                 }
                 for (var i = 0; i < PC_body_Nva_Arr.length; i++) {
@@ -320,6 +291,13 @@ index.addEventListener("click",function(e){
             course1();
             break;
             case 13:
+            if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+                var PC_subject = iphone_body;
+                var PC_Swiper = mySwiper_iphone;
+            }else{
+                var PC_subject = PC_body;
+                var PC_Swiper = mySwiper_PC;
+            }
             setTimeout(function(){ subject.style.opacity='0.8'; }, 100);
             setTimeout(function(){ subject.style.opacity='0.6'; }, 120);
             setTimeout(function(){ subject.style.opacity='0.4'; }, 140);
@@ -328,19 +306,22 @@ index.addEventListener("click",function(e){
             setTimeout(function(){ subject.style.display = "none"; }, 180);
             for (var i = 0; i < 100; i++) {
                 (function(i) {
-                    setTimeout(function() { PC_bg_anim.style.width= i + 1 + "%"; }, (i + 200) * 2);
+                    setTimeout(function() {
+                        PC_bg_anim.style.width= i + 1 + "%";
+                        // PC_bg_anim.style.height= i + 1 + "%";
+                    }, (i + 200) * 2);
                 })(i)
             }
-            setTimeout(function(){ PC_body.style.zIndex = "100"; }, 800);
-            setTimeout(function(){ PC_body.style.opacity = "0"; }, 800);
-            setTimeout(function(){ PC_body.style.opacity = "0.2"; }, 850);
-            setTimeout(function(){ PC_body.style.opacity = "0.4"; }, 900);
-            setTimeout(function(){ PC_body.style.opacity = "0.6"; }, 950);
-            setTimeout(function(){ PC_body.style.opacity = "0.8"; }, 1000);
-            setTimeout(function(){ PC_body.style.opacity = "1"; }, 1050);
+            setTimeout(function(){ PC_subject.style.zIndex = "100"; }, 800);
+            setTimeout(function(){ PC_subject.style.opacity = "0"; }, 800);
+            setTimeout(function(){ PC_subject.style.opacity = "0.2"; }, 850);
+            setTimeout(function(){ PC_subject.style.opacity = "0.4"; }, 900);
+            setTimeout(function(){ PC_subject.style.opacity = "0.6"; }, 950);
+            setTimeout(function(){ PC_subject.style.opacity = "0.8"; }, 1000);
+            setTimeout(function(){ PC_subject.style.opacity = "1"; }, 1050);
             setTimeout(function(){
-                mySwiper_PC.slideTo(1, 0, true);
-                mySwiper_PC.slideTo(0, 0, true);
+                PC_Swiper.slideTo(1, 0, true);
+                PC_Swiper.slideTo(0, 0, true);
             }, 1050);
             break;
             case 14:
@@ -665,11 +646,6 @@ var mySwiper2 = new Swiper('.gallery-top',{
                 Mask.style.display = "block";
                 Mask.style.zIndex = "21";
                 menu.style.display = "flex";
-                if (window.screen.height < 700) {
-                    var meun_width = 48;
-                }else{
-                    var meun_width = 60;
-                }
                 for (var i = 0; i < menu_Btn.length; i++) {
                     menu_Btn[i].style.width = meun_width + "px";
                     menu_Btn[i].style.height = meun_width + "px";
@@ -854,7 +830,7 @@ course_X.addEventListener("click",function(e){
     icon_box[1].style.zIndex = 1;
 })
 function PC_Nva(n) {
-    mySwiper_PC.slideTo(n, 100, true);
+    mySwiper_iphone.slideTo(n, 100, true);
 }
 PC_contact.onmouseover = function(e) {
     PC_contact.style.mixBlendMode = "normal";
@@ -889,25 +865,33 @@ PC_body_Nva.onmouseout = function(e) {
     }
 }
 function return_iphone() {
-    setTimeout(function(){ PC_body.style.opacity = "0.8"; }, 100);
-    setTimeout(function(){ PC_body.style.opacity = "0.6"; }, 200);
-    setTimeout(function(){ PC_body.style.opacity = "0.4"; }, 300);
-    setTimeout(function(){ PC_body.style.opacity = "0.2"; }, 400);
-    setTimeout(function(){ PC_body.style.opacity = "0"; }, 500);
-    setTimeout(function(){ PC_body.style.zIndex = "-100"; }, 500);
+    if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+        var PC_subject = iphone_body;
+        var PC_Swiper = mySwiper_iphone;
+    }else{
+        var PC_subject = PC_body;
+        var PC_Swiper = mySwiper_PC;
+    }
+    setTimeout(function(){ PC_subject.style.opacity = "0.8"; }, 50);
+    setTimeout(function(){ PC_subject.style.opacity = "0.6"; }, 100);
+    setTimeout(function(){ PC_subject.style.opacity = "0.4"; }, 150);
+    setTimeout(function(){ PC_subject.style.opacity = "0.2"; }, 200);
+    setTimeout(function(){ PC_subject.style.opacity = "0"; }, 250);
+    setTimeout(function(){ PC_subject.style.zIndex = "-100"; }, 300);
     for (var i = 0; i < 100; i++) {
         (function(i) {
             setTimeout(function() {
                 PC_bg_anim.style.width= 99 - i + "%";
-            }, (i + 600) * 2);
+                // PC_bg_anim.style.height= 99 - i + "%";
+            }, (i + 300) * 2);
         })(i)
     }
-    setTimeout(function(){ subject.style.display = "flex"; }, 1300);
-    setTimeout(function(){ subject.style.opacity='0.2'; }, 1400);
-    setTimeout(function(){ subject.style.opacity='0.4'; }, 1500);
-    setTimeout(function(){ subject.style.opacity='0.6'; }, 1600);
-    setTimeout(function(){ subject.style.opacity='0.8'; }, 1700);
-    setTimeout(function(){ subject.style.opacity='1'; }, 1800);
+    setTimeout(function(){ subject.style.display = "flex"; }, 750);
+    setTimeout(function(){ subject.style.opacity='0.2'; }, 750);
+    setTimeout(function(){ subject.style.opacity='0.4'; }, 800);
+    setTimeout(function(){ subject.style.opacity='0.6'; }, 850);
+    setTimeout(function(){ subject.style.opacity='0.8'; }, 900);
+    setTimeout(function(){ subject.style.opacity='1'; }, 950);
 }
 setInterval(function(){
     var today = new Date()
@@ -954,16 +938,16 @@ if (i<10)
 function contact_Popup(e) {
     if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
         console.log(e);
-        PC_contact_img[0].style.display = "none";
-        PC_contact_img[1].style.display = "none";
-        PC_contact_img[2].style.display = "none";
-        PC_contact_img[e].style.display = "block";
+        iphone_contact_img[0].style.display = "none";
+        iphone_contact_img[1].style.display = "none";
+        iphone_contact_img[2].style.display = "none";
+        iphone_contact_img[e].style.display = "block";
     }
 }
 function contact_Popup_X() {
-    PC_contact_img[0].style.display = "none";
-    PC_contact_img[1].style.display = "none";
-    PC_contact_img[2].style.display = "none";
+    iphone_contact_img[0].style.display = "none";
+    iphone_contact_img[1].style.display = "none";
+    iphone_contact_img[2].style.display = "none";
 }
 
 
