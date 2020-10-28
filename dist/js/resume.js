@@ -230,13 +230,14 @@ for(var i = 1; i < 51; i++) {
     })(i)
 }
 var dial_Btn = document.getElementsByClassName("dial-Btn");
-console.log(dial_Btn);
+
 window.onload = function () {
     var dial_box_width = document.getElementById("dial-box").offsetWidth;
-    var dial_Btn_width = parseInt((dial_box_width-22)/3);
-
+    var dial_Btn_width = parseInt(((dial_box_width-22)/3)/6);
+    console.log(dial_Btn_width);
     for (var i = 0; i < dial_Btn.length; i++) {
-        dial_Btn[i].style.width = dial_Btn_width + "px";
+        dial_Btn[i].style.width = dial_Btn_width*6 + "px";
+        dial_Btn[i].style.height = dial_Btn_width*4 + "px";
     }
     setTimeout(function(){
         loading.style.width = "260px";
