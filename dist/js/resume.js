@@ -28,6 +28,7 @@ var iphone_contact_img = document.getElementsByClassName("iphone-contact-img");
 var PC_contact_arr = PC_contact.getElementsByClassName("PC-contact-icon");
 var iphone_contact_arr = document.getElementsByClassName("iphone-contact-icon");
 var iphone_body = document.getElementById("iphone-body");
+var PC_swiper_slide_arr = PC_body.getElementsByClassName("swiper-slide");
 var Popup_state = false;
 var Page = 0;
 var equipment;
@@ -108,12 +109,19 @@ if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
 }else{
     console.log("电脑"); 
     equipment = "pc";
-    if (window.screen.height < 800) {
+    if (window.screen.height > 800) {
         var meun_width = 48;
         subject.style.width = "375px";
         subject.style.height = "600px";
         PC_body.style.width = "1000px";
+        PC_body.style.minWidth = "1000px";
         PC_body.style.height = "600px";
+        PC_body.style.left = "calc(50% - 500px)";
+        PC_body.style.top = "calc(50% - 300px)";
+        for (var i = 0; i < PC_swiper_slide_arr.length; i++) {
+            PC_swiper_slide_arr[i].style.top = "0";
+            PC_swiper_slide_arr[i].style.left = "0";
+        } 
     }else{
         var meun_width = 60;
         subject.style.width = "375px";
