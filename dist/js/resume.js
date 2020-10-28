@@ -109,7 +109,7 @@ if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
 }else{
     console.log("电脑"); 
     equipment = "pc";
-    if (window.screen.height > 800) {
+    if (window.screen.height < 800) {
         var meun_width = 48;
         subject.style.width = "375px";
         subject.style.height = "600px";
