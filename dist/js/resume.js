@@ -219,13 +219,7 @@ for (var i = 0; i < icon.length/2; i++) {
     icon[i].style.backgroundPosition = -i*60 + "px" + " " + -x*60 + "px";
     icon[i+64].style.backgroundPosition = -i*60 + "px" + " " + -x*60 + "px";
 }
-if (window.screen.height < 700) {
-    for (var i = 0; i < menu_Btn.length; i++) {
-        menu_Btn[i].style.width = "48xp";
-        menu_Btn[i].style.height = "48xp";
-        
-    }
-}
+
 
 for(var i = 1; i < 51; i++) {
     var loading = document.getElementById("jz-loading-2");
@@ -236,8 +230,14 @@ for(var i = 1; i < 51; i++) {
     })(i)
 }
 var dial_Btn = document.getElementsByClassName("dial-Btn");
-
+console.log(dial_Btn);
 window.onload = function () {
+    var dial_box_width = document.getElementById("dial-box").offsetWidth;
+    var dial_Btn_width = parseInt((dial_box_width-22)/3);
+
+    for (var i = 0; i < dial_Btn.length; i++) {
+        dial_Btn[i].style.width = dial_Btn_width + "px";
+    }
     setTimeout(function(){
         loading.style.width = "260px";
     }, 100);

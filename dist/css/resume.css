@@ -267,7 +267,7 @@ body {
 }
 
 .dial-Btn{
-	width: calc((100% - 22px)/3);
+	/*width: calc((100% - 22px)/3);*/
 	margin-top: 11px;
 	background:url(../../images/theme/dial-Btn-Num-0.png);
 	-webkit-background-size: 1200%;
