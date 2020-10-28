@@ -112,6 +112,8 @@ if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
         var meun_width = 48;
         subject.style.width = "375px";
         subject.style.height = "600px";
+        PC_body.style.width = "1000px";
+        PC_body.style.height = "600px";
     }else{
         var meun_width = 60;
         subject.style.width = "375px";
