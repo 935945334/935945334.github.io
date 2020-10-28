@@ -47,7 +47,7 @@ if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
     }
     for (var i = 0; i < iphone_contact_arr.length; i++) {
         iphone_contact_arr[i].index = i;
-        iphone_contact_arr[i].style.background = "url(images/PC/contact.png)";
+        iphone_contact_arr[i].style.background = "url(images/iphone/contact.png)";
         iphone_contact_arr[i].style.backgroundSize = "140px";
         iphone_contact_arr[i].style.backgroundPosition = -i*35 + "px" + " " + "0";
     }
@@ -75,7 +75,7 @@ if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
                     iphone_page.style.opacity = 1;
                     iphone_contact.style.opacity = 1;
                     iphone_body_Nva.style.opacity = 1;
-                    iphone_contact.style.mixBlendMode = "normal";
+                    iphone_contact.style.mixBlendMode = "overlay";
                 }else{
                     iphone_page.style.opacity = 0.5; 
                     iphone_contact.style.opacity = 0.5;
@@ -161,7 +161,7 @@ if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
                     PC_page.style.opacity = 1;
                     PC_contact.style.opacity = 1;
                     PC_body_Nva.style.opacity = 1;
-                    PC_contact.style.mixBlendMode = "normal";
+                    PC_contact.style.mixBlendMode = "overlay";
                 }else{
                     PC_page.style.opacity = 0.5; 
                     PC_contact.style.opacity = 0.5;
@@ -194,9 +194,7 @@ if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
     });
 }
 
-for (var i = 0; i < PC_contact_arr.length; i++) {
-    PC_contact_arr[i].index = i;
-}
+
 for (var i = 0; i < icon_div.length; i++) {
     icon_div[i].index = i;
     icon_div[i].style.background = "url(images/theme/desktop-icon-" + equipment + ".png)";

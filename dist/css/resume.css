@@ -696,55 +696,59 @@ body {
 	top: calc(100% - 20px);
 }
 #iphone-body-Nva{
-	display: -webkit-flex;
-    display: flex;
-    -webkit-justify-content: flex-end;
-    justify-content: flex-end;
-	height: 30px;
+	width: 30px;
 	position: absolute;
 	z-index: 200;
 	color: #c5e5da;
 	font-size: 16px;
-	right: 0;
-	width: 100%;
-	transform:rotate(-90deg);
-	-ms-transform:rotate(-90deg); /* IE 9 */
-	-webkit-transform:rotate(-90deg); /* Safari and Chrome */
-	transform-origin: 0 0;
-	left: 14px;
-	top: 100%;
+	display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+    -webkit-justify-content: flex-end;
+    justify-content: flex-end;
+	
+}
+#iphone-body-Nva div{
+	margin-top: 20px;
+	margin-left: 10px;
+	writing-mode: vertical-lr;
+	-webkit-writing-mode: vertical-lr;
+	-ms-writing-mode: vertical-lr;
+	-webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
 }
 #iphone-contact{
 	position: absolute;
+	height: 100%;
 	z-index: 200;
-	bottom: 20px;
+	right: 0;
+	margin-right: 10px;
 	display: -webkit-flex;
     display: flex;
-    /*opacity: 0.5;*/
 	mix-blend-mode: normal;
-	width: 100vh;
-	transform:rotate(-90deg);
-	-ms-transform:rotate(-90deg); /* IE 9 */
-	-webkit-transform:rotate(-90deg); /* Safari and Chrome */
-	transform-origin: 0 0;
-	left: calc(100% - 55px);
-	top: 100%;
+	display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+    -webkit-justify-content: flex-end;
+    justify-content: flex-end;
+	
 }
 .iphone-contact-icon{
 	width: 35px;
 	height: 35px;
-	margin-right: 10px;
+	margin-bottom: 10px;
 }
 .iphone-contact-icon:first-child {
-    margin-left: 20px;
+	margin-bottom: 20px;
 }
 .iphone-contact-icon:last-child {
-    margin-left: auto;
-    margin-right: 20px;
+    margin-bottom: auto;
+    margin-top: 20px;
+	
 }
-#iphone-body-Nva div{
-	margin-right: 20px;
-}
+
 .iphone-contact-img{
 	position: absolute;
 	z-index: 200;
