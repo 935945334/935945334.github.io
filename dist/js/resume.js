@@ -23,6 +23,7 @@ var iphone_page = document.getElementById("iphone-page");
 var iphone_contact = document.getElementById("iphone-contact");
 var iphone_body_Nva = document.getElementById("iphone-body-Nva");
 var PC_img = document.getElementsByClassName("PC-img");
+var iphone_img = document.getElementsByClassName("iphone-img");
 var PC_contact_img = document.getElementsByClassName("PC-contact-img");
 var iphone_contact_img = document.getElementsByClassName("iphone-contact-img");
 var PC_contact_arr = PC_contact.getElementsByClassName("PC-contact-icon");
@@ -34,10 +35,12 @@ var Page = 0;
 var equipment;
 var PC_Nva_Num;
 var iphone;
+var img_equipment;
+var Refresh = false;
 if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
     console.log("手机");
     equipment = "pc";
-
+    img_equipment = "iphone";
     document.querySelector("#status-bar").style.display = "none";
     index_bg_0_2.style.height = window.screen.width + "px";
     if (window.screen.height < 700) {
@@ -109,6 +112,7 @@ if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
 }else{
     console.log("电脑"); 
     equipment = "pc";
+    img_equipment = "PC";
     if (window.screen.height < 800) {
         var meun_width = 48;
         subject.style.width = "375px";
@@ -229,26 +233,7 @@ for(var i = 1; i < 51; i++) {
 }
 var dial_Btn = document.getElementsByClassName("dial-Btn");
 
-window.onload = function () {
-    var dial_box_width = document.getElementById("dial-box").offsetWidth;
-    var dial_Btn_width = parseInt(((dial_box_width-22)/3)/6);
-    console.log(dial_Btn_width);
-    for (var i = 0; i < dial_Btn.length; i++) {
-        dial_Btn[i].style.width = dial_Btn_width*6 + "px";
-        dial_Btn[i].style.height = dial_Btn_width*4 + "px";
-    }
-    setTimeout(function(){
-        loading.style.width = "260px";
-    }, 100);
-    setTimeout(function(){
-        loading.style.width = "270px";
-    }, 200);
-    setTimeout(function(){
-        loading.style.width = "280px";
-    }, 300);
-    setTimeout(function(){document.querySelector("#jz").style.display ='none'; }, 400);
-    setTimeout(function(){document.body.style.backgroundColor ='#eee'; }, 400);
-}
+
 
 
 
@@ -966,13 +951,50 @@ function contact_Popup_X() {
     iphone_contact_img[2].style.display = "none";
 }
 
+setTimeout(function(){
+    if (Refresh == false) {
+        location.reload();
+    }
+}, 5000);
+
+window.onload = function () {
+    var dial_box_width = document.getElementById("dial-box").offsetWidth;
+    var dial_Btn_width = parseInt(((dial_box_width-22)/3)/6);
+    console.log(dial_Btn_width);
+    for (var i = 0; i < dial_Btn.length; i++) {
+        dial_Btn[i].style.width = dial_Btn_width*6 + "px";
+        dial_Btn[i].style.height = dial_Btn_width*4 + "px";
+    }
+    setTimeout(function(){
+        loading.style.width = "260px";
+    }, 100);
+    setTimeout(function(){
+        loading.style.width = "270px";
+    }, 200);
+    setTimeout(function(){
+        loading.style.width = "280px";
+    }, 300);
+    setTimeout(function(){document.querySelector("#jz").style.display ='none'; }, 400);
+    setTimeout(function(){document.body.style.backgroundColor ='#eee'; }, 400);
+    Refresh = true;
+    Img_load()
+}
 
 
 
-
-
-
-
+function Img_load() {
+    if (img_equipment == "PC") {
+        for (var i = 0; i < PC_img.length; i++) {
+            PC_img[i].src = "images/PC/" + i + ".png";
+        }
+    }else if (img_equipment == "iphone") {
+        console.log("?");
+        for (var i = 0; i < iphone_img.length; i++) {
+            iphone_img[i].src = "images/iphone/" + i + ".png";
+        }
+    }
+    
+}
 
 
 

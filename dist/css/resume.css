@@ -670,6 +670,10 @@ body {
 	position: absolute;
 	height: 100%;
 }
+.iphone-img{
+	position: absolute;
+	height: 100%;
+}
 #iphone-body{
 	position: absolute;
 	z-index: -100;
