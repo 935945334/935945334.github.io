@@ -75,24 +75,24 @@ if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
                 var iphone_Nva_Color_Arr = ["#d02a2e","#08f70c","#13b5b1","#ea68a2","#6f84f1","#fff100"];
                 var iphone_body_Nva_Arr = document.getElementsByClassName("iphone-body-Nva");
                 if (this.activeIndex == 0) {
-                    iphone_page.style.opacity = 1;
-                    iphone_contact.style.opacity = 1;
                     iphone_body_Nva.style.opacity = 1;
                     iphone_contact.style.mixBlendMode = "overlay";
                 }else{
-                    iphone_page.style.opacity = 0.5; 
-                    iphone_contact.style.opacity = 0.5;
                     iphone_body_Nva.style.opacity = 0.5;
                     iphone_contact.style.mixBlendMode = "overlay";
                 }
-                if (this.activeIndex < 2) {
+                if (this.activeIndex < 3) {
                     iphone_Nva_Num = 0;
-                }else if (this.activeIndex == 2) {
+                }else if (this.activeIndex > 2 && this.activeIndex < 9) {
                     iphone_Nva_Num = 1;
-                }else if (this.activeIndex > 2 && this.activeIndex < 7) {
+                }else if (this.activeIndex > 8 && this.activeIndex < 14) {
                     iphone_Nva_Num = 2;
-                }else if (this.activeIndex > 6 && this.activeIndex < 10) {
+                }else if (this.activeIndex > 13 && this.activeIndex < 16) {
                     iphone_Nva_Num = 3;
+                }else if (this.activeIndex > 15 && this.activeIndex < 20) {
+                    iphone_Nva_Num = 4;
+                }else if (this.activeIndex > 19) {
+                    iphone_Nva_Num = 5;
                 }
                 for (var i = 0; i < iphone_body_Nva_Arr.length; i++) {
                     iphone_body_Nva_Arr[i].index = i;
@@ -162,24 +162,24 @@ if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
                 var PC_Nva_Color_Arr = ["#d02a2e","#08f70c","#13b5b1","#ea68a2","#6f84f1","#fff100"];
                 var PC_body_Nva_Arr = document.getElementsByClassName("PC-body-Nva");
                 if (this.activeIndex == 0) {
-                    PC_page.style.opacity = 1;
-                    PC_contact.style.opacity = 1;
                     PC_body_Nva.style.opacity = 1;
-                    PC_contact.style.mixBlendMode = "overlay";
+                    PC_contact.style.mixBlendMode = "normal";
                 }else{
-                    PC_page.style.opacity = 0.5; 
-                    PC_contact.style.opacity = 0.5;
                     PC_body_Nva.style.opacity = 0.5;
                     PC_contact.style.mixBlendMode = "overlay";
                 }
-                if (this.activeIndex == 0) {
+                if (this.activeIndex < 3) {
                     PC_Nva_Num = 0;
-                }else if (this.activeIndex == 2) {
+                }else if (this.activeIndex > 2 && this.activeIndex < 9) {
                     PC_Nva_Num = 1;
-                }else if (this.activeIndex > 2 && this.activeIndex < 7) {
+                }else if (this.activeIndex > 8 && this.activeIndex < 14) {
                     PC_Nva_Num = 2;
-                }else if (this.activeIndex > 6 && this.activeIndex < 10) {
+                }else if (this.activeIndex > 13 && this.activeIndex < 16) {
                     PC_Nva_Num = 3;
+                }else if (this.activeIndex > 15 && this.activeIndex < 20) {
+                    PC_Nva_Num = 4;
+                }else if (this.activeIndex > 19) {
+                    PC_Nva_Num = 5;
                 }
                 for (var i = 0; i < PC_body_Nva_Arr.length; i++) {
                     PC_body_Nva_Arr[i].index = i;
@@ -283,7 +283,7 @@ index.addEventListener("click",function(e){
             Mask.style.display = "block";
             WEB_Popup.style.display = "flex";
             Popup_state = true;
-            WEB_url = "http://bishengming.gitee.io/pixel/";
+            WEB_url = "http://bishengming.gitee.io/canvas/";
             break;
             case 12:
             course1();
@@ -828,10 +828,10 @@ course_X.addEventListener("click",function(e){
     icon_box[1].style.zIndex = 1;
 })
 function PC_Nva(n) {
-    mySwiper_PC.slideTo(n, 100*n, true);
+    mySwiper_PC.slideTo(n, 100, true);
 }
 function iphone_Nva(n) {
-    mySwiper_iphone.slideTo(n, 100*n, true);
+    mySwiper_iphone.slideTo(n, 100, true);
 }
 PC_contact.onmouseover = function(e) {
     PC_contact.style.mixBlendMode = "normal";
@@ -988,7 +988,6 @@ function Img_load() {
             PC_img[i].src = "images/PC/" + i + ".png";
         }
     }else if (img_equipment == "iphone") {
-        console.log("?");
         for (var i = 0; i < iphone_img.length; i++) {
             iphone_img[i].src = "images/iphone/" + i + ".png";
         }
@@ -1001,8 +1000,14 @@ function Img_load() {
 
 
 
-
-
-
+function PC_canvas() {
+    window.open("http://bishengming.gitee.io/canvas/");
+}
+function PC_xlg() {
+    window.open("http://bishengming.gitee.io/stardewvalleyfarm/");
+}
+function PC_xlgnn() {
+    window.open("http://bishengming.gitee.io/pixel/");
+}
 
 
