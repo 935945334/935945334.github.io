@@ -268,30 +268,7 @@
   justify-content: space-around;
   background:url(../../images/icon/bj.png);
 }
-.APP-1{
-  background: url(../../images/APP/1-bj.png);
-}
-.APP-7{
-  background: url(../../images/APP/7-bj.png);
-}
-.APP-8{
-  background: url(../../images/APP/8-bj.png);
-}
-#chahua-1{
-  background: url(../../images/chahua/chahua-1-bj.png);
-}
-#chahua-6{
-  background: url(../../images/chahua/chahua-1-bj.png);
-}
-#chahua-2{
-  background: url(../../images/chahua/chahua-2-bj.png);
-}
-#chahua-3{
-  background: url(../../images/chahua/chahua-3-bj.png);
-}
-#chahua-5{
-  background: url(../../images/chahua/chahua-5-bj.png);
-}
+
 #zhuti{
   z-index:12;
   margin-top: 40%;
