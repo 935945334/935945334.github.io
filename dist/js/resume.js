@@ -37,6 +37,7 @@ var PC_Nva_Num;
 var iphone;
 var img_equipment;
 var Refresh = false;
+var Tips = true;
 if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
     console.log("手机");
     equipment = "pc";
@@ -260,7 +261,6 @@ index.addEventListener("click",function(e){
             Page = e;
             console.log(e);
         }
-        console.log(e);
         switch (e){
             case 8:
             Mask.style.display = "block";
@@ -503,7 +503,7 @@ function function_load(e) {
 menu.addEventListener("click",function(e){
     var e = e.target.index;
     if (e != undefined) {
-        // console.log(e);
+        console.log(e);
         if (e != 9) {
             mySwiper2.slideTo(e, Math.abs(e-Page)*100, false);
             Page = e;
@@ -612,7 +612,15 @@ tel.addEventListener("click",function(e){
 
 var mySwiper2 = new Swiper('.gallery-top',{
     threshold : 20,
-    on:{
+    on:{  
+        touchStart: function(swiper,event){
+            if (Tips == true) {
+                Tips = false;
+                for (var i = 0; i < icon_div.length; i++) {
+                    icon_div[i].style.opacity = "1";
+                }
+            }
+        },
         slideChangeTransitionEnd: function(){
             theme.style.display = "none";
             WEB.style.display = "none";
@@ -688,7 +696,7 @@ var swiperV = new Swiper('.swiper-container-v', {
     touchAngle : 20,
     on: {
         slideChangeTransitionStart: function(){
-            console.log(course_state);
+            // console.log(course_state);
             if (course_state == 4) {
                 course_state = 0;
                 course_4.style.display = "none";
@@ -978,9 +986,19 @@ window.onload = function () {
     setTimeout(function(){document.body.style.backgroundColor ='#eee'; }, 400);
     Refresh = true;
     Img_load()
+    setTimeout(function(){time_Tips() }, 5000);
 }
 
-
+function time_Tips() {
+    // console.log(icon_div);
+    if (Tips == true) {
+        for (var i = 0; i < icon_div.length; i++) {
+            if (i != 12) {
+                icon_div[i].style.opacity = "0.5";
+            }
+        }
+    }
+}
 
 function Img_load() {
     if (img_equipment == "PC") {
