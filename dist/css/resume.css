@@ -672,7 +672,7 @@ body {
 }
 .iphone-img{
 	position: absolute;
-	height: 100%;
+	width: 100%;
 }
 #iphone-body{
 	position: absolute;
@@ -704,7 +704,7 @@ body {
 	position: absolute;
 	z-index: 200;
 	color: #c5e5da;
-	font-size: 16px;
+	font-size: 14px;
 	display: -webkit-flex;
     display: flex;
     -webkit-flex-direction: column-reverse;
