@@ -616,6 +616,7 @@ var mySwiper2 = new Swiper('.gallery-top',{
         touchStart: function(swiper,event){
             if (Tips == true) {
                 Tips = false;
+                document.getElementById("time_Tips").style.display = "none";
                 for (var i = 0; i < icon_div.length; i++) {
                     icon_div[i].style.opacity = "1";
                 }
@@ -992,9 +993,10 @@ window.onload = function () {
 function time_Tips() {
     // console.log(icon_div);
     if (Tips == true) {
+        document.getElementById("time_Tips").style.display = "block";
         for (var i = 0; i < icon_div.length; i++) {
             if (i != 12) {
-                icon_div[i].style.opacity = "0.5";
+                icon_div[i].style.opacity = "0.3";
             }
         }
     }
