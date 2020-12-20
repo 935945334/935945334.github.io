@@ -44,6 +44,9 @@ if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
     img_equipment = "iphone";
     document.querySelector("#status-bar").style.display = "none";
     index_bg_0_2.style.height = window.screen.width + "px";
+    document.getElementsByClassName("jingli")[0].style.width = "100%";
+    document.getElementsByClassName("jingli")[1].style.width = "100%";
+    document.getElementsByClassName("jingli")[2].style.width = "100%";
     if (window.screen.height < 700) {
         var meun_width = 48;
     }else{
@@ -137,6 +140,9 @@ if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
     subject.style.border = "4px solid #fcfefd";
     subject.style.borderRadius = "10px";
     subject.style.boxShadow = "10px 10px 50px #999999";
+    document.getElementsByClassName("jingli")[0].style.height = "100%";
+    document.getElementsByClassName("jingli")[1].style.height = "100%";
+    document.getElementsByClassName("jingli")[2].style.height = "100%";
     document.getElementsByClassName("swiper-container");
     for (var i = 0; i < PC_contact_arr.length; i++) {
         PC_contact_arr[i].index = i;
