@@ -372,6 +372,25 @@ body {
 	width: 150px;
 	height: 70px;
 }
+#WEB-download{
+	width: 300px;
+	height: 150px;
+	background:url(../../images/theme/download.png);
+	-webkit-background-size: 1200px;
+	background-size: 1200px;
+	position: absolute;
+	z-index: 20;
+	top: 30%;
+	display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: flex-end;
+    align-items: flex-end;
+    display: none;
+}
+#WEB-download div{
+	width: 150px;
+	height: 70px;
+}
 #mail-Popup{
 	width: 300px;
 	height: 60px;

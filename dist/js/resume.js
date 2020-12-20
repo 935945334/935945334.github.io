@@ -245,6 +245,7 @@ var menu = document.getElementById("menu");
 var theme_X = document.getElementById("theme-X");
 var WEB_X = document.getElementById("WEB-X");
 var WEB_Popup = document.getElementById("WEB-Popup");
+var WEB_download = document.getElementById("WEB-download");
 var WEB_url;
 index.addEventListener("click",function(e){
     if (e.target.index != undefined) {
@@ -340,7 +341,11 @@ index.addEventListener("click",function(e){
             mail_Popup.style.backgroundPosition = -theme_Num*300 + "px";
             break;
             case 17:
-            download_Zip();
+            Mask.style.display = "block";
+            WEB_download.style.display = "flex";
+            Popup_state = true;
+            WEB_url = "https://pan.baidu.com/s/1BYPYTSi8PAL1s7CTE6z_9w ";
+            // download_Zip();
             break;
         }
 
@@ -385,6 +390,7 @@ function A123(e) {
             }
             theme.style.backgroundPosition = -theme_Num*300 + "px";
             WEB_Popup.style.backgroundPosition = -theme_Num*300 + "px";
+            WEB_download.style.backgroundPosition = -theme_Num*300 + "px";
             theme_X.style.backgroundPosition = "60px" + " " + -theme_Num*60 + "px";
             erweima_X.style.backgroundPosition = "60px" + " " + -theme_Num*60 + "px";
             for (var i = 0; i < index_bg.length; i++) {
@@ -424,6 +430,7 @@ function theme_fun(n) {
         mySwiper2.slideTo(0, Math.abs(theme_Num-Page)*100, false);
         theme.style.backgroundPosition = -theme_Num*300 + "px";
         WEB_Popup.style.backgroundPosition = -theme_Num*300 + "px";
+        WEB_download.style.backgroundPosition = -theme_Num*300 + "px";
         theme_X.style.backgroundPosition = "60px" + " " + -theme_Num*60 + "px";
         erweima_X.style.backgroundPosition = "60px" + " " + -theme_Num*60 + "px";
         document.querySelector("#jz").style.display ="block";
@@ -512,6 +519,7 @@ menu.addEventListener("click",function(e){
             erweima.style.display = "none";
             mail.style.display = "none";
             WEB_Popup.style.display = "none";
+            WEB_download.style.display = "none";
             Mask.style.display = "none";
             dial_Del();
             Popup_state = false;
@@ -555,6 +563,8 @@ var mail_0 = mail.getElementsByTagName("div")[0];
 var mail_1 = mail.getElementsByTagName("div")[1];
 var WEB_0 = WEB_Popup.getElementsByTagName("div")[0];
 var WEB_1 = WEB_Popup.getElementsByTagName("div")[1];
+var WEB_download_0 = WEB_download.getElementsByTagName("div")[0];
+var WEB_download_1 = WEB_download.getElementsByTagName("div")[1];
 var tel = dial_Btn[9];
 var mail_Popup = document.getElementById("mail-Popup");
 var tel_Popup = document.getElementById("tel-Popup");
@@ -584,6 +594,17 @@ WEB_0.addEventListener("click",function(e){
 WEB_1.addEventListener("click",function(e){
     Mask.style.display = "none";
     WEB_Popup.style.display = "none";
+    Popup_state = false;
+})
+WEB_download_0.addEventListener("click",function(e){
+    Mask.style.display = "none";
+    WEB_download.style.display = "none";
+    Popup_state = false;
+    window.open(WEB_url);
+})
+WEB_download_1.addEventListener("click",function(e){
+    Mask.style.display = "none";
+    WEB_download.style.display = "none";
     Popup_state = false;
 })
 tel.addEventListener("click",function(e){
