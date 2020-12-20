@@ -340,7 +340,7 @@ index.addEventListener("click",function(e){
             mail_Popup.style.backgroundPosition = -theme_Num*300 + "px";
             break;
             case 17:
-
+            download_Zip();
             break;
         }
 
@@ -1030,4 +1030,12 @@ function PC_xlgnn() {
     window.open("http://bishengming.gitee.io/pixel/");
 }
 
-
+function download_JianLi() {
+    window.open("https://github.com/935945334/resume/raw/master/%E6%AF%95%E6%99%9F%E9%93%AD-%E7%AE%80%E5%8E%86-17150024672.pdf");
+}
+function download_ZuoPinJi() {
+    window.open("https://github.com/935945334/resume/raw/master/%E6%AF%95%E6%99%9F%E9%93%AD-%E4%BD%9C%E5%93%81%E9%9B%86-17150024672.pdf");
+}
+function download_Zip() {
+    window.open("https://github.com/935945334/resume/raw/master/%E6%AF%95%E6%99%9F%E9%93%AD-%E7%AE%80%E5%8E%86-%E4%BD%9C%E5%93%81%E9%9B%86.zip");
+}
