@@ -644,6 +644,7 @@ var mySwiper2 = new Swiper('.gallery-top',{
             
         },
         slideChangeTransitionEnd: function(){
+            console.log(1111);
             if (Tips == true) {
                 Tips = false;
                 document.getElementById("time_Tips").style.display = "none";
