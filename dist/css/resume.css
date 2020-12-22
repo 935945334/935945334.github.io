@@ -782,13 +782,21 @@ body {
 #time_Tips{
 	background: #000;
 	position: absolute;
-	width: 100vw;
-	height: 100vh;
+	width: 100%;
+	height: 100%;
 	z-index: 9;
 	opacity: 0.7;
 	display: none;
 }
-
+#tishi{
+	width: 60px;
+	height: 78px;
+	position: relative;
+	top: -94px;
+	display: none;
+	opacity: 0.5;
+	pointer-events: none;
+}
 
 
 

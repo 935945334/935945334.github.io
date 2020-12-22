@@ -648,6 +648,7 @@ var mySwiper2 = new Swiper('.gallery-top',{
             if (Tips == true) {
                 Tips = false;
                 document.getElementById("time_Tips").style.display = "none";
+                document.getElementById("tishi").style.display = "none";
                 for (var i = 0; i < icon_div.length; i++) {
                     icon_div[i].style.opacity = "1";
                 }
@@ -813,6 +814,7 @@ var course_5 = document.getElementById("course-5");
 var course_X = document.getElementById("course-X");
 function course1() {
     document.getElementById("time_Tips").style.display = "none";
+    document.getElementById("tishi").style.display = "none";
     for (var i = 0; i < icon_div.length; i++) {
         icon_div[i].style.opacity = "1";
     }
@@ -1020,13 +1022,14 @@ window.onload = function () {
     setTimeout(function(){document.body.style.backgroundColor ='#eee'; }, 400);
     Refresh = true;
     Img_load()
-    setTimeout(function(){time_Tips() }, 3000);
+    setTimeout(function(){time_Tips() }, 5000);
 }
 
 function time_Tips() {
     // console.log(icon_div);
     if (Tips == true) {
         document.getElementById("time_Tips").style.display = "block";
+        document.getElementById("tishi").style.display = "block";
         for (var i = 0; i < icon_div.length; i++) {
             if (i != 12) {
                 icon_div[i].style.opacity = "0.3";
