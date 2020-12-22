@@ -641,7 +641,7 @@ var mySwiper2 = new Swiper('.gallery-top',{
     threshold : 20,
     on:{  
         touchStart: function(swiper,event){
-            
+            // course_3.style.display = "none";
         },
         slideChangeTransitionEnd: function(){
             console.log(1111);
@@ -1020,7 +1020,7 @@ window.onload = function () {
     setTimeout(function(){document.body.style.backgroundColor ='#eee'; }, 400);
     Refresh = true;
     Img_load()
-    setTimeout(function(){time_Tips() }, 5000);
+    setTimeout(function(){time_Tips() }, 3000);
 }
 
 function time_Tips() {
