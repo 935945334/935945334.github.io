@@ -641,6 +641,9 @@ var mySwiper2 = new Swiper('.gallery-top',{
     threshold : 20,
     on:{  
         touchStart: function(swiper,event){
+            
+        },
+        slideChangeTransitionEnd: function(){
             if (Tips == true) {
                 Tips = false;
                 document.getElementById("time_Tips").style.display = "none";
@@ -648,8 +651,6 @@ var mySwiper2 = new Swiper('.gallery-top',{
                     icon_div[i].style.opacity = "1";
                 }
             }
-        },
-        slideChangeTransitionEnd: function(){
             theme.style.display = "none";
             WEB.style.display = "none";
             erweima.style.display = "none";
@@ -721,7 +722,7 @@ var swiperV = new Swiper('.swiper-container-v', {
     paginationClickable: true,
     direction: 'vertical',
     mousewheel: true,
-    touchAngle : 20,
+    // touchAngle : 20,
     on: {
         slideChangeTransitionStart: function(){
             // console.log(course_state);
@@ -810,6 +811,10 @@ var course_4 = document.getElementById("course-4");
 var course_5 = document.getElementById("course-5");
 var course_X = document.getElementById("course-X");
 function course1() {
+    document.getElementById("time_Tips").style.display = "none";
+    for (var i = 0; i < icon_div.length; i++) {
+        icon_div[i].style.opacity = "1";
+    }
     for (var i = 0; i < icon_div.length; i++) {
         icon_div[i].index = i;
         icon_div[i].style.background = "url(images/theme/desktop-icon-" + equipment + ".png)";
