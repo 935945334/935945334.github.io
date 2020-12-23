@@ -1047,7 +1047,7 @@ function time_Tips() {
     // console.log(icon_div);
     if (Tips == true) {
         Mask.style.display = "block";
-        WEB_tishi.style.display = "flex";
+        WEB_tishi.style.display = "flex"; 
     }
 }
 
