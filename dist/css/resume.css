@@ -391,6 +391,25 @@ body {
 	width: 150px;
 	height: 70px;
 }
+#WEB-tishi{
+	width: 300px;
+	height: 150px;
+	background:url(../../images/theme/tishi.png);
+	-webkit-background-size: 1200px;
+	background-size: 1200px;
+	position: absolute;
+	z-index: 20;
+	top: 30%;
+	display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: flex-end;
+    align-items: flex-end;
+    display: none;
+}
+#WEB-tishi div{
+	width: 150px;
+	height: 70px;
+}
 #mail-Popup{
 	width: 300px;
 	height: 60px;

@@ -252,6 +252,7 @@ var theme_X = document.getElementById("theme-X");
 var WEB_X = document.getElementById("WEB-X");
 var WEB_Popup = document.getElementById("WEB-Popup");
 var WEB_download = document.getElementById("WEB-download");
+var WEB_tishi = document.getElementById("WEB-tishi");
 var WEB_url;
 index.addEventListener("click",function(e){
     if (e.target.index != undefined) {
@@ -397,6 +398,7 @@ function A123(e) {
             theme.style.backgroundPosition = -theme_Num*300 + "px";
             WEB_Popup.style.backgroundPosition = -theme_Num*300 + "px";
             WEB_download.style.backgroundPosition = -theme_Num*300 + "px";
+            WEB_tishi.style.backgroundPosition = -theme_Num*300 + "px";
             theme_X.style.backgroundPosition = "60px" + " " + -theme_Num*60 + "px";
             erweima_X.style.backgroundPosition = "60px" + " " + -theme_Num*60 + "px";
             for (var i = 0; i < index_bg.length; i++) {
@@ -437,6 +439,7 @@ function theme_fun(n) {
         theme.style.backgroundPosition = -theme_Num*300 + "px";
         WEB_Popup.style.backgroundPosition = -theme_Num*300 + "px";
         WEB_download.style.backgroundPosition = -theme_Num*300 + "px";
+        WEB_tishi.style.backgroundPosition = -theme_Num*300 + "px";
         theme_X.style.backgroundPosition = "60px" + " " + -theme_Num*60 + "px";
         erweima_X.style.backgroundPosition = "60px" + " " + -theme_Num*60 + "px";
         document.querySelector("#jz").style.display ="block";
@@ -526,6 +529,7 @@ menu.addEventListener("click",function(e){
             mail.style.display = "none";
             WEB_Popup.style.display = "none";
             WEB_download.style.display = "none";
+            WEB_tishi.style.display = "none";
             Mask.style.display = "none";
             dial_Del();
             Popup_state = false;
@@ -571,6 +575,8 @@ var WEB_0 = WEB_Popup.getElementsByTagName("div")[0];
 var WEB_1 = WEB_Popup.getElementsByTagName("div")[1];
 var WEB_download_0 = WEB_download.getElementsByTagName("div")[0];
 var WEB_download_1 = WEB_download.getElementsByTagName("div")[1];
+var WEB_tishi_0 = WEB_tishi.getElementsByTagName("div")[0];
+var WEB_tishi_1 = WEB_tishi.getElementsByTagName("div")[1];
 var tel = dial_Btn[9];
 var mail_Popup = document.getElementById("mail-Popup");
 var tel_Popup = document.getElementById("tel-Popup");
@@ -611,6 +617,18 @@ WEB_download_0.addEventListener("click",function(e){
 WEB_download_1.addEventListener("click",function(e){
     Mask.style.display = "none";
     WEB_download.style.display = "none";
+    Popup_state = false;
+})
+WEB_tishi_0.addEventListener("click",function(e){
+    Mask.style.display = "none";
+    WEB_tishi.style.display = "none";
+    Popup_state = false;
+    course1();
+    console.log(1111);
+})
+WEB_tishi_1.addEventListener("click",function(e){
+    Mask.style.display = "none";
+    WEB_tishi.style.display = "none";
     Popup_state = false;
 })
 tel.addEventListener("click",function(e){
@@ -814,7 +832,7 @@ var course_5 = document.getElementById("course-5");
 var course_X = document.getElementById("course-X");
 function course1() {
     document.getElementById("time_Tips").style.display = "none";
-    document.getElementById("tishi").style.display = "none";
+    document.getElementById("WEB-tishi").style.display = "none";
     for (var i = 0; i < icon_div.length; i++) {
         icon_div[i].style.opacity = "1";
     }
@@ -1028,13 +1046,8 @@ window.onload = function () {
 function time_Tips() {
     // console.log(icon_div);
     if (Tips == true) {
-        document.getElementById("time_Tips").style.display = "block";
-        document.getElementById("tishi").style.display = "block";
-        for (var i = 0; i < icon_div.length; i++) {
-            if (i != 12) {
-                icon_div[i].style.opacity = "0.3";
-            }
-        }
+        Mask.style.display = "block";
+        WEB_tishi.style.display = "flex";
     }
 }
 
