@@ -662,20 +662,21 @@ var mySwiper2 = new Swiper('.gallery-top',{
             // course_3.style.display = "none";
         },
         slideChangeTransitionEnd: function(){
-            console.log(1111);
-            if (Tips == true) {
-                Tips = false;
-                document.getElementById("time_Tips").style.display = "none";
-                document.getElementById("tishi").style.display = "none";
-                for (var i = 0; i < icon_div.length; i++) {
-                    icon_div[i].style.opacity = "1";
-                }
-            }
+            // console.log(1111);
+            // if (Tips == true) {
+            //     Tips = false;
+            //     document.getElementById("time_Tips").style.display = "none";
+            //     document.getElementById("WEB_tishi").style.display = "none";
+            //     for (var i = 0; i < icon_div.length; i++) {
+            //         icon_div[i].style.opacity = "1";
+            //     }
+            // }
             theme.style.display = "none";
             WEB.style.display = "none";
             erweima.style.display = "none";
             mail.style.display = "none";
             WEB_Popup.style.display = "none";
+            WEB_tishi.style.display = "none";
             Mask.style.display = "none";
             Mask.style.zIndex = "15";
             dial_Num_box.innerHTML = "";

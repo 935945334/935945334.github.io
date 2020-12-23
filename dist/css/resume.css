@@ -816,7 +816,13 @@ body {
 	opacity: 0.5;
 	pointer-events: none;
 }
-
+.jiantou{
+	position: absolute;
+	width: 100%;
+	opacity: 0.3;
+	bottom: 0px;
+	z-index: 200;
+}
 
 
 
