@@ -209,7 +209,7 @@ if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
 for (var i = 0; i < icon_div.length; i++) {
 	icon_div[i].index = i;
 	icon_div[i].style.background = "url(images/theme/desktop-icon-" + equipment + ".png)";
-	icon_div[i].style.backgroundSize = "1080px 624px";
+	icon_div[i].style.backgroundSize = "1140px 624px";
 	icon_div[i].style.backgroundPosition = -i*60 + "px" + " " + theme_Num*78 + "px";
 }
 for (var i = 0; i < theme_icon.length; i++) {
@@ -272,31 +272,37 @@ index.addEventListener("click",function(e){
 		switch (e){
 			case 8:
 			Mask.style.display = "block";
-			theme.style.display = "flex";
+			WEB_Popup.style.display = "flex";
 			Popup_state = true;
+			WEB_url = "http://bishengming.gitee.io/stardewvalleyfarm/";
 			break;
 			case 9:
 			Mask.style.display = "block";
 			WEB_Popup.style.display = "flex";
 			Popup_state = true;
-			WEB_url = "http://bishengming.gitee.io/stardewvalleyfarm/";
+			WEB_url = "http://bishengming.gitee.io/pixel/";
 			break;
 			case 10:
 			Mask.style.display = "block";
 			WEB_Popup.style.display = "flex";
 			Popup_state = true;
-			WEB_url = "http://bishengming.gitee.io/pixel/";
+			WEB_url = "http://bishengming.gitee.io/canvas/";
 			break;
 			case 11:
 			Mask.style.display = "block";
 			WEB_Popup.style.display = "flex";
 			Popup_state = true;
-			WEB_url = "http://bishengming.gitee.io/canvas/";
+			WEB_url = "http://bishengming.gitee.io/tarot/";
 			break;
 			case 12:
-			course1();
+			Mask.style.display = "block";
+			theme.style.display = "flex";
+			Popup_state = true;
 			break;
 			case 13:
+			course1();
+			break;
+			case 14:
 			if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
 				var PC_subject = iphone_body;
 				var PC_Swiper = mySwiper_iphone;
@@ -366,7 +372,7 @@ function A123(e) {
 			for (var i = 0; i < icon_div.length; i++) {
 				icon_div[i].index = i;
 				icon_div[i].style.background = "url(images/theme/desktop-icon-" + equipment + ".png)";
-				icon_div[i].style.backgroundSize = "1080px 624px";
+				icon_div[i].style.backgroundSize = "1140px 624px";
 				icon_div[i].style.backgroundPosition = -i*60 + "px" + " " + -theme_Num*78 + "px";
 			}
 			for (var i = 0; i < theme_icon.length; i++) {
@@ -843,7 +849,7 @@ function course1() {
 	for (var i = 0; i < icon_div.length; i++) {
 		icon_div[i].index = i;
 		icon_div[i].style.background = "url(images/theme/desktop-icon-" + equipment + ".png)";
-		icon_div[i].style.backgroundSize = "1080px 624px";
+		icon_div[i].style.backgroundSize = "1140px 624px";
 		icon_div[i].style.backgroundPosition = -i*60 + "px" + " " + -(theme_Num+4)*78 + "px";
 	}
 	course_X.style.display = "block";
@@ -863,7 +869,7 @@ function course2() {
 	for (var i = 0; i < icon_div.length; i++) {
 		icon_div[i].index = i;
 		icon_div[i].style.background = "url(images/theme/desktop-icon-" + equipment + ".png)";
-		icon_div[i].style.backgroundSize = "1080px 624px";
+		icon_div[i].style.backgroundSize = "1140px 624px";
 		icon_div[i].style.backgroundPosition = -i*60 + "px" + " " + -theme_Num*78 + "px";
 	}
 }
@@ -879,7 +885,7 @@ course_X.addEventListener("click",function(e){
 	for (var i = 0; i < icon_div.length; i++) {
 		icon_div[i].index = i;
 		icon_div[i].style.background = "url(images/theme/desktop-icon-" + equipment + ".png)";
-		icon_div[i].style.backgroundSize = "1080px 624px";
+		icon_div[i].style.backgroundSize = "1140px 624px";
 		icon_div[i].style.backgroundPosition = -i*60 + "px" + " " + -theme_Num*78 + "px";
 	}
 	course_1.style.display = "none";
@@ -1078,6 +1084,9 @@ function Img_load() {
 
 
 
+function PC_tarot() {
+	window.open("http://bishengming.gitee.io/tarot/");
+}
 function PC_canvas() {
 	window.open("http://bishengming.gitee.io/canvas/");
 }
