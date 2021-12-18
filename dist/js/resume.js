@@ -336,24 +336,24 @@ index.addEventListener("click",function(e){
 				PC_Swiper.slideTo(0, 0, true);
 			}, 1050);
 			break;
-			case 14:
+			case 15:
 			fun_dial();
 			break;
-			case 15:
+			case 16:
 			Mask.style.display = "block";
 			erweima.style.display = "block";
 			Popup_state = true;
 			console.log(theme_Num);
 			erweima.style.backgroundPosition = -theme_Num*300 + "px";
 			break;
-			case 16:
+			case 17:
 			Mask.style.display = "block";
 			mail.style.display = "flex";
 			Popup_state = true;
 			mail.style.backgroundPosition = -theme_Num*300 + "px";
 			mail_Popup.style.backgroundPosition = -theme_Num*300 + "px";
 			break;
-			case 17:
+			case 18:
 			Mask.style.display = "block";
 			WEB_download.style.display = "flex";
 			Popup_state = true;
