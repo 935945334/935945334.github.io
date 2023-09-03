@@ -1,3 +1,33 @@
+var LT_TXT_1 = "你好";
+var LT_TXT_2 = "吃了吗";
+var LT_TXT_3 = "啊啊啊啊";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     //手机模式下保证底部icon位置在底部
     // if(screen.width < 1365){
     //         window.onload = function () {

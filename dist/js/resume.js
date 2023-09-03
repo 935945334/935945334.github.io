@@ -1,4 +1,5 @@
 var icon_div = document.getElementsByClassName("icon-div");
+console.log(icon_div);
 var theme_icon = document.getElementsByClassName("theme-icon");
 var WEB_icon = document.getElementsByClassName("WEB-icon");
 var menu_Btn = document.getElementsByClassName("menu-Btn");
@@ -30,6 +31,7 @@ var PC_contact_arr = PC_contact.getElementsByClassName("PC-contact-icon");
 var iphone_contact_arr = document.getElementsByClassName("iphone-contact-icon");
 var iphone_body = document.getElementById("iphone-body");
 var PC_swiper_slide_arr = PC_body.getElementsByClassName("swiper-slide");
+var liaotian = document.getElementById("liaotian");
 var Popup_state = false;
 var Page = 0;
 var equipment;
@@ -85,17 +87,17 @@ if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
 					iphone_body_Nva.style.opacity = 0.5;
 					iphone_contact.style.mixBlendMode = "overlay";
 				}
-				if (this.activeIndex < 3) {
+				if (this.activeIndex == 0) {
 					iphone_Nva_Num = 0;
-				}else if (this.activeIndex > 2 && this.activeIndex < 9) {
+				}else if (this.activeIndex > 0 && this.activeIndex < 2) {
 					iphone_Nva_Num = 1;
-				}else if (this.activeIndex > 8 && this.activeIndex < 14) {
+				}else if (this.activeIndex > 2 && this.activeIndex < 7) {
 					iphone_Nva_Num = 2;
-				}else if (this.activeIndex > 13 && this.activeIndex < 16) {
+				}else if (this.activeIndex > 6 && this.activeIndex < 10) {
 					iphone_Nva_Num = 3;
-				}else if (this.activeIndex > 15 && this.activeIndex < 20) {
+				}else if (this.activeIndex > 9 && this.activeIndex < 15) {
 					iphone_Nva_Num = 4;
-				}else if (this.activeIndex > 19) {
+				}else if (this.activeIndex > 14) {
 					iphone_Nva_Num = 5;
 				}
 				for (var i = 0; i < iphone_body_Nva_Arr.length; i++) {
@@ -175,17 +177,17 @@ if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
 					PC_body_Nva.style.opacity = 0.5;
 					PC_contact.style.mixBlendMode = "overlay";
 				}
-				if (this.activeIndex < 3) {
+				if (this.activeIndex == 0) {
 					PC_Nva_Num = 0;
-				}else if (this.activeIndex > 2 && this.activeIndex < 9) {
+				}else if (this.activeIndex > 0 && this.activeIndex < 2) {
 					PC_Nva_Num = 1;
-				}else if (this.activeIndex > 8 && this.activeIndex < 14) {
+				}else if (this.activeIndex > 2 && this.activeIndex < 7) {
 					PC_Nva_Num = 2;
-				}else if (this.activeIndex > 13 && this.activeIndex < 16) {
+				}else if (this.activeIndex > 6 && this.activeIndex < 10) {
 					PC_Nva_Num = 3;
-				}else if (this.activeIndex > 15 && this.activeIndex < 20) {
+				}else if (this.activeIndex > 9 && this.activeIndex < 15) {
 					PC_Nva_Num = 4;
-				}else if (this.activeIndex > 19) {
+				}else if (this.activeIndex > 14) {
 					PC_Nva_Num = 5;
 				}
 				for (var i = 0; i < PC_body_Nva_Arr.length; i++) {
@@ -209,7 +211,7 @@ if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
 for (var i = 0; i < icon_div.length; i++) {
 	icon_div[i].index = i;
 	icon_div[i].style.background = "url(images/theme/desktop-icon-" + equipment + ".png)";
-	icon_div[i].style.backgroundSize = "1140px 624px";
+	icon_div[i].style.backgroundSize = "1080px 624px";
 	icon_div[i].style.backgroundPosition = -i*60 + "px" + " " + theme_Num*78 + "px";
 }
 for (var i = 0; i < theme_icon.length; i++) {
@@ -217,8 +219,10 @@ for (var i = 0; i < theme_icon.length; i++) {
 	theme_icon[i].style.backgroundSize = "300px 312px";
 	theme_icon[i].style.backgroundPosition = -i*60 + "px" + " " + theme_Num*78 + "px";
 }
+console.log(icon.length);
 for (var i = 0; i < icon.length/2; i++) {
 	var x = Math.floor(i/16);
+
 	icon[i].index = i;
 	icon[i+64].index = i+64;
 	icon[i].style.background = "url(images/icon/icon.png)";
@@ -257,7 +261,7 @@ var WEB_url;
 index.addEventListener("click",function(e){
 	if (e.target.index != undefined) {
 		var e = e.target.index;
-		if (e < 8) {
+		if (e < 7) {
 			if (course_state == 1) {
 				icon_box[0].style.zIndex = 1;
 				icon_box[1].style.zIndex = 1;
@@ -270,39 +274,39 @@ index.addEventListener("click",function(e){
 			console.log(e);
 		}
 		switch (e){
-			case 8:
+			case 7:
 			Mask.style.display = "block";
 			WEB_Popup.style.display = "flex";
 			Popup_state = true;
 			WEB_url = "http://bishengming.gitee.io/stardewvalleyfarm/";
 			break;
-			case 9:
+			case 8:
 			Mask.style.display = "block";
 			WEB_Popup.style.display = "flex";
 			Popup_state = true;
 			WEB_url = "http://bishengming.gitee.io/pixel/";
 			break;
-			case 10:
+			case 9:
 			Mask.style.display = "block";
 			WEB_Popup.style.display = "flex";
 			Popup_state = true;
 			WEB_url = "http://bishengming.gitee.io/canvas/";
 			break;
-			case 11:
+			case 10:
 			Mask.style.display = "block";
 			WEB_Popup.style.display = "flex";
 			Popup_state = true;
-			WEB_url = "http://bishengming.gitee.io/tarot/";
+			WEB_url = "http://bishengming.gitee.io/diviner/";
 			break;
-			case 12:
+			case 11:
 			Mask.style.display = "block";
 			theme.style.display = "flex";
 			Popup_state = true;
 			break;
-			case 13:
+			case 12:
 			course1();
 			break;
-			case 14:
+			case 13:
 			if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
 				var PC_subject = iphone_body;
 				var PC_Swiper = mySwiper_iphone;
@@ -336,26 +340,39 @@ index.addEventListener("click",function(e){
 				PC_Swiper.slideTo(0, 0, true);
 			}, 1050);
 			break;
-			case 15:
+			case 14:
 			fun_dial();
 			break;
-			case 16:
-			Mask.style.display = "block";
-			erweima.style.display = "block";
-			Popup_state = true;
-			console.log(theme_Num);
-			erweima.style.backgroundPosition = -theme_Num*300 + "px";
+			case 15:
+			console.log(e);
+			liaotian.style.display = "flex";
+			if (liaotian_ == 1){
+				hf = hf_6;
+				hf_changdu = [0]
+			}else if (liaotian_ == 0){
+				hf = ["你好","欢迎来到我的个人网站","images/liaotian/1.png"];;
+				hf_changdu = [0,0,1]
+			}
+			
+			setTimeout(function(){
+				hf_shuru();
+			}, hf_sudu);
+			setTimeout(function(){xuanxiang.style.pointerEvents = "auto"}, hf_sudu * 4 * (hf.length+1));
+			var status_bar = document.getElementById("status-bar");
+			status_bar.style.width = "96%";
+			status_bar.style.marginTop = "5px";
+			status_bar.style.marginLeft = "0px";
 			break;
-			case 17:
+			case 16:
 			Mask.style.display = "block";
 			mail.style.display = "flex";
 			Popup_state = true;
 			mail.style.backgroundPosition = -theme_Num*300 + "px";
 			mail_Popup.style.backgroundPosition = -theme_Num*300 + "px";
 			break;
-			case 18:
+			case 17:
 			Mask.style.display = "block";
-			WEB_download.style.display = "flex";
+			WEB_download.style.display = "flex";	
 			Popup_state = true;
 			WEB_url = "https://pan.baidu.com/s/1BYPYTSi8PAL1s7CTE6z_9w ";
 			// download_Zip();
@@ -372,7 +389,7 @@ function A123(e) {
 			for (var i = 0; i < icon_div.length; i++) {
 				icon_div[i].index = i;
 				icon_div[i].style.background = "url(images/theme/desktop-icon-" + equipment + ".png)";
-				icon_div[i].style.backgroundSize = "1140px 624px";
+				icon_div[i].style.backgroundSize = "1080px 624px";
 				icon_div[i].style.backgroundPosition = -i*60 + "px" + " " + -theme_Num*78 + "px";
 			}
 			for (var i = 0; i < theme_icon.length; i++) {
@@ -406,7 +423,7 @@ function A123(e) {
 			WEB_download.style.backgroundPosition = -theme_Num*300 + "px";
 			WEB_tishi.style.backgroundPosition = -theme_Num*300 + "px";
 			theme_X.style.backgroundPosition = "60px" + " " + -theme_Num*60 + "px";
-			erweima_X.style.backgroundPosition = "60px" + " " + -theme_Num*60 + "px";
+			download_X.style.backgroundPosition = "60px" + " " + -theme_Num*60 + "px";
 			for (var i = 0; i < index_bg.length; i++) {
 				if (i == theme_Num) {
 					index_bg[i].style.display = "flex";
@@ -434,20 +451,46 @@ function A123(e) {
 			e.stopPropagation();
 		}
 }
+var LiaoTianChuangKou = document.getElementById("LiaoTianChuangKou");
+var liaotian_1 = document.getElementById("liaotian-1");
+var liaotian_3 = document.getElementById("liaotian-3");
+var liaotian_1_1 = document.getElementById("liaotian-1-1");
+var liaotian_3_1 = document.getElementById("liaotian-3-1");
+var liaotian_text = document.getElementById("liaotian-text");
+var xuanxiang = document.getElementById("xuanxiang");
+var NeiLan = document.getElementById("NeiLan");
+var QiPao_text = document.getElementsByClassName("QiPao-text");
+var QiPao_img = document.getElementsByClassName("QiPao-img");
+var LT_color = ["#dcdcdc","#7f2d00","#464243","#7f6c61"];
+var LT_bj = ["#214a61","url(../resume/images/liaotian/bj-1.png)","#daf2d2","#f1e8d9"];
+var LT_QiPao = ["#265772","#fff0ba","#fbf1ac","#ffc388",];
+var LT_QiPao_border = ["#2b6584","#5b2b2a","#464243","#7f6c61"];
 var new_theme_Num = 0;
 function theme_fun(n) {
 	new_theme_Num = n;
 	if (new_theme_Num == theme_Num) {
 		console.log("正在使用该主题");
 	}else {
+		console.log("切换为主题" + new_theme_Num);
 		theme_Num = new_theme_Num;
+		LiaoTianChuangKou.style.background = LT_bj[theme_Num];
+		liaotian_1.style.background = LT_bj[theme_Num];
+		liaotian_3.style.background = LT_bj[theme_Num];
+		liaotian_1.style.color = LT_color[theme_Num];
+		liaotian_1_1.style.background = "url(../resume/images/liaotian/top-" + theme_Num + ".png)"
+		liaotian_3_1.style.background = "url(../resume/images/liaotian/top-" + theme_Num + ".png)"
+		liaotian_text.style.color = LT_color[theme_Num];
+		xuanxiang.style.color = LT_color[theme_Num];
+		NeiLan.style.background = LT_bj[theme_Num];
+		console.log(QiPao_text);
+
 		mySwiper2.slideTo(0, Math.abs(theme_Num-Page)*100, false);
 		theme.style.backgroundPosition = -theme_Num*300 + "px";
 		WEB_Popup.style.backgroundPosition = -theme_Num*300 + "px";
 		WEB_download.style.backgroundPosition = -theme_Num*300 + "px";
 		WEB_tishi.style.backgroundPosition = -theme_Num*300 + "px";
 		theme_X.style.backgroundPosition = "60px" + " " + -theme_Num*60 + "px";
-		erweima_X.style.backgroundPosition = "60px" + " " + -theme_Num*60 + "px";
+		download_X.style.backgroundPosition = "60px" + " " + -theme_Num*60 + "px";
 		document.querySelector("#jz").style.display ="block";
 		document.getElementById("bar").src = "images/bar-" + theme_Num + ".png";
 		var color_Arr = ["#dcdcdc","#7f2d00","#464243","#7f6c61"];
@@ -526,12 +569,11 @@ menu.addEventListener("click",function(e){
 	var e = e.target.index;
 	if (e != undefined) {
 		console.log(e);
-		if (e != 9) {
+		if (e != 8) {
 			mySwiper2.slideTo(e, Math.abs(e-Page)*100, false);
 			Page = e;
 			theme.style.display = "none";
 			WEB.style.display = "none";
-			erweima.style.display = "none";
 			mail.style.display = "none";
 			WEB_Popup.style.display = "none";
 			WEB_download.style.display = "none";
@@ -567,11 +609,10 @@ WEB_X.addEventListener("click",function(e){
 	WEB.style.display = "none";
 	Popup_state = false;
 })
-var erweima_X = document.getElementById("erweima-X");
-erweima_X.addEventListener("click",function(e){
-	var erweima = document.getElementById("erweima");
+var download_X = document.getElementById("download-X");
+download_X.addEventListener("click",function(e){
 	Mask.style.display = "none";
-	erweima.style.display = "none";
+	WEB_download.style.display = "none";
 	Popup_state = false;
 })
 var mail = document.getElementById("mail");
@@ -579,8 +620,6 @@ var mail_0 = mail.getElementsByTagName("div")[0];
 var mail_1 = mail.getElementsByTagName("div")[1];
 var WEB_0 = WEB_Popup.getElementsByTagName("div")[0];
 var WEB_1 = WEB_Popup.getElementsByTagName("div")[1];
-var WEB_download_0 = WEB_download.getElementsByTagName("div")[0];
-var WEB_download_1 = WEB_download.getElementsByTagName("div")[1];
 var WEB_tishi_0 = WEB_tishi.getElementsByTagName("div")[0];
 var WEB_tishi_1 = WEB_tishi.getElementsByTagName("div")[1];
 var tel = dial_Btn[9];
@@ -612,17 +651,6 @@ WEB_0.addEventListener("click",function(e){
 WEB_1.addEventListener("click",function(e){
 	Mask.style.display = "none";
 	WEB_Popup.style.display = "none";
-	Popup_state = false;
-})
-WEB_download_0.addEventListener("click",function(e){
-	Mask.style.display = "none";
-	WEB_download.style.display = "none";
-	Popup_state = false;
-	window.open(WEB_url);
-})
-WEB_download_1.addEventListener("click",function(e){
-	Mask.style.display = "none";
-	WEB_download.style.display = "none";
 	Popup_state = false;
 })
 WEB_tishi_0.addEventListener("click",function(e){
@@ -682,7 +710,6 @@ var mySwiper2 = new Swiper('.gallery-top',{
 			// }
 			theme.style.display = "none";
 			WEB.style.display = "none";
-			erweima.style.display = "none";
 			mail.style.display = "none";
 			WEB_Popup.style.display = "none";
 			WEB_tishi.style.display = "none";
@@ -716,7 +743,7 @@ var mySwiper2 = new Swiper('.gallery-top',{
 					menu_Btn[i].style.height = meun_width + "px";
 					menu_Btn[i].index = i;
 					menu_Btn[i].style.background = "url(images/theme/menu-icon.png)";
-					menu_Btn[i].style.backgroundSize = 10*meun_width + "px" + " " + 4*meun_width + "px";
+					menu_Btn[i].style.backgroundSize = 9*meun_width + "px" + " " + 4*meun_width + "px";
 					menu_Btn[i].style.backgroundPosition = -i*meun_width + "px" + " " + -theme_Num*meun_width + "px";
 				}
 				setTimeout(function(){ menu.style.opacity='0.2'; }, 50);
@@ -849,7 +876,7 @@ function course1() {
 	for (var i = 0; i < icon_div.length; i++) {
 		icon_div[i].index = i;
 		icon_div[i].style.background = "url(images/theme/desktop-icon-" + equipment + ".png)";
-		icon_div[i].style.backgroundSize = "1140px 624px";
+		icon_div[i].style.backgroundSize = "1080px 624px";
 		icon_div[i].style.backgroundPosition = -i*60 + "px" + " " + -(theme_Num+4)*78 + "px";
 	}
 	course_X.style.display = "block";
@@ -869,7 +896,7 @@ function course2() {
 	for (var i = 0; i < icon_div.length; i++) {
 		icon_div[i].index = i;
 		icon_div[i].style.background = "url(images/theme/desktop-icon-" + equipment + ".png)";
-		icon_div[i].style.backgroundSize = "1140px 624px";
+		icon_div[i].style.backgroundSize = "1080px 624px";
 		icon_div[i].style.backgroundPosition = -i*60 + "px" + " " + -theme_Num*78 + "px";
 	}
 }
@@ -885,7 +912,7 @@ course_X.addEventListener("click",function(e){
 	for (var i = 0; i < icon_div.length; i++) {
 		icon_div[i].index = i;
 		icon_div[i].style.background = "url(images/theme/desktop-icon-" + equipment + ".png)";
-		icon_div[i].style.backgroundSize = "1140px 624px";
+		icon_div[i].style.backgroundSize = "1080px 624px";
 		icon_div[i].style.backgroundPosition = -i*60 + "px" + " " + -theme_Num*78 + "px";
 	}
 	course_1.style.display = "none";
@@ -1085,7 +1112,7 @@ function Img_load() {
 
 
 function PC_tarot() {
-	window.open("http://bishengming.gitee.io/tarot/");
+	window.open("http://bishengming.gitee.io/diviner/");
 }
 function PC_canvas() {
 	window.open("http://bishengming.gitee.io/canvas/");
@@ -1106,3 +1133,331 @@ function download_ZuoPinJi() {
 function download_Zip() {
 	window.open("https://github.com/935945334/resume/raw/master/%E6%AF%95%E6%99%9F%E9%93%AD-%E7%AE%80%E5%8E%86-%E4%BD%9C%E5%93%81%E9%9B%86.zip");
 }
+var time = 0;//计时
+var timeX = 0//时间状态
+var cloud_1 = document.getElementById("cloud-1");
+var cloud_2 = document.getElementById("cloud-2");
+var cloud_3 = document.getElementById("cloud-3");
+var cloud_4 = document.getElementById("cloud-4");
+var bird_1 = document.getElementById("bird-1");
+var bird_2 = document.getElementById("bird-2");
+var cloudX1 = cloud_1.offsetLeft;//云1
+var cloudX2 = cloud_2.offsetLeft;//云2
+var cloudX3 = cloud_3.offsetLeft;//云1
+var cloudX4 = cloud_4.offsetLeft;//云2
+var birdX1 = bird_1.offsetLeft;//云2
+var birdX2 = bird_2.offsetLeft;//云2
+var animation = setInterval("cloud()",50)//每50毫秒运行一次动画
+function cloud() {
+	if (timeX == 0) {
+		bird_1.style.transform = "scaleX(1)";
+		bird_2.style.transform = "scaleX(1)";
+		window.time = time + 1;
+		if (time == 300) {
+			window.timeX = 1
+		}
+	}else if (timeX == 1) {
+		bird_1.style.transform = "scaleX(-1)";
+		bird_2.style.transform = "scaleX(-1)";
+		window.time = time - 1;
+		if (time == 1) {
+			window.timeX = 0
+		}
+	}
+	cloud_1.style.left = cloudX1 + time +"px";
+	cloud_2.style.left = cloudX2 - time +"px";
+	cloud_3.style.left = cloudX1 + time +"px";
+	cloud_4.style.left = cloudX2 - time +"px";
+	bird_1.style.left = birdX1 - time*3 +"px";
+	bird_2.style.left = birdX1 - time*3 +"px";
+}
+
+
+
+
+
+// var hf_text = ["马修","黄毛","艾梅达",];
+var swiper_LiaoTian = new Swiper('.swiper-container-LiaoTian', {
+	direction: 'vertical',
+	slidesPerView: 'auto',
+	freeMode: true,
+	scrollbar: {
+		el: '.swiper-scrollbar',
+	},
+	// on: {
+	// 	touchStart: function(swiper,event){
+	// 		LT_X();
+	// 	},
+	// },
+	mousewheel: true,
+});
+
+
+
+var jishu = 0;
+var LT_PanDuan = false;
+var NeiLan = document.getElementById("NeiLan");
+var text_pianyi = 130;
+var PanYiZ = 0;
+function LT_text() {
+	if (LT_PanDuan == false){
+		console.log(document.getElementById("LiaoTianChuangKou").offsetHeight);
+		var LT_windows = document.getElementById("liaotian-3");
+		var xuanxiang = document.getElementById("xuanxiang");
+		var LiaoTianChuangKou = document.getElementById("LiaoTianChuangKou");
+		var LiaoTianChuangKouH = document.getElementById("LiaoTianChuangKou").offsetHeight;
+		console.log(LiaoTianChuangKouH);
+		var LiaoTianChuangKouT = document.getElementById("swiper-wrapper-LiaoTian").offsetTop;
+
+		LiaoTianChuangKou.style.height = LiaoTianChuangKouH - text_pianyi + "px";
+
+		if (LiaoTianChuangKouH < NeiLan.offsetHeight){
+			document.getElementById("swiper-wrapper-LiaoTian").style.top = LiaoTianChuangKouT - LiaoTianChuangKouT - text_pianyi + "px";
+			PanYiZ = text_pianyi;
+		}
+		console.log(LiaoTianChuangKouH);
+		console.log(text_pianyi);
+		LT_windows.style.height = "180px";
+		xuanxiang.style.display = "flex";
+		// console.log(LiaoTianChuangKouT);
+		document.getElementById("LT-X").style.display = "flex";
+		LT_PanDuan = true;
+	}
+	
+}
+var hf_sudu = 200;
+var hf = [];
+var hf_changdu = []
+var hf_6 = ["很高兴再次见到你"];
+var liaotian_ = 0;//判断是否第一次打开聊天页面
+var panduan_jianli = false;
+var panduan_lianxifangshi = false;
+function LT_text_X(e) {
+	console.log("选项1");
+	
+	LT_X();
+	var xuanxiang = document.getElementById("xuanxiang");
+	var div = document.createElement("div");
+	var div1 = document.createElement("div");
+	xuanxiang.style.pointerEvents = "none"
+	div.appendChild(div1).className = "QiPao-text";
+	div1.style.background = LT_QiPao[theme_Num];
+	div1.style.color = LT_color[theme_Num];
+	div1.style.border = "2px solid " + LT_QiPao_border[theme_Num];
+	NeiLan.appendChild(div).className = "LiaoTianLan-r LiaoTianLan";
+	swiper_LiaoTian.update();
+	switch (e){
+		case 0:
+			div1.innerHTML = "介绍一下这个网站";
+			hf_changdu = [0,0,0,1,0,1,1,0,1,0,1,0,0,0,1]
+			hf = ["这里是我的个人网站","主要用来展示作品","以下部分为视觉作品 点击对应图标即可直接浏览","images/liaotian/1-1.png","以下部分为工具类网站作品 点击点击图标后会直接打开对应网站","images/liaotian/1-2.png","images/liaotian/1-3.png","以下图标分别为更换主题风格、操作说明和宽屏模式","images/liaotian/1-4.png","跟换主题可以将主页替换为其他风格","images/liaotian/1-5.png","操作说明可以具体演示本网站浏览方式","详细说明请返回主页点击“操作说明”","PC模式是为电脑浏览准备的宽屏模式","images/liaotian/1-6.png",];
+		break;
+		case 1:
+			div1.innerHTML = "这个网站应该怎么用";
+			hf_changdu = [0,0,0,0]
+			hf = ["左右滑动可以切换分类","上下滑动可以翻页","双击屏幕可以呼出快速导航","详细演示请返回主页点击“操作说明”",];
+		break;
+		case 2:
+			panduan_jianli = true;
+			div1.innerHTML = "可以发一份简历吗";
+			hf_changdu = [0,0,0];
+			hf = ["百度网盘：点击下载","阿里云盘：点击下载","本地下载：点击下载"];
+		break;
+		case 3:
+			panduan_lianxifangshi = true;
+			div1.innerHTML = "有什么联系方式吗";
+			hf_changdu = [0,0,0,1];
+			hf = ["电话：15510100531","邮箱：935945334@qq.com","微信","images/liaotian/1-7.png",];
+		break;
+		case 4:
+			div1.innerHTML = "不聊了";
+			hf_changdu = [0];
+			hf = ["再见"];
+		break;
+	}
+
+	
+	setTimeout(function(){
+		hf_shuru();
+	}, hf_sudu);
+	setTimeout(function(){xuanxiang.style.pointerEvents = "auto"}, hf_sudu * 4 * (hf.length+1));
+	if (e == 4){
+		setTimeout(function(){
+			xuanxiang.style.pointerEvents = "auto";
+			NeiLan.replaceChildren();
+			liaotian_ = 1;
+			liaotian.style.display = "none";
+			var status_bar = document.getElementById("status-bar");
+			status_bar.style.width = "86%";
+			status_bar.style.marginTop = "24px";
+			status_bar.style.marginLeft = "-4px";
+		}, hf_sudu * 4 * (hf.length+1));
+	}
+}
+
+
+function bdwp(){
+	console.log("百度网盘");
+	window.open("https://pan.baidu.com/s/1bXGi5fRJu-NPALMFUbyDbA?pwd=fhgz");
+}
+function alyp(){
+	console.log("阿里云盘");
+	window.open("https://www.aliyundrive.com/s/sYnxvT9xmD7");
+}
+function bdxz(){
+	console.log("本地下载");
+	window.open("毕晟铭-简历&作品集.zip ");
+}
+
+function ddh(){
+	console.log("打电话");
+	tel_Popup.style.display = "block";
+	var e = document.getElementById("tel-text");
+	if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+		window.location.href = 'tel:15510100531';
+	}else{
+		e.select(); // 选择对象
+		document.execCommand("Copy"); // 执行浏览器复制命令
+		setTimeout(function(){
+			tel_Popup.style.display = "none"
+		}, 1000);
+	}
+}
+function fzyx(){
+	console.log("复制邮箱");
+	mail_Popup.style.display = "block";
+	var e = document.getElementById("mail-text");
+	e.select(); // 选择对象
+	document.execCommand("Copy"); // 执行浏览器复制命令
+	setTimeout(function(){
+		mail_Popup.style.display = "none"
+		Mask.style.display = "none";
+		Popup_state = false;
+	}, 1000);
+}
+function hf_shuru(){
+	for (var i = 0; i < hf.length; i++) {
+		(function(i) {
+			setTimeout(function() {
+				if (hf_changdu[i] == 0)
+				{
+					add_txt(i);
+				}else if (hf_changdu[i] == 1){
+					add_img(i);
+				}
+				
+			}, hf_sudu * 4 * i);
+		})(i)
+	}
+}
+function add_txt(i){
+	// console.log(hf);
+	var div = document.createElement("div");
+	var div1 = document.createElement("div");
+	if (panduan_jianli == true) {
+		if (i == 0){
+			div1.onclick = bdwp;
+		}
+		if (i == 1){
+			div1.onclick = alyp;
+		}
+		if (i == 2){
+			div1.onclick = bdxz;
+			panduan_jianli = false;
+		}
+	}
+	if (panduan_lianxifangshi == true) {
+		if (i == 0){
+			div1.onclick = ddh;
+		}
+		if (i == 1){
+			div1.onclick = fzyx;
+			panduan_lianxifangshi = false;
+		}
+	}
+	div.appendChild(div1).className = "QiPao-text";
+	NeiLan.appendChild(div).className = "LiaoTianLan-l LiaoTianLan";
+	div1.style.background = LT_QiPao[theme_Num];
+	div1.style.color = LT_color[theme_Num];
+	div1.style.border = "2px solid " + LT_QiPao_border[theme_Num];
+	swiper_LiaoTian.update();
+	var LiaoTianChuangKouH = document.getElementById("LiaoTianChuangKou").offsetHeight;
+	var NeiLanH = document.getElementById("NeiLan").offsetHeight;
+	if (LiaoTianChuangKouH < NeiLan.offsetHeight){
+		if (LiaoTianChuangKouH - NeiLanH < 0){
+			swiper_LiaoTian.setTranslate(LiaoTianChuangKouH - NeiLanH -20);
+		}
+	}
+	setTimeout(function(){div1.innerHTML = "·";}, hf_sudu*0);
+	setTimeout(function(){div1.innerHTML = "··";}, hf_sudu*1);
+	setTimeout(function(){div1.innerHTML = "···";}, hf_sudu*2);
+	setTimeout(function(){div1.innerHTML = hf[i];}, hf_sudu*3);
+	setTimeout(function(){
+		NeiLanH = NeiLan.offsetHeight;
+		if (LiaoTianChuangKouH < NeiLanH){
+			if (LiaoTianChuangKouH - NeiLanH < 0){
+				swiper_LiaoTian.setTranslate(LiaoTianChuangKouH - NeiLanH);
+			}
+		}
+	}, hf_sudu*3+3);
+}
+function add_img(i){
+	var div = document.createElement("div");
+	var Img = document.createElement("img");
+	var div1 = document.createElement("div");
+	div.appendChild(div1).className = "QiPao-text";
+	NeiLan.appendChild(div).className = "LiaoTianLan-l LiaoTianLan";
+	div1.style.background = LT_QiPao[theme_Num];
+	div1.style.color = LT_color[theme_Num];
+	div1.style.border = "10px solid " + LT_QiPao[theme_Num];
+	Img.style.border = "2px solid " + LT_QiPao_border[theme_Num];
+	Img.style.background = LT_QiPao[theme_Num];
+	swiper_LiaoTian.update();
+	var LiaoTianChuangKouH = document.getElementById("LiaoTianChuangKou").offsetHeight;
+	var NeiLanH = document.getElementById("NeiLan").offsetHeight;
+	if (LiaoTianChuangKouH < NeiLan.offsetHeight){
+		if (LiaoTianChuangKouH - NeiLanH < 0){
+			swiper_LiaoTian.setTranslate(LiaoTianChuangKouH - NeiLanH -20);
+			console.log(LiaoTianChuangKouH - NeiLanH);
+		}
+	}
+	setTimeout(function(){div1.innerHTML = "·";}, hf_sudu*0);
+	setTimeout(function(){div1.innerHTML = "··";}, hf_sudu*1);
+	setTimeout(function(){div1.innerHTML = "···";}, hf_sudu*2);
+	setTimeout(function(){
+		div1.remove();
+		Img.src = hf[i];
+		div.appendChild(Img).className = "QiPao-img";
+	}, hf_sudu*3);
+	setTimeout(function(){
+		NeiLanH = NeiLan.offsetHeight;
+		if (LiaoTianChuangKouH < NeiLanH){
+			if (LiaoTianChuangKouH - NeiLanH < 0){
+				swiper_LiaoTian.setTranslate(LiaoTianChuangKouH - NeiLanH);
+			}
+		}
+	}, hf_sudu*3+3);
+}
+
+function LT_X() {
+	if (LT_PanDuan == true){
+		console.log("?");
+		var LT_windows = document.getElementById("liaotian-3");
+		var xuanxiang = document.getElementById("xuanxiang");
+		var LiaoTianChuangKou = document.getElementById("LiaoTianChuangKou");
+		var LiaoTianChuangKouH = document.getElementById("LiaoTianChuangKou").offsetHeight;
+		var LiaoTianChuangKouT = document.getElementById("swiper-wrapper-LiaoTian").offsetTop;
+		LiaoTianChuangKou.style.height = LiaoTianChuangKouH + text_pianyi + "px";
+		document.getElementById("swiper-wrapper-LiaoTian").style.top = 0;
+		LT_windows.style.height = "50px";
+		xuanxiang.style.display = "none";
+		document.getElementById("LT-X").style.display = "none";
+		swiper_LiaoTian.update();
+		LT_PanDuan = false;
+		
+	}
+	
+}
+
+
+
