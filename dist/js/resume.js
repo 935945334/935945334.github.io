@@ -1260,8 +1260,8 @@ function LT_text_X(e) {
 	switch (e){
 		case 0:
 			div1.innerHTML = "介绍一下这个网站";
-			hf_changdu = [0,0,0,1,0,1,1,0,1,0,1,0,0,0,1]
-			hf = ["这里是我的个人网站","主要用来展示作品","以下部分为视觉作品 点击对应图标即可直接浏览","images/liaotian/1-1.png","以下部分为工具类网站作品 点击点击图标后会直接打开对应网站","images/liaotian/1-2.png","images/liaotian/1-3.png","以下图标分别为更换主题风格、操作说明和宽屏模式","images/liaotian/1-4.png","跟换主题可以将主页替换为其他风格","images/liaotian/1-5.png","操作说明可以具体演示本网站浏览方式","详细说明请返回主页点击“操作说明”","PC模式是为电脑浏览准备的宽屏模式","images/liaotian/1-6.png",];
+			hf_changdu = [0,0,0,1,0,1,1,0,1,0,1,0,0,0,1,0]
+			hf = ["这里是我的个人网站","主要用来展示作品","以下部分为视觉作品 点击对应图标即可直接浏览","images/liaotian/1-1.png","以下部分为工具类网站作品 点击点击图标后会直接打开对应网站","images/liaotian/1-2.png","images/liaotian/1-3.png","以下图标分别为更换主题风格、操作说明和宽屏模式","images/liaotian/1-4.png","跟换主题可以将主页替换为其他风格","images/liaotian/1-5.png","操作说明可以具体演示本网站浏览方式","详细说明请返回主页点击“操作说明”","宽屏模式是更加接近传统作品集的显示方式","images/liaotian/1-6.png","手机浏览宽屏模式需要将手机横向放置"];
 		break;
 		case 1:
 			div1.innerHTML = "这个网站应该怎么用";
@@ -1459,7 +1459,7 @@ function add_img(i){
 		NeiLanH = NeiLan.offsetHeight;
 		if (LiaoTianChuangKouH < NeiLanH){
 			if (LiaoTianChuangKouH - NeiLanH < 0){
-				swiper_LiaoTian.setTranslate(LiaoTianChuangKouH - NeiLanH - 500);
+				swiper_LiaoTian.setTranslate(LiaoTianChuangKouH - NeiLanH);
 			}
 		}
 		swiper_LiaoTian.update();

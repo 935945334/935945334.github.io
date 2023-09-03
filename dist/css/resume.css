@@ -727,6 +727,7 @@ body {
 .iphone-img{
 	position: absolute;
 	width: 100%;
+	height: auto;
 }
 #iphone-body{
 	position: absolute;
@@ -737,6 +738,8 @@ body {
 }
 #iphone-body .swiper-slide{
 	background: #161a26;
+	-webkit-justify-content: center;
+    justify-content: center;
 }
 #iphone-page{
 	color: #fff;
