@@ -1326,7 +1326,7 @@ function gbjl(){
 }
 function bdxz(){
 	console.log("本地下载");
-	window.open("平面设计-作品集-15510100531-毕晟铭.pdf");
+	window.location.href = '平面设计-作品集-15510100531-毕晟铭.pdf';
 }
 
 function ddh(){
