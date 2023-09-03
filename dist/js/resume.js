@@ -487,7 +487,7 @@ function theme_fun(n) {
 		LiaoTianChuangKou.style.background = LT_bj[theme_Num];
 		liaotian.style.background = LT_bj[theme_Num];
 		liaotian_1.style.background = LT_bj[theme_Num];
-		liaotian_3.style.background = LT_bj[theme_Num];
+		LT_windows.style.background = LT_bj[theme_Num];
 		liaotian_1.style.color = LT_color[theme_Num];
 		liaotian_1_1.style.background = "url(../resume/images/liaotian/top-" + theme_Num + ".png)"
 		liaotian_3_1.style.background = "url(../resume/images/liaotian/top-" + theme_Num + ".png)"
