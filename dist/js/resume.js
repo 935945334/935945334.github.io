@@ -1369,6 +1369,12 @@ function hf_shuru(){
 			}, hf_sudu * 4 * i);
 		})(i)
 	}
+	setTimeout(function(){
+		var LiaoTianChuangKouH = document.getElementById("LiaoTianChuangKou").offsetHeight;
+		var NeiLanH = document.getElementById("NeiLan").offsetHeight;
+		swiper_LiaoTian.setTranslate(LiaoTianChuangKouH - NeiLanH -20);
+			swiper_LiaoTian.update();
+	}, (hf.length+1)*4*hf_sudu);
 }
 function add_txt(i){
 	// console.log(hf);
