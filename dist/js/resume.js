@@ -1457,11 +1457,10 @@ function add_img(i){
 		if (LiaoTianChuangKouH < NeiLanH){
 			if (LiaoTianChuangKouH - NeiLanH < 0){
 				swiper_LiaoTian.setTranslate(LiaoTianChuangKouH - NeiLanH);
-				swiper_LiaoTian.update();
-				console.log("图片");
 			}
 		}
-	}, hf_sudu*3+3);
+		swiper_LiaoTian.update();
+	}, hf_sudu*3+10);
 }
 
 function LT_X() {
