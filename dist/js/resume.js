@@ -1367,17 +1367,13 @@ function hf_shuru(){
 				}else if (hf_changdu[i] == 1){
 					add_img(i);
 				}
-				// tiaoshi();
+				var LiaoTianChuangKouH = document.getElementById("LiaoTianChuangKou").offsetHeight;
+				var NeiLanH = document.getElementById("NeiLan").offsetHeight;
+				swiper_LiaoTian.update();
+				swiper_LiaoTian.setTranslate(LiaoTianChuangKouH - NeiLanH -20);
 			}, hf_sudu * 4 * i);
 		})(i)
 	}
-	setTimeout(function(){
-		var LiaoTianChuangKouH = document.getElementById("LiaoTianChuangKou").offsetHeight;
-		var NeiLanH = document.getElementById("NeiLan").offsetHeight;
-		swiper_LiaoTian.update();
-		swiper_LiaoTian.setTranslate(LiaoTianChuangKouH - NeiLanH -20);
-		swiper_LiaoTian.update();
-	}, (hf.length*4*hf_sudu)+10);
 }
 function add_txt(i){
 	// console.log(hf);
@@ -1423,7 +1419,7 @@ function add_txt(i){
 		NeiLanH = NeiLan.offsetHeight;
 		if (LiaoTianChuangKouH < NeiLanH){
 			if (LiaoTianChuangKouH - NeiLanH < 0){
-				swiper_LiaoTian.setTranslate(LiaoTianChuangKouH - NeiLanH);
+				swiper_LiaoTian.setTranslate(LiaoTianChuangKouH - NeiLanH-20);
 			}
 		}
 		swiper_LiaoTian.update();
@@ -1467,7 +1463,7 @@ function add_img(i){
 		NeiLanH = NeiLan.offsetHeight;
 		if (LiaoTianChuangKouH < NeiLanH){
 			if (LiaoTianChuangKouH - NeiLanH < 0){
-				swiper_LiaoTian.setTranslate(LiaoTianChuangKouH - NeiLanH);
+				swiper_LiaoTian.setTranslate(LiaoTianChuangKouH - NeiLanH-20);
 			}
 		}
 		swiper_LiaoTian.update();
