@@ -350,14 +350,24 @@ index.addEventListener("click",function(e){
 				hf = hf_6;
 				hf_changdu = [0]
 			}else if (liaotian_ == 0){
-				hf = ["你好","欢迎来到我的个人网站","images/liaotian/1.png"];;
+				hf = ["你好","欢迎来到我的个人网站","images/liaotian/1.png"];
 				hf_changdu = [0,0,1]
 			}
 			
 			setTimeout(function(){
 				hf_shuru();
 			}, hf_sudu);
-			setTimeout(function(){xuanxiang.style.pointerEvents = "auto"}, hf_sudu * 4 * (hf.length+1));
+			setTimeout(function(){
+				xuanxiang.style.pointerEvents = "auto"
+				swiper_LiaoTian.update();
+				var LiaoTianChuangKouH = document.getElementById("LiaoTianChuangKou").offsetHeight;
+				NeiLanH = NeiLan.offsetHeight;
+				if (LiaoTianChuangKouH < NeiLanH){
+      				if (LiaoTianChuangKouH - NeiLanH < 0){
+        				swiper_LiaoTian.setTranslate(LiaoTianChuangKouH - NeiLanH);
+      				}
+    			}
+			}, hf_sudu * 4 * (hf.length+1));
 			var status_bar = document.getElementById("status-bar");
 			status_bar.style.width = "96%";
 			status_bar.style.marginTop = "5px";
@@ -451,6 +461,7 @@ function A123(e) {
 			e.stopPropagation();
 		}
 }
+var liaotian = document.getElementById("liaotian");
 var LiaoTianChuangKou = document.getElementById("LiaoTianChuangKou");
 var liaotian_1 = document.getElementById("liaotian-1");
 var liaotian_3 = document.getElementById("liaotian-3");
@@ -462,7 +473,7 @@ var NeiLan = document.getElementById("NeiLan");
 var QiPao_text = document.getElementsByClassName("QiPao-text");
 var QiPao_img = document.getElementsByClassName("QiPao-img");
 var LT_color = ["#dcdcdc","#7f2d00","#464243","#7f6c61"];
-var LT_bj = ["#214a61","url(../resume/images/liaotian/bj-1.png)","#daf2d2","#f1e8d9"];
+var LT_bj = ["#214a61","#ffcb7b","#daf2d2","#f1e8d9"];
 var LT_QiPao = ["#265772","#fff0ba","#fbf1ac","#ffc388",];
 var LT_QiPao_border = ["#2b6584","#5b2b2a","#464243","#7f6c61"];
 var new_theme_Num = 0;
@@ -474,6 +485,7 @@ function theme_fun(n) {
 		console.log("切换为主题" + new_theme_Num);
 		theme_Num = new_theme_Num;
 		LiaoTianChuangKou.style.background = LT_bj[theme_Num];
+		liaotian.style.background = LT_bj[theme_Num];
 		liaotian_1.style.background = LT_bj[theme_Num];
 		liaotian_3.style.background = LT_bj[theme_Num];
 		liaotian_1.style.color = LT_color[theme_Num];
@@ -1260,8 +1272,8 @@ function LT_text_X(e) {
 		case 2:
 			panduan_jianli = true;
 			div1.innerHTML = "可以发一份简历吗";
-			hf_changdu = [0,0,0];
-			hf = ["百度网盘：点击下载","阿里云盘：点击下载","本地下载：点击下载"];
+			hf_changdu = [1,0,0];
+			hf = ["images/liaotian/jl.png","百度网盘：点击下载","阿里云盘：点击下载"];
 		break;
 		case 3:
 			panduan_lianxifangshi = true;
@@ -1304,9 +1316,17 @@ function alyp(){
 	console.log("阿里云盘");
 	window.open("https://www.aliyundrive.com/s/sYnxvT9xmD7");
 }
+function dkjl(){
+	document.getElementById("jl").style.display = "flex";
+	console.log("???");
+}
+function gbjl(){
+	document.getElementById("jl").style.display = "none";
+	
+}
 function bdxz(){
 	console.log("本地下载");
-	window.open("毕晟铭-简历&作品集.zip ");
+	window.open("平面设计-作品集-15510100531-毕晟铭.pdf");
 }
 
 function ddh(){
@@ -1319,7 +1339,7 @@ function ddh(){
 		e.select(); // 选择对象
 		document.execCommand("Copy"); // 执行浏览器复制命令
 		setTimeout(function(){
-			tel_Popup.style.display = "none"
+			tel_Popup.style.display = "none";
 		}, 1000);
 	}
 }
@@ -1355,14 +1375,11 @@ function add_txt(i){
 	var div = document.createElement("div");
 	var div1 = document.createElement("div");
 	if (panduan_jianli == true) {
-		if (i == 0){
+		if (i == 1){
 			div1.onclick = bdwp;
 		}
-		if (i == 1){
-			div1.onclick = alyp;
-		}
 		if (i == 2){
-			div1.onclick = bdxz;
+			div1.onclick = alyp;
 			panduan_jianli = false;
 		}
 	}
@@ -1405,6 +1422,11 @@ function add_img(i){
 	var div = document.createElement("div");
 	var Img = document.createElement("img");
 	var div1 = document.createElement("div");
+	if (panduan_jianli == true) {
+		if (i == 0){
+			Img.onclick = dkjl;
+		}
+	}
 	div.appendChild(div1).className = "QiPao-text";
 	NeiLan.appendChild(div).className = "LiaoTianLan-l LiaoTianLan";
 	div1.style.background = LT_QiPao[theme_Num];
