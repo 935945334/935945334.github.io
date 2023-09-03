@@ -1196,11 +1196,11 @@ var swiper_LiaoTian = new Swiper('.swiper-container-LiaoTian', {
 	scrollbar: {
 		el: '.swiper-scrollbar',
 	},
-	// on: {
-	// 	touchStart: function(swiper,event){
-	// 		LT_X();
-	// 	},
-	// },
+	on: {
+		touchStart: function(swiper,event){
+			swiper_LiaoTian.update();
+		},
+	},
 	mousewheel: true,
 });
 
@@ -1365,7 +1365,7 @@ function hf_shuru(){
 				}else if (hf_changdu[i] == 1){
 					add_img(i);
 				}
-				
+				// tiaoshi();
 			}, hf_sudu * 4 * i);
 		})(i)
 	}
@@ -1440,6 +1440,7 @@ function add_img(i){
 	if (LiaoTianChuangKouH < NeiLan.offsetHeight){
 		if (LiaoTianChuangKouH - NeiLanH < 0){
 			swiper_LiaoTian.setTranslate(LiaoTianChuangKouH - NeiLanH -20);
+			swiper_LiaoTian.update();
 			console.log(LiaoTianChuangKouH - NeiLanH);
 		}
 	}
@@ -1456,6 +1457,8 @@ function add_img(i){
 		if (LiaoTianChuangKouH < NeiLanH){
 			if (LiaoTianChuangKouH - NeiLanH < 0){
 				swiper_LiaoTian.setTranslate(LiaoTianChuangKouH - NeiLanH);
+				swiper_LiaoTian.update();
+				console.log("图片");
 			}
 		}
 	}, hf_sudu*3+3);
