@@ -1277,8 +1277,8 @@ function LT_text_X(e) {
 		case 3:
 			panduan_lianxifangshi = true;
 			div1.innerHTML = "有什么联系方式吗";
-			hf_changdu = [0,0,0,1];
-			hf = ["电话：15510100531","邮箱：935945334@qq.com","微信","images/liaotian/1-7.png",];
+			hf_changdu = [0,0,1,0];
+			hf = ["电话：15510100531","邮箱：935945334@qq.com","images/liaotian/1-7.png","微信二维码↑↑↑",];
 		break;
 		case 4:
 			div1.innerHTML = "不聊了";
