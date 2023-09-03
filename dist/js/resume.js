@@ -358,7 +358,7 @@ index.addEventListener("click",function(e){
 				hf_shuru();
 			}, hf_sudu);
 			setTimeout(function(){
-				xuanxiang.style.pointerEvents = "auto"
+				LT_windows.style.pointerEvents = "auto"
 				swiper_LiaoTian.update();
 				var LiaoTianChuangKouH = document.getElementById("LiaoTianChuangKou").offsetHeight;
 				NeiLanH = NeiLan.offsetHeight;
@@ -464,7 +464,7 @@ function A123(e) {
 var liaotian = document.getElementById("liaotian");
 var LiaoTianChuangKou = document.getElementById("LiaoTianChuangKou");
 var liaotian_1 = document.getElementById("liaotian-1");
-var liaotian_3 = document.getElementById("liaotian-3");
+var LT_windows = document.getElementById("liaotian-3");
 var liaotian_1_1 = document.getElementById("liaotian-1-1");
 var liaotian_3_1 = document.getElementById("liaotian-3-1");
 var liaotian_text = document.getElementById("liaotian-text");
@@ -1215,14 +1215,11 @@ var text_pianyi = 130;
 var PanYiZ = 0;
 function LT_text() {
 	if (LT_PanDuan == false){
-		console.log(document.getElementById("LiaoTianChuangKou").offsetHeight);
 		var LT_windows = document.getElementById("liaotian-3");
 		var xuanxiang = document.getElementById("xuanxiang");
 		var LiaoTianChuangKou = document.getElementById("LiaoTianChuangKou");
 		var LiaoTianChuangKouH = document.getElementById("LiaoTianChuangKou").offsetHeight;
-		console.log(LiaoTianChuangKouH);
 		var LiaoTianChuangKouT = document.getElementById("swiper-wrapper-LiaoTian").offsetTop;
-
 		LiaoTianChuangKou.style.height = LiaoTianChuangKouH - text_pianyi + "px";
 
 		if (LiaoTianChuangKouH < NeiLan.offsetHeight){
@@ -1253,7 +1250,7 @@ function LT_text_X(e) {
 	var xuanxiang = document.getElementById("xuanxiang");
 	var div = document.createElement("div");
 	var div1 = document.createElement("div");
-	xuanxiang.style.pointerEvents = "none"
+	LT_windows.style.pointerEvents = "none"
 	div.appendChild(div1).className = "QiPao-text";
 	div1.style.background = LT_QiPao[theme_Num];
 	div1.style.color = LT_color[theme_Num];
@@ -1269,7 +1266,7 @@ function LT_text_X(e) {
 		case 1:
 			div1.innerHTML = "这个网站应该怎么用";
 			hf_changdu = [0,0,0,0]
-			hf = ["左右滑动可以切换分类","上下滑动可以翻页","双击屏幕可以呼出快速导航","详细演示请返回主页点击“操作说明”",];
+			hf = ["左右滑动可以切换分类","上下滑动可以翻页","双击屏幕可以呼出快速导航","详细演示请返回主页点击“操作说明”"];
 		break;
 		case 2:
 			panduan_jianli = true;
@@ -1297,7 +1294,7 @@ function LT_text_X(e) {
 	setTimeout(function(){xuanxiang.style.pointerEvents = "auto"}, hf_sudu * 4 * (hf.length+1));
 	if (e == 4){
 		setTimeout(function(){
-			xuanxiang.style.pointerEvents = "auto";
+			LT_windows.style.pointerEvents = "auto";
 			NeiLan.replaceChildren();
 			liaotian_ = 1;
 			liaotian.style.display = "none";
@@ -1320,16 +1317,11 @@ function alyp(){
 }
 function dkjl(){
 	document.getElementById("jl").style.display = "flex";
-	console.log("???");
 }
 function gbjl(){
 	document.getElementById("jl").style.display = "none";
 	
 }
-// function bdxz(){
-// 	console.log("本地下载");
-// 	window.location.href = '平面设计-作品集-15510100531-毕晟铭.pdf';
-// }
 
 function ddh(){
 	console.log("打电话");
@@ -1358,7 +1350,7 @@ function fzyx(){
 	}, 1000);
 }
 function hf_shuru(){
-	for (var i = 0; i < hf.length; i++) {
+	for (var i = 0; i < hf.length+1; i++) {
 		(function(i) {
 			setTimeout(function() {
 				if (hf_changdu[i] == 0)
@@ -1367,16 +1359,25 @@ function hf_shuru(){
 				}else if (hf_changdu[i] == 1){
 					add_img(i);
 				}
-				var LiaoTianChuangKouH = document.getElementById("LiaoTianChuangKou").offsetHeight;
-				var NeiLanH = document.getElementById("NeiLan").offsetHeight;
-				swiper_LiaoTian.update();
-				swiper_LiaoTian.setTranslate(LiaoTianChuangKouH - NeiLanH -20);
-			}, hf_sudu * 4 * i);
+				if (i == hf.length){
+					tiaoshi();
+				}
+			}, hf_sudu * 4.5 * i);
 		})(i)
 	}
 }
+function tiaoshi(){
+	var LiaoTianChuangKouH = document.getElementById("LiaoTianChuangKou").offsetHeight;
+	NeiLanH = NeiLan.offsetHeight;
+	if (LiaoTianChuangKouH < NeiLanH){
+		if (LiaoTianChuangKouH - NeiLanH < 0){
+			swiper_LiaoTian.setTranslate(LiaoTianChuangKouH - NeiLanH);
+		}
+	}
+	LT_windows.style.pointerEvents = "auto"
+	swiper_LiaoTian.update();
+}
 function add_txt(i){
-	// console.log(hf);
 	var div = document.createElement("div");
 	var div1 = document.createElement("div");
 	if (panduan_jianli == true) {
@@ -1402,15 +1403,13 @@ function add_txt(i){
 	div1.style.background = LT_QiPao[theme_Num];
 	div1.style.color = LT_color[theme_Num];
 	div1.style.border = "2px solid " + LT_QiPao_border[theme_Num];
-	swiper_LiaoTian.update();
 	var LiaoTianChuangKouH = document.getElementById("LiaoTianChuangKou").offsetHeight;
 	var NeiLanH = document.getElementById("NeiLan").offsetHeight;
-	if (LiaoTianChuangKouH < NeiLan.offsetHeight){
+	if (LiaoTianChuangKouH < NeiLanH){
 		if (LiaoTianChuangKouH - NeiLanH < 0){
-			swiper_LiaoTian.setTranslate(LiaoTianChuangKouH - NeiLanH -20);
+			swiper_LiaoTian.setTranslate(LiaoTianChuangKouH - NeiLanH -21);
 		}
 	}
-	swiper_LiaoTian.update();
 	setTimeout(function(){div1.innerHTML = "·";}, hf_sudu*0);
 	setTimeout(function(){div1.innerHTML = "··";}, hf_sudu*1);
 	setTimeout(function(){div1.innerHTML = "···";}, hf_sudu*2);
@@ -1419,7 +1418,7 @@ function add_txt(i){
 		NeiLanH = NeiLan.offsetHeight;
 		if (LiaoTianChuangKouH < NeiLanH){
 			if (LiaoTianChuangKouH - NeiLanH < 0){
-				swiper_LiaoTian.setTranslate(LiaoTianChuangKouH - NeiLanH-20);
+				swiper_LiaoTian.setTranslate(LiaoTianChuangKouH - NeiLanH - 20);
 			}
 		}
 		swiper_LiaoTian.update();
@@ -1441,14 +1440,11 @@ function add_img(i){
 	div1.style.border = "10px solid " + LT_QiPao[theme_Num];
 	Img.style.border = "2px solid " + LT_QiPao_border[theme_Num];
 	Img.style.background = LT_QiPao[theme_Num];
-	swiper_LiaoTian.update();
 	var LiaoTianChuangKouH = document.getElementById("LiaoTianChuangKou").offsetHeight;
 	var NeiLanH = document.getElementById("NeiLan").offsetHeight;
 	if (LiaoTianChuangKouH < NeiLan.offsetHeight){
 		if (LiaoTianChuangKouH - NeiLanH < 0){
-			swiper_LiaoTian.setTranslate(LiaoTianChuangKouH - NeiLanH -20);
-			swiper_LiaoTian.update();
-			console.log(LiaoTianChuangKouH - NeiLanH);
+			swiper_LiaoTian.setTranslate(LiaoTianChuangKouH - NeiLanH - 21);
 		}
 	}
 	setTimeout(function(){div1.innerHTML = "·";}, hf_sudu*0);
@@ -1463,7 +1459,7 @@ function add_img(i){
 		NeiLanH = NeiLan.offsetHeight;
 		if (LiaoTianChuangKouH < NeiLanH){
 			if (LiaoTianChuangKouH - NeiLanH < 0){
-				swiper_LiaoTian.setTranslate(LiaoTianChuangKouH - NeiLanH-20);
+				swiper_LiaoTian.setTranslate(LiaoTianChuangKouH - NeiLanH - 500);
 			}
 		}
 		swiper_LiaoTian.update();
@@ -1472,7 +1468,7 @@ function add_img(i){
 
 function LT_X() {
 	if (LT_PanDuan == true){
-		console.log("?");
+		// console.log("?");
 		var LT_windows = document.getElementById("liaotian-3");
 		var xuanxiang = document.getElementById("xuanxiang");
 		var LiaoTianChuangKou = document.getElementById("LiaoTianChuangKou");
