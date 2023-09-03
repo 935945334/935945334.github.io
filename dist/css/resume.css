@@ -948,6 +948,7 @@ body {
 }
 #iphone-HTML-slide img{
 	width: 100%;
+	height: auto;
 	position: relative;
 }
 #liaotian{
