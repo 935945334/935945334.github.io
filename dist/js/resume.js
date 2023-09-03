@@ -1324,10 +1324,10 @@ function gbjl(){
 	document.getElementById("jl").style.display = "none";
 	
 }
-function bdxz(){
-	console.log("本地下载");
-	window.location.href = '平面设计-作品集-15510100531-毕晟铭.pdf';
-}
+// function bdxz(){
+// 	console.log("本地下载");
+// 	window.location.href = '平面设计-作品集-15510100531-毕晟铭.pdf';
+// }
 
 function ddh(){
 	console.log("打电话");
