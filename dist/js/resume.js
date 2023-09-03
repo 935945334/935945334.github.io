@@ -1374,8 +1374,9 @@ function hf_shuru(){
 	setTimeout(function(){
 		var LiaoTianChuangKouH = document.getElementById("LiaoTianChuangKou").offsetHeight;
 		var NeiLanH = document.getElementById("NeiLan").offsetHeight;
+		swiper_LiaoTian.update();
 		swiper_LiaoTian.setTranslate(LiaoTianChuangKouH - NeiLanH -20);
-			swiper_LiaoTian.update();
+		swiper_LiaoTian.update();
 	}, (hf.length*4*hf_sudu)+10);
 }
 function add_txt(i){
@@ -1413,6 +1414,7 @@ function add_txt(i){
 			swiper_LiaoTian.setTranslate(LiaoTianChuangKouH - NeiLanH -20);
 		}
 	}
+	swiper_LiaoTian.update();
 	setTimeout(function(){div1.innerHTML = "·";}, hf_sudu*0);
 	setTimeout(function(){div1.innerHTML = "··";}, hf_sudu*1);
 	setTimeout(function(){div1.innerHTML = "···";}, hf_sudu*2);
@@ -1424,6 +1426,7 @@ function add_txt(i){
 				swiper_LiaoTian.setTranslate(LiaoTianChuangKouH - NeiLanH);
 			}
 		}
+		swiper_LiaoTian.update();
 	}, hf_sudu*3+3);
 }
 function add_img(i){
