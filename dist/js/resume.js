@@ -1376,7 +1376,7 @@ function hf_shuru(){
 		var NeiLanH = document.getElementById("NeiLan").offsetHeight;
 		swiper_LiaoTian.setTranslate(LiaoTianChuangKouH - NeiLanH -20);
 			swiper_LiaoTian.update();
-	}, (hf.length+1)*4*hf_sudu);
+	}, (hf.length*4*hf_sudu)+10);
 }
 function add_txt(i){
 	// console.log(hf);
