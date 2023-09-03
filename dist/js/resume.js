@@ -1199,6 +1199,8 @@ var swiper_LiaoTian = new Swiper('.swiper-container-LiaoTian', {
 	on: {
 		touchStart: function(swiper,event){
 			swiper_LiaoTian.update();
+			tel_Popup.style.display = "none";
+			mail_Popup.style.display = "none";
 		},
 	},
 	mousewheel: true,
