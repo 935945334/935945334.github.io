@@ -1309,11 +1309,11 @@ function LT_text_X(e) {
 
 function bdwp(){
 	console.log("百度网盘");
-	window.open("https://pan.baidu.com/s/1VsyBClo3GJ6PcBKa2m9N9w?pwd=9xra ");
+	window.open("https://pan.baidu.com/s/1f7YJWnCjsJzZoWbHgCJ1tA?pwd=4u1c ");
 }
 function alyp(){
 	console.log("阿里云盘");
-	window.open("https://www.aliyundrive.com/s/mUvNgkNrsGN");
+	window.open("https://www.aliyundrive.com/s/dLR6a3BPR7q");
 }
 function dkjl(){
 	document.getElementById("jl").style.display = "flex";
