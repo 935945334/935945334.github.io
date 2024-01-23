@@ -211,7 +211,7 @@ if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
 for (var i = 0; i < icon_div.length; i++) {
 	icon_div[i].index = i;
 	icon_div[i].style.background = "url(images/theme/desktop-icon-" + equipment + ".png)";
-	icon_div[i].style.backgroundSize = "1080px 624px";
+	icon_div[i].style.backgroundSize = "1140px 624px";
 	icon_div[i].style.backgroundPosition = -i*60 + "px" + " " + theme_Num*78 + "px";
 }
 for (var i = 0; i < theme_icon.length; i++) {
@@ -247,7 +247,8 @@ var dial_Btn = document.getElementsByClassName("dial-Btn");
 
 
 
-
+var ship_pc = document.getElementById("ship-pc");
+var shipin_pc_bg = document.getElementById("shipin-pc-bg");
 var Mask = document.getElementById("Mask");
 var index = document.getElementById("index");
 var theme = document.getElementById("theme");
@@ -260,7 +261,7 @@ var WEB_tishi = document.getElementById("WEB-tishi");
 var WEB_url;
 index.addEventListener("click",function(e){
 	if (e.target.index != undefined) {
-		var e = e.target.index;
+		var e = e.target.index -1;
 		if (e < 7) {
 			if (course_state == 1) {
 				icon_box[0].style.zIndex = 1;
@@ -272,6 +273,11 @@ index.addEventListener("click",function(e){
 			mySwiper2.slideTo(e+1, (e+1)*100, false);
 			Page = e;
 			console.log(e);
+		}
+		if (e < 0)  {
+			ship_pc.style.display = "block";
+			shipin_pc_bg.style.display = "block";
+			document.getElementById("shipin-pc").play();
 		}
 		switch (e){
 			case 7:
@@ -399,7 +405,7 @@ function A123(e) {
 			for (var i = 0; i < icon_div.length; i++) {
 				icon_div[i].index = i;
 				icon_div[i].style.background = "url(images/theme/desktop-icon-" + equipment + ".png)";
-				icon_div[i].style.backgroundSize = "1080px 624px";
+				icon_div[i].style.backgroundSize = "1140px 624px";
 				icon_div[i].style.backgroundPosition = -i*60 + "px" + " " + -theme_Num*78 + "px";
 			}
 			for (var i = 0; i < theme_icon.length; i++) {
@@ -888,7 +894,7 @@ function course1() {
 	for (var i = 0; i < icon_div.length; i++) {
 		icon_div[i].index = i;
 		icon_div[i].style.background = "url(images/theme/desktop-icon-" + equipment + ".png)";
-		icon_div[i].style.backgroundSize = "1080px 624px";
+		icon_div[i].style.backgroundSize = "1140px 624px";
 		icon_div[i].style.backgroundPosition = -i*60 + "px" + " " + -(theme_Num+4)*78 + "px";
 	}
 	course_X.style.display = "block";
@@ -908,7 +914,7 @@ function course2() {
 	for (var i = 0; i < icon_div.length; i++) {
 		icon_div[i].index = i;
 		icon_div[i].style.background = "url(images/theme/desktop-icon-" + equipment + ".png)";
-		icon_div[i].style.backgroundSize = "1080px 624px";
+		icon_div[i].style.backgroundSize = "1140px 624px";
 		icon_div[i].style.backgroundPosition = -i*60 + "px" + " " + -theme_Num*78 + "px";
 	}
 }
@@ -924,7 +930,7 @@ course_X.addEventListener("click",function(e){
 	for (var i = 0; i < icon_div.length; i++) {
 		icon_div[i].index = i;
 		icon_div[i].style.background = "url(images/theme/desktop-icon-" + equipment + ".png)";
-		icon_div[i].style.backgroundSize = "1080px 624px";
+		icon_div[i].style.backgroundSize = "1140px 624px";
 		icon_div[i].style.backgroundPosition = -i*60 + "px" + " " + -theme_Num*78 + "px";
 	}
 	course_1.style.display = "none";
