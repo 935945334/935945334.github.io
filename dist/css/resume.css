@@ -1171,6 +1171,7 @@ body {
 	top:  calc(50% - 300px);
 	transition:all 0.5s ease 0s;
 	margin-top: 30px;
+	pointer-events: none;
 	/*display: none;*/
 }
 #shipin-pc{
@@ -1193,6 +1194,7 @@ body {
 	top: 30%;
 	transition:all 0.5s ease 0s;
 	margin-top: 30px;
+	pointer-events: none;
 }
 #shipin-sj{
 	width: 100vw;

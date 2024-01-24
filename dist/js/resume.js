@@ -40,8 +40,11 @@ var iphone;
 var img_equipment;
 var Refresh = false;
 var Tips = true;
+var ship_sj = document.getElementById("ship-sj");
+var ship_pc = document.getElementById("ship-pc");
 if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
 	console.log("手机");
+	ship_pc.style.display = "none";
 	equipment = "pc";
 	img_equipment = "iphone";
 	document.querySelector("#status-bar").style.display = "none";
@@ -117,6 +120,7 @@ if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
 	});
 }else{
 	console.log("电脑"); 
+	ship_sj.style.display = "none";
 	equipment = "pc";
 	img_equipment = "PC";
 	if (window.screen.height < 800) {
@@ -247,9 +251,7 @@ var dial_Btn = document.getElementsByClassName("dial-Btn");
 
 
 
-var ship_sj = document.getElementById("ship-sj");
 var shipin_pc_sj = document.getElementById("shipin-pc-sj");
-var ship_pc = document.getElementById("ship-pc");
 var shipin_pc_bg = document.getElementById("shipin-pc-bg");
 var shipin_sj_bg = document.getElementById("shipin-sj-bg");
 var Mask = document.getElementById("Mask");
@@ -263,6 +265,7 @@ var WEB_download = document.getElementById("WEB-download");
 var WEB_tishi = document.getElementById("WEB-tishi");
 var WEB_url;
 shipin_pc_bg.addEventListener("click",function(e){
+	ship_pc.style.pointerEvents = "none"
 	ship_pc.style.opacity = "0";
 	ship_pc.style.marginTop = "30px";
 	ship_pc.style.zIndex = 1;
@@ -270,6 +273,7 @@ shipin_pc_bg.addEventListener("click",function(e){
 	setTimeout(function(){shipin_pc_bg.style.display = "none";}, 500);
 });
 shipin_sj_bg.addEventListener("click",function(e){
+	ship_sj.style.pointerEvents = "none"
 	ship_sj.style.opacity = "0";
 	ship_sj.style.top = "30%";
 	ship_sj.style.zIndex = 1;
@@ -281,6 +285,7 @@ index.addEventListener("click",function(e){
 		var e = e.target.index -1;
 		if (e < 0)  {
 			if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+				ship_sj.style.pointerEvents = "auto"
 				ship_sj.style.opacity = "1";
 				ship_sj.style.zIndex = 100;
 				ship_sj.style.top = "calc(50% - " + ship_sj.offsetHeight + "px)";
@@ -288,6 +293,7 @@ index.addEventListener("click",function(e){
 				setTimeout(function(){document.getElementById("shipin-sj").play();}, 200);
 				shipin_sj_bg.style.display = "block";
 			}else{
+				ship_pc.style.pointerEvents = "auto"
 				ship_pc.style.opacity = "1";
 				ship_pc.style.zIndex = 100;
 				ship_pc.style.marginTop = 0;
