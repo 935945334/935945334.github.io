@@ -350,6 +350,7 @@ index.addEventListener("click",function(e){
 				var PC_subject = PC_body;
 				var PC_Swiper = mySwiper_PC;
 			}
+			Img_load();
 			setTimeout(function(){ subject.style.opacity='0.8'; }, 100);
 			setTimeout(function(){ subject.style.opacity='0.6'; }, 120);
 			setTimeout(function(){ subject.style.opacity='0.4'; }, 140);
@@ -1124,7 +1125,7 @@ window.onload = function () {
 	setTimeout(function(){document.querySelector("#jz").style.display ='none'; }, 400);
 	setTimeout(function(){document.body.style.backgroundColor ='#eee'; }, 400);
 	Refresh = true;
-	Img_load()
+	// Img_load();
 	if (localStorage.explain == 0) {
 			console.log("非首次开启页面，关闭教程提示。");
 		}else{
