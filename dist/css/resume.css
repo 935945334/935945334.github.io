@@ -1171,9 +1171,10 @@ body {
 	top:  calc(50% - 300px);
 	display: none;
 }
-video{
+#shipin-pc{
 	width: 960px;
 	height: 540px;
+	border-radius: 10px;
 }
 #shipin-pc-bg{
 	width: 100%;
@@ -1182,4 +1183,17 @@ video{
 	background-color: #eee;
 	display: none;
 }
-
+#ship-huancun{
+	width: 300px;
+	position: absolute;
+	z-index: 100;
+	opacity: 1;
+	border: 4px solid #fcfefd;
+	border-radius: 10px;
+	box-shadow: 10px 10px 50px #141623;
+	/*left: calc(50% - 100px);
+	top:  calc(50% - 100px);*/
+}
+#shipin-hc{
+	width: 300px;
+}

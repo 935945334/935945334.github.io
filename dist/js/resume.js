@@ -249,6 +249,8 @@ var dial_Btn = document.getElementsByClassName("dial-Btn");
 
 var ship_pc = document.getElementById("ship-pc");
 var shipin_pc_bg = document.getElementById("shipin-pc-bg");
+var shipin_hc = document.getElementById("shipin-hc");
+// shipin_hc.play();
 var Mask = document.getElementById("Mask");
 var index = document.getElementById("index");
 var theme = document.getElementById("theme");
@@ -1072,7 +1074,7 @@ setTimeout(function(){
 	if (Refresh == false) {
 		location.reload();
 	}
-}, 5000);
+}, 20000);
 
 window.onload = function () {
 	var dial_box_width = document.getElementById("dial-box").offsetWidth;
