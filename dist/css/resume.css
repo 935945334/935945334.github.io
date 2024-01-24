@@ -1162,14 +1162,16 @@ body {
 	width: 960px;
 	height: 540px;
 	position: absolute;
-	z-index: 100;
-	opacity: 1;
+	z-index: 1;
+	opacity: 0;
 	border: 4px solid #fcfefd;
 	border-radius: 10px;
 	box-shadow: 10px 10px 50px #141623;
 	left: calc(50% - 480px);
 	top:  calc(50% - 300px);
-	display: none;
+	transition:all 0.5s ease 0s;
+	margin-top: 30px;
+	/*display: none;*/
 }
 #shipin-pc{
 	width: 960px;
@@ -1183,17 +1185,22 @@ body {
 	background-color: #eee;
 	display: none;
 }
-#ship-huancun{
-	width: 300px;
+#ship-sj{
+	width: 100vw;
+	opacity: 0;
+	z-index: 1;
 	position: absolute;
-	z-index: 100;
-	opacity: 1;
-	border: 4px solid #fcfefd;
-	border-radius: 10px;
-	box-shadow: 10px 10px 50px #141623;
-	/*left: calc(50% - 100px);
-	top:  calc(50% - 100px);*/
+	top: 30%;
+	transition:all 0.5s ease 0s;
+	margin-top: 30px;
 }
-#shipin-hc{
-	width: 300px;
+#shipin-sj{
+	width: 100vw;
+}
+#shipin-sj-bg{
+	width: 100%;
+	height: 100%;
+	z-index: 99;
+	background-color: #000;
+	display: none;
 }

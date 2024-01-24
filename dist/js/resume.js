@@ -247,10 +247,11 @@ var dial_Btn = document.getElementsByClassName("dial-Btn");
 
 
 
+var ship_sj = document.getElementById("ship-sj");
+var shipin_pc_sj = document.getElementById("shipin-pc-sj");
 var ship_pc = document.getElementById("ship-pc");
 var shipin_pc_bg = document.getElementById("shipin-pc-bg");
-var shipin_hc = document.getElementById("shipin-hc");
-// shipin_hc.play();
+var shipin_sj_bg = document.getElementById("shipin-sj-bg");
 var Mask = document.getElementById("Mask");
 var index = document.getElementById("index");
 var theme = document.getElementById("theme");
@@ -261,9 +262,40 @@ var WEB_Popup = document.getElementById("WEB-Popup");
 var WEB_download = document.getElementById("WEB-download");
 var WEB_tishi = document.getElementById("WEB-tishi");
 var WEB_url;
+shipin_pc_bg.addEventListener("click",function(e){
+	ship_pc.style.opacity = "0";
+	ship_pc.style.marginTop = "30px";
+	ship_pc.style.zIndex = 1;
+	document.getElementById("shipin-pc").pause();
+	setTimeout(function(){shipin_pc_bg.style.display = "none";}, 500);
+});
+shipin_sj_bg.addEventListener("click",function(e){
+	ship_sj.style.opacity = "0";
+	ship_sj.style.top = "30%";
+	ship_sj.style.zIndex = 1;
+	document.getElementById("shipin-sj").pause();
+	setTimeout(function(){shipin_sj_bg.style.display = "none";}, 500);
+});
 index.addEventListener("click",function(e){
 	if (e.target.index != undefined) {
 		var e = e.target.index -1;
+		if (e < 0)  {
+			if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+				ship_sj.style.opacity = "1";
+				ship_sj.style.zIndex = 100;
+				ship_sj.style.top = "calc(50% - " + ship_sj.offsetHeight + "px)";
+				ship_pc.style.zIndex = -100;
+				setTimeout(function(){document.getElementById("shipin-sj").play();}, 200);
+				shipin_sj_bg.style.display = "block";
+			}else{
+				ship_pc.style.opacity = "1";
+				ship_pc.style.zIndex = 100;
+				ship_pc.style.marginTop = 0;
+				ship_sj.style.zIndex = -100;
+				shipin_pc_bg.style.display = "block";
+				setTimeout(function(){document.getElementById("shipin-pc").play();}, 200);
+			}
+		}
 		if (e < 7) {
 			if (course_state == 1) {
 				icon_box[0].style.zIndex = 1;
@@ -276,11 +308,7 @@ index.addEventListener("click",function(e){
 			Page = e;
 			console.log(e);
 		}
-		if (e < 0)  {
-			ship_pc.style.display = "block";
-			shipin_pc_bg.style.display = "block";
-			document.getElementById("shipin-pc").play();
-		}
+		
 		switch (e){
 			case 7:
 			Mask.style.display = "block";
