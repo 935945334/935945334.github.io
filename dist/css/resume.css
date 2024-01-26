@@ -1238,7 +1238,7 @@ body {
 }
 #kp-S{
 	/*width: 100vh;*/
-	height: 80vw;
+	height: 70vw;
 	position: absolute;
 	z-index: 1;
 	opacity: 1;
@@ -1254,7 +1254,7 @@ body {
 }
 #k-s{
 	/*width: 100vh;*/
-	height: 80vw;
+	height: 70vw;
 	border-radius: 10px;
 }
 
