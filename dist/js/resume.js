@@ -1039,9 +1039,11 @@ function return_iphone() {
 	if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
 		var PC_subject = iphone_body;
 		var PC_Swiper = mySwiper_iphone;
+		document.getElementById("k-s").pause();
 	}else{
 		var PC_subject = PC_body;
 		var PC_Swiper = mySwiper_PC;
+		document.getElementById("k-pc").pause();
 	}
 	setTimeout(function(){ PC_subject.style.opacity = "0.8"; }, 50);
 	setTimeout(function(){ PC_subject.style.opacity = "0.6"; }, 100);

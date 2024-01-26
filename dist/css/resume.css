@@ -1224,7 +1224,7 @@ body {
 	opacity: 1;
 	border: 4px solid #fcfefd;
 	border-radius: 10px;
-	box-shadow: 10px 10px 50px #141623;
+	box-shadow: 10px 10px 30px #020306;
 	left: calc(50% - 480px);
 	top:  calc(50% - 300px);
 	transition:all 0.5s ease 0s;
@@ -1244,7 +1244,7 @@ body {
 	opacity: 1;
 	border: 4px solid #fcfefd;
 	border-radius: 10px;
-	box-shadow: 10px 10px 50px #141623;
+	box-shadow: 10px 10px 30px #020306;
 	/*left: calc(50% - 480px);*/
 	/*top:  calc(50% - 300px);*/
 	transition:all 0.5s ease 0s;
