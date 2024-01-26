@@ -1216,3 +1216,58 @@ body {
 	background-color: #000;
 	display: none;
 }
+#kp-PC{
+	width: 960px;
+	height: 540px;
+	position: absolute;
+	z-index: 1;
+	opacity: 1;
+	border: 4px solid #fcfefd;
+	border-radius: 10px;
+	box-shadow: 10px 10px 50px #141623;
+	left: calc(50% - 480px);
+	top:  calc(50% - 300px);
+	transition:all 0.5s ease 0s;
+	margin-top: 30px;
+	/*pointer-events: none;*/
+}
+#k-pc{
+	width: 960px;
+	height: 540px;
+	border-radius: 10px;
+}
+#kp-S{
+	/*width: 100vh;*/
+	height: 80vw;
+	position: absolute;
+	z-index: 1;
+	opacity: 1;
+	border: 4px solid #fcfefd;
+	border-radius: 10px;
+	box-shadow: 10px 10px 50px #141623;
+	/*left: calc(50% - 480px);*/
+	/*top:  calc(50% - 300px);*/
+	transition:all 0.5s ease 0s;
+	margin-top: 30px;
+	/*pointer-events: none;*/
+	transform:rotate(-90deg);
+}
+#k-s{
+	/*width: 100vh;*/
+	height: 80vw;
+	border-radius: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

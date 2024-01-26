@@ -75,6 +75,11 @@ if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
 				swiperAnimate(this);
 				console.log(this.activeIndex);
 				console.log(iphone_page);
+				if (this.activeIndex == 2) {
+					setTimeout(function(){document.getElementById("k-s").play();}, 200);
+				}else{
+					document.getElementById("k-s").pause();
+				}
 				if (this.activeIndex < 10) {
 					iphone_page.innerHTML = "0" + this.activeIndex;
 				}else{
@@ -167,6 +172,11 @@ if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
 			slideChangeTransitionStart: function(){
 				swiperAnimate(this);
 				console.log(this.activeIndex);
+				if (this.activeIndex == 2) {
+					setTimeout(function(){document.getElementById("k-pc").play();}, 200);
+				}else{
+					document.getElementById("k-pc").pause();
+				}
 				if (this.activeIndex < 10) {
 					PC_page.innerHTML = "0" + this.activeIndex;
 				}else{
