@@ -215,12 +215,12 @@ if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
 for (var i = 0; i < icon_div.length; i++) {
 	icon_div[i].index = i;
 	icon_div[i].style.background = "url(images/theme/desktop-icon-" + equipment + ".png)";
-	icon_div[i].style.backgroundSize = "1140px 624px";
+	icon_div[i].style.backgroundSize = "1140px 240px";
 	icon_div[i].style.backgroundPosition = -i*60 + "px" + " " + theme_Num*78 + "px";
 }
 for (var i = 0; i < theme_icon.length; i++) {
 	theme_icon[i].style.background = "url(images/theme/theme-icon.png)";
-	theme_icon[i].style.backgroundSize = "300px 312px";
+	theme_icon[i].style.backgroundSize = "300px 60px";
 	theme_icon[i].style.backgroundPosition = -i*60 + "px" + " " + theme_Num*78 + "px";
 }
 console.log(icon.length);
@@ -442,13 +442,13 @@ function A123(e) {
 			for (var i = 0; i < icon_div.length; i++) {
 				icon_div[i].index = i;
 				icon_div[i].style.background = "url(images/theme/desktop-icon-" + equipment + ".png)";
-				icon_div[i].style.backgroundSize = "1140px 624px";
+				icon_div[i].style.backgroundSize = "1140px 240px";
 				icon_div[i].style.backgroundPosition = -i*60 + "px" + " " + -theme_Num*78 + "px";
 			}
 			for (var i = 0; i < theme_icon.length; i++) {
 				theme_icon[i].index = i;
 				theme_icon[i].style.background = "url(images/theme/theme-icon.png)";
-				theme_icon[i].style.backgroundSize = "300px 312px";
+				theme_icon[i].style.backgroundSize = "300px 60px";
 				theme_icon[i].style.backgroundPosition = -i*60 + "px" + " " + -theme_Num*78 + "px";
 			}
 			document.getElementById("bar").src = "images/bar-" + theme_Num + ".png";
@@ -593,12 +593,18 @@ function theme_fun(n) {
 function icon_1080(o) {
 	for (var i = 0; i < o.length; i++) {
 		o[i].index = i;
-		o[i].style.backgroundPosition = -i*60 + "px" + " " + -theme_Num*78 + "px";
+		o[i].style.backgroundPosition = -i*60 + "px" + " " + -theme_Num*60 + "px";
+		var color_Arr = ["#dcdcdc","#7f2d00","#464243","#7f6c61"];
+		o[i].style.color = color_Arr[theme_Num];
+		console.log(o[i]);
 	}
 }
 function icon_300(o) {
 	for (var i = 0; i < o.length; i++) {
-		o[i].style.backgroundPosition = -i*60 + "px" + " " + -theme_Num*78 + "px";
+		o[i].style.backgroundPosition = -i*60 + "px" + " " + -theme_Num*60 + "px";
+		var color_Arr = ["#dcdcdc","#7f2d00","#464243","#7f6c61"];
+		o[i].style.color = color_Arr[theme_Num];
+		console.log(o[i]);
 	}
 }
 function index_bg_fun() {
@@ -931,7 +937,7 @@ function course1() {
 	for (var i = 0; i < icon_div.length; i++) {
 		icon_div[i].index = i;
 		icon_div[i].style.background = "url(images/theme/desktop-icon-" + equipment + ".png)";
-		icon_div[i].style.backgroundSize = "1140px 624px";
+		icon_div[i].style.backgroundSize = "1140px 240px";
 		icon_div[i].style.backgroundPosition = -i*60 + "px" + " " + -(theme_Num+4)*78 + "px";
 	}
 	course_X.style.display = "block";
@@ -951,7 +957,7 @@ function course2() {
 	for (var i = 0; i < icon_div.length; i++) {
 		icon_div[i].index = i;
 		icon_div[i].style.background = "url(images/theme/desktop-icon-" + equipment + ".png)";
-		icon_div[i].style.backgroundSize = "1140px 624px";
+		icon_div[i].style.backgroundSize = "1140px 240px";
 		icon_div[i].style.backgroundPosition = -i*60 + "px" + " " + -theme_Num*78 + "px";
 	}
 }
@@ -967,7 +973,7 @@ course_X.addEventListener("click",function(e){
 	for (var i = 0; i < icon_div.length; i++) {
 		icon_div[i].index = i;
 		icon_div[i].style.background = "url(images/theme/desktop-icon-" + equipment + ".png)";
-		icon_div[i].style.backgroundSize = "1140px 624px";
+		icon_div[i].style.backgroundSize = "1140px 240px";
 		icon_div[i].style.backgroundPosition = -i*60 + "px" + " " + -theme_Num*78 + "px";
 	}
 	course_1.style.display = "none";
