@@ -370,7 +370,7 @@ body {
 }
 #WEB-download{
 	width: 300px;
-	height: 126px;
+	height: 283px;
 	/*height: 176px;*/
 	background:url(../../images/theme/download.png);
 	-webkit-background-size: 1200px;
@@ -390,9 +390,10 @@ body {
 }
 .download-btn{
 	width: 120px;
-	height: 50%;
+	height: 20%;
 	/*height: 33%;*/
 	/*background:#000;*/
+	/*opacity: 0.5;*/
 }
 #download-X{
 	width: 60px;

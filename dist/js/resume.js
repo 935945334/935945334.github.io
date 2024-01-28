@@ -294,23 +294,7 @@ index.addEventListener("click",function(e){
 	if (e.target.index != undefined) {
 		var e = e.target.index -1;
 		if (e < 0)  {
-			if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
-				ship_sj.style.pointerEvents = "auto"
-				ship_sj.style.opacity = "1";
-				ship_sj.style.zIndex = 100;
-				ship_sj.style.top = "calc(50% - " + ship_sj.offsetHeight + "px)";
-				ship_pc.style.zIndex = -100;
-				setTimeout(function(){document.getElementById("shipin-sj").play();}, 200);
-				shipin_sj_bg.style.display = "block";
-			}else{
-				ship_pc.style.pointerEvents = "auto"
-				ship_pc.style.opacity = "1";
-				ship_pc.style.zIndex = 100;
-				ship_pc.style.marginTop = 0;
-				ship_sj.style.zIndex = -100;
-				shipin_pc_bg.style.display = "block";
-				setTimeout(function(){document.getElementById("shipin-pc").play();}, 200);
-			}
+			shipin_bf()
 		}
 		if (e < 7) {
 			if (course_state == 1) {
@@ -437,8 +421,7 @@ index.addEventListener("click",function(e){
 			Mask.style.display = "block";
 			WEB_download.style.display = "flex";	
 			Popup_state = true;
-			WEB_url = "https://pan.baidu.com/s/1BYPYTSi8PAL1s7CTE6z_9w ";
-			download_JianLi();
+			WEB_url = "https://pan.baidu.com/s/1Oz4BzoNPSKcjDVo96meoGg?pwd=0000";
 			// download_Zip();
 			break;
 		}
@@ -1204,8 +1187,30 @@ function download_JianLi() {
 function download_ZuoPinJi() {
 	window.open("平面设计-作品集-15510100531-毕晟铭.pdf");
 }
+function download_ShiPin() {
+	window.open("作品集视频版-15510100531-毕晟铭.mp4");
+}
 function download_Zip() {
 	window.open("简历&作品集-毕晟铭.zip");
+}
+function shipin_bf() {
+	if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+		ship_sj.style.pointerEvents = "auto"
+		ship_sj.style.opacity = "1";
+		ship_sj.style.zIndex = 100;
+		ship_sj.style.top = "calc(50% - " + ship_sj.offsetHeight + "px)";
+		ship_pc.style.zIndex = -100;
+		setTimeout(function(){document.getElementById("shipin-sj").play();}, 200);
+		shipin_sj_bg.style.display = "block";
+	}else{
+		ship_pc.style.pointerEvents = "auto"
+		ship_pc.style.opacity = "1";
+		ship_pc.style.zIndex = 100;
+		ship_pc.style.marginTop = 0;
+		ship_sj.style.zIndex = -100;
+		shipin_pc_bg.style.display = "block";
+		setTimeout(function(){document.getElementById("shipin-pc").play();}, 200);
+	}
 }
 var time = 0;//计时
 var timeX = 0//时间状态
@@ -1333,8 +1338,8 @@ function LT_text_X(e) {
 		case 2:
 			panduan_jianli = true;
 			div1.innerHTML = "可以发一份简历吗";
-			hf_changdu = [1,0,0];
-			hf = ["images/liaotian/jl.png","百度网盘：点击下载","阿里云盘：点击下载"];
+			hf_changdu = [1,1,0];
+			hf = ["images/liaotian/jl.png","images/liaotian/fm.png","点击打包下载简历与作品集"];
 		break;
 		case 3:
 			panduan_lianxifangshi = true;
@@ -1371,7 +1376,7 @@ function LT_text_X(e) {
 
 function bdwp(){
 	console.log("百度网盘");
-	window.open("https://pan.baidu.com/s/1f7YJWnCjsJzZoWbHgCJ1tA?pwd=4u1c ");
+	window.open("https://pan.baidu.com/s/1Oz4BzoNPSKcjDVo96meoGg?pwd=0000");
 }
 function alyp(){
 	console.log("阿里云盘");
@@ -1443,11 +1448,8 @@ function add_txt(i){
 	var div = document.createElement("div");
 	var div1 = document.createElement("div");
 	if (panduan_jianli == true) {
-		if (i == 1){
-			div1.onclick = bdwp;
-		}
 		if (i == 2){
-			div1.onclick = alyp;
+			div1.onclick = bdwp;
 			panduan_jianli = false;
 		}
 	}
@@ -1493,6 +1495,9 @@ function add_img(i){
 	if (panduan_jianli == true) {
 		if (i == 0){
 			Img.onclick = dkjl;
+		}
+		if (i == 1){
+			Img.onclick = shipin_bf;
 		}
 	}
 	div.appendChild(div1).className = "QiPao-text";
