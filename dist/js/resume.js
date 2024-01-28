@@ -1200,7 +1200,7 @@ function PC_xlgnn() {
 
 function download_JianLi() {
 	console.log(111);
-	window.open("平面设计-简历-15510100531-毕晟铭.pdf");
+	window.open("简历&作品集.zip");
 }
 function download_ZuoPinJi() {
 	window.open("https://github.com/935945334/resume/raw/master/%E6%AF%95%E6%99%9F%E9%93%AD-%E4%BD%9C%E5%93%81%E9%9B%86-17150024672.pdf");
