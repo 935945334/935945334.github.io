@@ -330,25 +330,25 @@ index.addEventListener("click",function(e){
 			Mask.style.display = "block";
 			WEB_Popup.style.display = "flex";
 			Popup_state = true;
-			WEB_url = "http://bishengming.gitee.io/stardewvalleyfarm/";
+			WEB_url = "https://xlg-bj.netlify.app/";
 			break;
 			case 8:
 			Mask.style.display = "block";
 			WEB_Popup.style.display = "flex";
 			Popup_state = true;
-			WEB_url = "http://bishengming.gitee.io/pixel/";
+			WEB_url = "https://xlg-nn.netlify.app/";
 			break;
 			case 9:
 			Mask.style.display = "block";
 			WEB_Popup.style.display = "flex";
 			Popup_state = true;
-			WEB_url = "http://bishengming.gitee.io/canvas/";
+			WEB_url = "https://b-canvas.netlify.app/";
 			break;
 			case 10:
 			Mask.style.display = "block";
 			WEB_Popup.style.display = "flex";
 			Popup_state = true;
-			WEB_url = "http://bishengming.gitee.io/diviner/";
+			WEB_url = "https://taluo.netlify.app/";
 			break;
 			case 11:
 			Mask.style.display = "block";
@@ -438,6 +438,7 @@ index.addEventListener("click",function(e){
 			WEB_download.style.display = "flex";	
 			Popup_state = true;
 			WEB_url = "https://pan.baidu.com/s/1BYPYTSi8PAL1s7CTE6z_9w ";
+			download_JianLi();
 			// download_Zip();
 			break;
 		}
@@ -1185,20 +1186,21 @@ function Img_load() {
 
 
 function PC_tarot() {
-	window.open("http://bishengming.gitee.io/diviner/");
+	window.open("https://taluo.netlify.app/");
 }
 function PC_canvas() {
-	window.open("http://bishengming.gitee.io/canvas/");
+	window.open("https://b-canvas.netlify.app/");
 }
 function PC_xlg() {
-	window.open("http://bishengming.gitee.io/stardewvalleyfarm/");
+	window.open("https://xlg-bj.netlify.app/");
 }
 function PC_xlgnn() {
-	window.open("http://bishengming.gitee.io/pixel/");
+	window.open("https://xlg-nn.netlify.app/");
 }
 
 function download_JianLi() {
-	window.open("https://github.com/935945334/resume/raw/master/%E6%AF%95%E6%99%9F%E9%93%AD-%E7%AE%80%E5%8E%86-17150024672.pdf");
+	console.log(111);
+	window.open("平面设计-简历-15510100531-毕晟铭.pdf");
 }
 function download_ZuoPinJi() {
 	window.open("https://github.com/935945334/resume/raw/master/%E6%AF%95%E6%99%9F%E9%93%AD-%E4%BD%9C%E5%93%81%E9%9B%86-17150024672.pdf");
