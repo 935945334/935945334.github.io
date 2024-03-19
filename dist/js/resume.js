@@ -1382,7 +1382,7 @@ function LT_text_X(e) {
 
 function bdwp(){
 	console.log("百度网盘");
-	window.open("https://pan.baidu.com/s/1Oz4BzoNPSKcjDVo96meoGg?pwd=0000");
+	window.open("https://pan.baidu.com/s/1_Y6wZ51n4gsM7dKpIxjlbg?pwd=0000");
 }
 function alyp(){
 	console.log("阿里云盘");
