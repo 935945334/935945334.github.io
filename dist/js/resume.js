@@ -343,39 +343,45 @@ index.addEventListener("click",function(e){
 			course1();
 			break;
 			case 13:
-			if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
-				var PC_subject = iphone_body;
-				var PC_Swiper = mySwiper_iphone;
-			}else{
-				var PC_subject = PC_body;
-				var PC_Swiper = mySwiper_PC;
-			}
-			Img_load();
-			setTimeout(function(){ subject.style.opacity='0.8'; }, 100);
-			setTimeout(function(){ subject.style.opacity='0.6'; }, 120);
-			setTimeout(function(){ subject.style.opacity='0.4'; }, 140);
-			setTimeout(function(){ subject.style.opacity='0.2'; }, 160);
-			setTimeout(function(){ subject.style.opacity='0'; }, 180);
-			setTimeout(function(){ subject.style.display = "none"; }, 180);
-			for (var i = 0; i < 100; i++) {
-				(function(i) {
-					setTimeout(function() {
-						PC_bg_anim.style.width= i + 1 + "%";
-						// PC_bg_anim.style.height= i + 1 + "%";
-					}, (i + 200) * 2);
-				})(i)
-			}
-			setTimeout(function(){ PC_subject.style.zIndex = "100"; }, 800);
-			setTimeout(function(){ PC_subject.style.opacity = "0"; }, 800);
-			setTimeout(function(){ PC_subject.style.opacity = "0.2"; }, 850);
-			setTimeout(function(){ PC_subject.style.opacity = "0.4"; }, 900);
-			setTimeout(function(){ PC_subject.style.opacity = "0.6"; }, 950);
-			setTimeout(function(){ PC_subject.style.opacity = "0.8"; }, 1000);
-			setTimeout(function(){ PC_subject.style.opacity = "1"; }, 1050);
-			setTimeout(function(){
-				PC_Swiper.slideTo(1, 0, true);
-				PC_Swiper.slideTo(0, 0, true);
-			}, 1050);
+			var pdf_x = document.getElementById("pdf-x");
+			var pdf = document.getElementById("pdf");
+			pdf_x.style.pointerEvents = "auto";
+			pdf.style.pointerEvents = "auto";
+			pdf_x.style.opacity='1';
+			pdf.style.opacity='1';
+			// if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+			// 	var PC_subject = iphone_body;
+			// 	var PC_Swiper = mySwiper_iphone;
+			// }else{
+			// 	var PC_subject = PC_body;
+			// 	var PC_Swiper = mySwiper_PC;
+			// }
+			// Img_load();
+			// setTimeout(function(){ subject.style.opacity='0.8'; }, 100);
+			// setTimeout(function(){ subject.style.opacity='0.6'; }, 120);
+			// setTimeout(function(){ subject.style.opacity='0.4'; }, 140);
+			// setTimeout(function(){ subject.style.opacity='0.2'; }, 160);
+			// setTimeout(function(){ subject.style.opacity='0'; }, 180);
+			// setTimeout(function(){ subject.style.display = "none"; }, 180);
+			// for (var i = 0; i < 100; i++) {
+			// 	(function(i) {
+			// 		setTimeout(function() {
+			// 			PC_bg_anim.style.width= i + 1 + "%";
+			// 			// PC_bg_anim.style.height= i + 1 + "%";
+			// 		}, (i + 200) * 2);
+			// 	})(i)
+			// }
+			// setTimeout(function(){ PC_subject.style.zIndex = "100"; }, 800);
+			// setTimeout(function(){ PC_subject.style.opacity = "0"; }, 800);
+			// setTimeout(function(){ PC_subject.style.opacity = "0.2"; }, 850);
+			// setTimeout(function(){ PC_subject.style.opacity = "0.4"; }, 900);
+			// setTimeout(function(){ PC_subject.style.opacity = "0.6"; }, 950);
+			// setTimeout(function(){ PC_subject.style.opacity = "0.8"; }, 1000);
+			// setTimeout(function(){ PC_subject.style.opacity = "1"; }, 1050);
+			// setTimeout(function(){
+			// 	PC_Swiper.slideTo(1, 0, true);
+			// 	PC_Swiper.slideTo(0, 0, true);
+			// }, 1050);
 			break;
 			case 14:
 			fun_dial();
@@ -1212,44 +1218,44 @@ function shipin_bf() {
 		setTimeout(function(){document.getElementById("shipin-pc").play();}, 200);
 	}
 }
-var time = 0;//计时
-var timeX = 0//时间状态
-var cloud_1 = document.getElementById("cloud-1");
-var cloud_2 = document.getElementById("cloud-2");
-var cloud_3 = document.getElementById("cloud-3");
-var cloud_4 = document.getElementById("cloud-4");
-var bird_1 = document.getElementById("bird-1");
-var bird_2 = document.getElementById("bird-2");
-var cloudX1 = cloud_1.offsetLeft;//云1
-var cloudX2 = cloud_2.offsetLeft;//云2
-var cloudX3 = cloud_3.offsetLeft;//云1
-var cloudX4 = cloud_4.offsetLeft;//云2
-var birdX1 = bird_1.offsetLeft;//云2
-var birdX2 = bird_2.offsetLeft;//云2
-var animation = setInterval("cloud()",50)//每50毫秒运行一次动画
-function cloud() {
-	if (timeX == 0) {
-		bird_1.style.transform = "scaleX(1)";
-		bird_2.style.transform = "scaleX(1)";
-		window.time = time + 1;
-		if (time == 300) {
-			window.timeX = 1
-		}
-	}else if (timeX == 1) {
-		bird_1.style.transform = "scaleX(-1)";
-		bird_2.style.transform = "scaleX(-1)";
-		window.time = time - 1;
-		if (time == 1) {
-			window.timeX = 0
-		}
-	}
-	cloud_1.style.left = cloudX1 + time +"px";
-	cloud_2.style.left = cloudX2 - time +"px";
-	cloud_3.style.left = cloudX1 + time +"px";
-	cloud_4.style.left = cloudX2 - time +"px";
-	bird_1.style.left = birdX1 - time*3 +"px";
-	bird_2.style.left = birdX1 - time*3 +"px";
-}
+// var time = 0;//计时
+// var timeX = 0//时间状态
+// var cloud_1 = document.getElementById("cloud-1");
+// var cloud_2 = document.getElementById("cloud-2");
+// var cloud_3 = document.getElementById("cloud-3");
+// var cloud_4 = document.getElementById("cloud-4");
+// var bird_1 = document.getElementById("bird-1");
+// var bird_2 = document.getElementById("bird-2");
+// var cloudX1 = cloud_1.offsetLeft;//云1
+// var cloudX2 = cloud_2.offsetLeft;//云2
+// var cloudX3 = cloud_3.offsetLeft;//云1
+// var cloudX4 = cloud_4.offsetLeft;//云2
+// var birdX1 = bird_1.offsetLeft;//云2
+// var birdX2 = bird_2.offsetLeft;//云2
+// var animation = setInterval("cloud()",50)//每50毫秒运行一次动画
+// function cloud() {
+// 	if (timeX == 0) {
+// 		bird_1.style.transform = "scaleX(1)";
+// 		bird_2.style.transform = "scaleX(1)";
+// 		window.time = time + 1;
+// 		if (time == 300) {
+// 			window.timeX = 1
+// 		}
+// 	}else if (timeX == 1) {
+// 		bird_1.style.transform = "scaleX(-1)";
+// 		bird_2.style.transform = "scaleX(-1)";
+// 		window.time = time - 1;
+// 		if (time == 1) {
+// 			window.timeX = 0
+// 		}
+// 	}
+// 	cloud_1.style.left = cloudX1 + time +"px";
+// 	cloud_2.style.left = cloudX2 - time +"px";
+// 	cloud_3.style.left = cloudX1 + time +"px";
+// 	cloud_4.style.left = cloudX2 - time +"px";
+// 	bird_1.style.left = birdX1 - time*3 +"px";
+// 	bird_2.style.left = birdX1 - time*3 +"px";
+// }
 
 
 
@@ -1553,5 +1559,21 @@ function LT_X() {
 	
 }
 
-
-
+var swiper_pdf = new Swiper('.swiper-container-pdf', {
+      direction: 'vertical',
+      slidesPerView: 'auto',
+      freeMode: true,
+      scrollbar: {
+        el: '.swiper-scrollbar',
+      },
+      mousewheel: true,
+    });
+function pdf_X() {
+	var pdf_x = document.getElementById("pdf-x");
+	var pdf = document.getElementById("pdf");
+	pdf_x.style.pointerEvents = "none";
+	pdf.style.pointerEvents = "none";
+	pdf_x.style.opacity='0';
+	pdf.style.opacity='0';
+	
+}
