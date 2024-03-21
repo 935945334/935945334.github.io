@@ -1259,20 +1259,28 @@ body {
 	border-radius: 10px;
 }
 #pdf{
-	width: 96%;
-	height: 96%;
+	width: 100%;
+	height: calc(100% - 50px);
 	position: absolute;
 	z-index: 998;
 	opacity: 0;
+	transition:all 0.5s ease 0s;
+	pointer-events: none;
+	background-color: #151515;
+	/*display: none;*/
+	/*width: 96%;
+	height: 96%;
+	
+	
 	border: 4px solid #fcfefd;
 	border-radius: 10px;
 	box-shadow: 10px 10px 50px #141623;
 	left: calc(50% - 48%);
 	top:  calc(50% - 48%);
-	transition:all 0.5s ease 0s;
+	*/
 	/*margin-top: 30px;*/
-	pointer-events: none;
-	/*display: none;*/
+	/**/
+	/**/
 }
 #pdf img{
 	width: 100%;
@@ -1284,22 +1292,33 @@ body {
 }
 
 #pdf-x{
-	width: 100px;
+	width: 100%;
 	height: 50px;
 	position: absolute;
 	z-index: 999;
-	opacity: 0;
-	border: 4px solid #fcfefd;
-	border-radius: 100px;
-	box-shadow: 10px 10px 50px #141623;
-	left: calc(50% - 50px);
-	top:  calc(94% - 25px);
+	top:  calc(100% - 50px);
 	background-color: #fed12f;
 	font-size: 26px;
 	color: #fff;
 	text-align: center;
-	line-height: 46px;
+	line-height: 44px;
+	box-shadow: 10px 10px 50px #141623;
+	border-top: 4px solid #fcfefd;
+	opacity: 0;
+	pointer-events: none;
+	transition:all 0.5s ease 0s;
 	/*display: none;*/
+	/*width: 100px;
+	height: 50px;
+	
+	
+	border-radius: 100px;
+	box-shadow: 10px 10px 50px #141623;
+	left: calc(50% - 50px);
+	top:  calc(94% - 25px);
+	
+	
+	/**/
 }
 
 

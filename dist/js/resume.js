@@ -125,6 +125,23 @@ if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
 	});
 }else{
 	console.log("电脑"); 
+	var pdf_x = document.getElementById("pdf-x");
+	pdf_x.style.pointerEvents = "auto";
+	pdf_x.style.width = "100px";
+	pdf_x.style.height = "50px";
+	pdf_x.style.boxShadow = "10px 10px 50px #141623";
+	pdf_x.style.borderRadius = "20px";
+	pdf_x.style.border = "4px solid #fcfefd";
+	pdf_x.style.left = "calc(50% - 50px)";
+	pdf_x.style.top = "calc(94% - 25px)";
+	pdf.style.width = "80%";
+	pdf.style.height = "88%";
+	pdf.style.border = "4px solid #fcfefd";
+	pdf.style.borderRadius = "10px";
+	pdf.style.boxShadow = "10px 10px 50px #141623";
+	pdf.style.left = "calc(50% - 40%)";
+	// pdf.style.top = "calc(50% - 40%)%";
+	pdf.style.marginTop = "20px";
 	ship_sj.style.display = "none";
 	equipment = "pc";
 	img_equipment = "PC";
