@@ -444,7 +444,7 @@ index.addEventListener("click",function(e){
 			Mask.style.display = "block";
 			WEB_download.style.display = "flex";	
 			Popup_state = true;
-			WEB_url = "https://pan.baidu.com/s/1Oz4BzoNPSKcjDVo96meoGg?pwd=0000";
+			WEB_url = "https://pan.baidu.com/s/1lbU-V0Qy0DpKeGCOnUO_5A?pwd=0000";
 			// download_Zip();
 			break;
 		}
@@ -1205,16 +1205,16 @@ function PC_xlgnn() {
 }
 
 function download_JianLi() {
-	window.open("平面设计-简历-15510100531-毕晟铭.pdf");
+	window.open("UI设计-简历-15510100531-毕晟铭.pdf");
 }
 function download_ZuoPinJi() {
-	window.open("平面设计-作品集-15510100531-毕晟铭.pdf");
+	window.open("UI设计-作品集-15510100531-毕晟铭.pdf");
 }
 function download_ShiPin() {
 	window.open("作品集视频版-15510100531-毕晟铭.mp4");
 }
 function download_Zip() {
-	window.open("简历&作品集-毕晟铭.zip");
+	window.open("UI设计-简历&作品集-毕晟铭.zip");
 }
 function shipin_bf() {
 	if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
