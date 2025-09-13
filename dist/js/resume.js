@@ -1130,41 +1130,13 @@ function contact_Popup_X() {
 	iphone_contact_img[2].style.display = "none";
 }
 
-// setTimeout(function(){
-// 	if (Refresh == false) {
-// 		location.reload();
-// 	}
-// }, 20000);
-
-// window.onload = function () {
-// 	var dial_box_width = document.getElementById("dial-box").offsetWidth;
-// 	var dial_Btn_width = parseInt(((dial_box_width-22)/3)/6);
-// 	console.log(dial_Btn_width);
-// 	for (var i = 0; i < dial_Btn.length; i++) {
-// 		dial_Btn[i].style.width = dial_Btn_width*6 + "px";
-// 		dial_Btn[i].style.height = dial_Btn_width*4 + "px";
-// 	}
-// 	setTimeout(function(){
-// 		loading.style.width = "260px";
-// 	}, 100);
-// 	setTimeout(function(){
-// 		loading.style.width = "270px";
-// 	}, 200);
-// 	setTimeout(function(){
-// 		loading.style.width = "280px";
-// 	}, 300);
-// 	setTimeout(function(){document.querySelector("#jz").style.display ='none'; }, 400);
-// 	setTimeout(function(){document.body.style.backgroundColor ='#eee'; }, 400);
-// 	Refresh = true;
-// 	// Img_load();
-// 	if (localStorage.explain == 0) {
-// 			console.log("非首次开启页面，关闭教程提示。");
-// 		}else{
-// 			setTimeout(function(){time_Tips()}, 5000);
-// 		}
-	
-// }
 setTimeout(function(){
+	if (Refresh == false) {
+		location.reload();
+	}
+}, 20000);
+
+window.onload = function () {
 	var dial_box_width = document.getElementById("dial-box").offsetWidth;
 	var dial_Btn_width = parseInt(((dial_box_width-22)/3)/6);
 	console.log(dial_Btn_width);
@@ -1190,8 +1162,8 @@ setTimeout(function(){
 		}else{
 			setTimeout(function(){time_Tips()}, 5000);
 		}
-}, 5000);
-
+	
+}
 
 
 function time_Tips() {
