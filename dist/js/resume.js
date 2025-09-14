@@ -59,7 +59,7 @@ if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
 	}
 	for (var i = 0; i < iphone_contact_arr.length; i++) {
 		iphone_contact_arr[i].index = i;
-		iphone_contact_arr[i].style.background = "url(images/iphone/contact.png)";
+		// iphone_contact_arr[i].style.background = "url(images/iphone/contact.png)";
 		iphone_contact_arr[i].style.backgroundSize = "140px";
 		iphone_contact_arr[i].style.backgroundPosition = -i*35 + "px" + " " + "0";
 	}
@@ -174,7 +174,7 @@ if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
 	document.getElementsByClassName("swiper-container");
 	for (var i = 0; i < PC_contact_arr.length; i++) {
 		PC_contact_arr[i].index = i;
-		PC_contact_arr[i].style.background = "url(images/PC/contact.png)";
+		// PC_contact_arr[i].style.background = "url(images/PC/contact.png)";
 		PC_contact_arr[i].style.backgroundSize = "140px";
 		PC_contact_arr[i].style.backgroundPosition = -i*35 + "px" + " " + "0";
 	}
